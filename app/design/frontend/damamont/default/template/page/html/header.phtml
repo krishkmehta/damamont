@@ -15,9 +15,7 @@
             <div class="col-3">
                 <?php //echo $this->getChildHtml('topLinks') ?>
                 <!-- Cart -->
-                <div id="utilities">
-                    <?php echo $this->getChildHtml('topMenu') ?>
-                </div>
+                
 
                 <div class="account-cart-wrapper">
                     <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>" data-target-element="#header-account" class="skip-link skip-account">
@@ -38,4 +36,9 @@
             
             <?php echo $this->getChildHtml('topContainer'); ?>
         </div>
+        <nav class="main-navigation">
+            <div id="utilities">
+                <?php echo $this->getChildHtml('topMenu') ?>
+            </div>
+        </nav>
     </div>

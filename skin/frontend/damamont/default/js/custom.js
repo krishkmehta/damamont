@@ -1,20 +1,26 @@
-jQuery('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:5
-        }
-    }
-})
+// jQuery('.owl-carousel').owlCarousel({
+//     loop:true,
+//     margin:10,
+//     nav:true,
+//     responsive:{
+//         0:{
+//             items:1
+//         },
+//         600:{
+//             items:3
+//         },
+//         1000:{
+//             items:5
+//         }
+//     }
+// });
 
+
+
+(function(){
+    var headerHeight = jQuery('header-container').outerHeight();
+    jQuery('body').css({'paddingTop': headerHeight});
+}());
 jQuery(window).scroll(function() {    
     var scroll = jQuery(window).scrollTop();
 
