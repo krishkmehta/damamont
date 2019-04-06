@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+
+	<default>
+		<reference name="head">
+			<action method="addLinkRel">
+				<rel>stylesheet</rel>
+				<href>https://fonts.googleapis.com/css?family=Dancing+Script</href>
+			</action>
+			<action method="addLinkRel">
+				<rel>stylesheet</rel>
+				<href>https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700</href>
+			</action>
+			<action method="addLinkRel">
+				<rel>stylesheet</rel>
+				<href>https://fonts.googleapis.com/css?family=Abel</href>
+			</action>
+			<action method="addLinkRel">
+				<rel>stylesheet</rel>
+				<href>https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css</href>
+			</action>
+			
+			<action method="addItem">
+				<type>skin_css</type>
+				<name>css/bootstrap.css</name>
+			</action>
+			<action method="addItem">
+				<type>skin_css</type>
+				<name>css/owl.carousel.min.css</name>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/owl.carousel.min.js</name>
+				<params/>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/custom.js</name>
+				<params/>
+			</action>
+		</reference>
+	</default>
+</layout> 

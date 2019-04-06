@@ -1,0 +1,38 @@
+<div class="header-container">
+    <div class="header">
+
+        <div class="col-3">
+            <?php echo $this->getChildHtml('store_language') ?>
+            <?php echo $this->getChildHtml('topSearch') ?>
+        </div>
+        <div class="col-3 text-center">
+            <?php if ($this->getIsHomePage()):?>
+                <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+                <?php else:?>
+                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+                <?php endif?>
+            </div>
+            <div class="col-3">
+                <?php // echo $this->getChildHtml('topLinks') ?>
+                <!-- Cart -->
+
+                <div class="account-cart-wrapper">
+                    <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>" data-target-element="#header-account" class="skip-link skip-account">
+                        <span class="account-icon"></span>
+                    </a>
+
+                    <!-- Cart -->
+
+                    <div class="header-minicart">
+                        <?php echo $this->getChildHtml('minicart_head'); ?>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="quick-access">
+                <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
+                
+            </div> -->
+            
+            <?php echo $this->getChildHtml('topContainer'); ?>
+        </div>
+    </div>

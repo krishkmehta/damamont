@@ -1,0 +1,86 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
+<div class="grid">
+    <div class="dama-contact-wrap">
+        <img src="//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/dama-fade-logo.png?0" class="img-responsive" height="" width="">
+        <div class="dc">
+            <h2>Contact Us</h2>
+            <h5>D’AMA customer with a question? We are here for You.</h5>
+            <p class="text-center">If you haven’t found the info you need on our Website.. Our in house Customer Service Team looks forward to helping you with any questions about Products, Orders, and Shipping.</p>
+        </div>
+        <div class="small-contact-wrap">
+            <div class="contact-detail">
+               <p><img src="//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/envelope.jpg?0" class="img-responsive" height="" width=""> email: info@damamontecarlo.com</p>
+
+               <p><img src="//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/file-icon.png?0" class="img-responsive" height="" width="">Please write to us by using the form below.</p>
+           </div>
+           <form action="<?php echo $this->getFormAction(); ?>" id="contactForm" method="post">
+            <div class="fieldset">
+                <ul class="form-list">
+                    <li class="fields">
+                        <div class="field">
+                            <!-- <label for="name" class="required"><em>*</em><?php echo Mage::helper('contacts')->__('Name') ?></label> -->
+                            <div class="input-box">
+                                <input placeholder="Name" name="name" id="name" title="<?php echo Mage::helper('core')->quoteEscape(Mage::helper('contacts')->__('Name')) ?>" value="<?php echo $this->escapeHtml($this->helper('contacts')->getUserName()) ?>" class="input-text form-control required-entry" type="text" />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <!-- <label for="email" class="required"><em>*</em><?php echo Mage::helper('contacts')->__('Email') ?></label> -->
+                            <div class="input-box">
+                                <input placeholder="Email" name="email" id="email" title="<?php echo Mage::helper('core')->quoteEscape(Mage::helper('contacts')->__('Email')) ?>" value="<?php echo $this->escapeHtml($this->helper('contacts')->getUserEmail()) ?>" class="input-text form-control required-entry validate-email" type="text" />
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- <label for="telephone"><?php echo Mage::helper('contacts')->__('Telephone') ?></label> -->
+                        <div class="input-box">
+                            <input placeholder="Phone Number" name="telephone" id="telephone" title="<?php echo Mage::helper('core')->quoteEscape(Mage::helper('contacts')->__('Telephone')) ?>" value="" class="input-text form-control" type="text" />
+                        </div>
+                    </li>
+                    <li class="wide">
+                        <!-- <label for="comment" class="required"><em>*</em><?php echo Mage::helper('contacts')->__('Comment') ?></label> -->
+                        <div class="input-box">
+                            <textarea placeholder="Message" name="comment" id="comment" title="<?php echo Mage::helper('core')->quoteEscape(Mage::helper('contacts')->__('Comment')) ?>" class="form-control required-entry input-text" cols="5" rows="3"></textarea>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="buttons-set">
+                <p class="required"><?php echo Mage::helper('contacts')->__('* Required Fields') ?></p>
+                <input type="text" name="hideit" id="hideit" value="" style="display:none !important;" />
+                <button type="submit" title="<?php echo Mage::helper('core')->quoteEscape(Mage::helper('contacts')->__('Submit')) ?>" class="btn button"><span><span><?php echo Mage::helper('contacts')->__('Submit') ?></span></span></button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var contactForm = new VarienForm('contactForm', true);
+//]]>
+</script>
