@@ -31,8 +31,12 @@
 			?> 
 
 			<?php echo $this->getChildHtml() ?>
-			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('follow-us')->toHtml(); 
-			?> 
+			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('follow-us')->toHtml();
+
+            $filter = Mage::getModel('widget/template_filter');
+            echo $filter->filter('{{widget type="SSSWidget/footerlink"}}');
+
+            ?>
 		</div>
 		<?php echo $this->getCopyright() ?>
 		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('terms-privacy-link')->toHtml(); ?>

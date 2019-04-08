@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<widgets>
+    <SSSWidget_Footerlink type="SSSWidget/footerlink">
+        <name>Footer Links</name>
+        <description type="desc">Footer link into footer</description>
+    </SSSWidget_Footerlink>
+</widgets>
