@@ -40,6 +40,8 @@
 				<params/>
 			</action>
 		</reference>
-		
+		<reference name="after_body_start">
+			<block type="core/template" name="after_body_start_script" template="page/html/after_body_start.phtml" />
+		</reference>
 	</default>
 </layout> 
