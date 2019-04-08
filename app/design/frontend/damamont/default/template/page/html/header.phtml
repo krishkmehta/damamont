@@ -1,6 +1,7 @@
 <div class="header-container">
-    <div class="header">
 
+    <div class="header">
+        <img class="hamburger-menu" height="25" src="<?php echo $this->getSkinUrl('images/hamburger-menu.svg') ?>">
         <div class="col-3">
             <?php echo $this->getChildHtml('store_language') ?>
             <?php echo $this->getChildHtml('topSearch') ?>
@@ -18,8 +19,10 @@
                 
 
                 <div class="account-cart-wrapper">
-                    <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>" data-target-element="#header-account" class="skip-link skip-account">
-                        <span class="account-icon"></span>
+                    <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>" data-target-element="#header-account">
+                        <span class="account-icon">
+                            <img height="28" src="<?php echo $this->getSkinUrl('images/user-icon.svg') ?>" alt=""/>
+                        </span>
                     </a>
 
                     <!-- Cart -->
@@ -37,6 +40,7 @@
             <?php echo $this->getChildHtml('topContainer'); ?>
         </div>
         <nav class="main-navigation">
+            <div class="menu-close-mobile">×</div>
             <div id="utilities">
                 <?php echo $this->getChildHtml('topMenu') ?>
             </div>

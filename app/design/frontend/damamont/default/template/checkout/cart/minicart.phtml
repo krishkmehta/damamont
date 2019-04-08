@@ -41,7 +41,7 @@ if(empty($_cartQty)) {
 
 <a href="<?php echo $this->helper('checkout/cart')->getCartUrl(); ?>" data-target-element="#header-cart" class="skip-link skip-cart <?php if($_cartQty <= 0): ?> no-count<?php endif; ?>">
 	<span class="icon">
-		<img src="//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/DAMA-cart.svg?0" width="35">
+		<img height="28px" src="<?php echo $this->getSkinUrl('images/cart-icon.svg',array(‘_secure’=>true)) ?>">
 	</span>
 	<span id="CartCount" class="count"><?php echo $_cartQty; ?></span>
 </a>

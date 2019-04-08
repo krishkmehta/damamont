@@ -35,7 +35,24 @@ jQuery(window).scroll(function() {
         }
     }); //missing );
 
-(function(){
-    var headerHeight = jQuery('header-container').outerHeight();
-    jQuery('body').css({'paddingTop': headerHeight});
-}());
+jQuery(document).ready(function () {
+    jQuery('.search-icon').click(function(){
+        jQuery(this).addClass('search-active');
+        jQuery(this).closest('.input-box').addClass('is_search_active')
+    });
+    jQuery('.menu-close-mobile').click(function(){
+        jQuery('.main-navigation').removeClass('nav-active');
+    })
+    jQuery('.hamburger-menu').click(function(){
+        jQuery('.main-navigation').toggleClass('nav-active');
+    });
+    jQuery('#search').focus(function(){
+        jQuery(this).addClass('search-active');
+        jQuery(this).closest('.input-box').addClass('is_search_active')
+    }).blur(function () {
+        jQuery('#search').removeClass('search-active')
+        jQuery('.input-box').removeClass('is_search_active')
+    });;
+    var headerHeight = jQuery('.header-container').outerHeight();
+    jQuery('body:not(.cms-home)').css({'paddingTop': headerHeight});
+});
