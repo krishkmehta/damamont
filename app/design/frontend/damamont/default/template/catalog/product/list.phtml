@@ -120,7 +120,7 @@ $cat_ids = array_filter($subats_ids);
                 <?php foreach ($_productCollection as $_product): ?>
                     <div class="single_collection">
                         <div class="collection_img"
-                             style="background-image: url('<?php $this->helper('catalog/image')->init($_product, 'small_image')->resize(270, 180); ?>">
+                             style="background-image: url(<?php $this->helper('catalog/image')->init($_product, 'small_image')->resize(270, 180); ?>)">
                             <img style="display: none;"
                                  src="<?php $this->helper('catalog/image')->init($_product, 'small_image')->resize(270, 180); ?>"
                                  width="270" height="180">
@@ -154,7 +154,8 @@ $cat_ids = array_filter($subats_ids);
         as $_product): ?>
             <div class="single_collection">
                 <div class="collection_img"
-                     style="background-image: url('<?php $this->helper('catalog/image')->init($_product, 'small_image')->resize(270, 180); ?>">
+                     style="background-image: url(<?php $this->helper('catalog/image')->init($_product,
+                         'small_image')->resize(270, 180); ?>)">
                     <img style="display: none;"
                          src="<?php $this->helper('catalog/image')->init($_product, 'small_image')->resize(270, 180); ?>"
                          width="270" height="180">
