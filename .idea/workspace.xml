@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62bce157-2ade-489f-87fc-72e0ac8d9044" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/code/local/SSS/Custom/Block/Footerlink.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/code/local/SSS/Custom/etc/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/catalog/product/list.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/catalog/product/list.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/footer.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/footer.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skin/frontend/damamont/default/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/skin/frontend/damamont/default/js/custom.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,21 +47,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/catalog/product/list.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="176" column="4" selection-start-line="176" selection-start-column="4" selection-end-line="176" selection-end-column="4" />
+            <state relative-caret-position="269">
+              <caret line="122" column="149" selection-start-line="122" selection-start-column="149" selection-end-line="122" selection-end-column="149" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="e#1472#9760#0#PHP" />
-                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" />
                 <element signature="e#5516#5521#0#PHP" />
-                <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#!!top" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#div#2;n#div#1;n#div#0;n#div#1;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,7 +76,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/catalog/product/view.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
+            <state relative-caret-position="-125">
               <caret line="32" column="2" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
             </state>
           </provider>
@@ -94,7 +85,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/catalog/category/view.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
+            <state relative-caret-position="-277">
               <caret line="51" column="15" selection-start-line="51" selection-start-column="15" selection-end-line="51" selection-end-column="15" />
               <folding>
                 <marker date="1554748150757" expanded="true" signature="2031:2116" ph="..." />
@@ -470,13 +461,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13385000" />
+    <option name="totallyTimeSpent" value="13806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="27" width="1313" height="741" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2573007" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2573007" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -489,7 +480,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32843137" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.88398695" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -499,6 +490,22 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/catalog/product/list.phtml</url>
+          <line>156</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/catalog/product/list.phtml</url>
+          <line>163</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/design/frontend/rwd/default/etc/theme.xml">
@@ -743,7 +750,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/catalog/category/view.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
+        <state relative-caret-position="-277">
           <caret line="51" column="15" selection-start-line="51" selection-start-column="15" selection-end-line="51" selection-end-column="15" />
           <folding>
             <marker date="1554748150757" expanded="true" signature="2031:2116" ph="..." />
@@ -753,28 +760,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/catalog/product/view.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
+        <state relative-caret-position="-125">
           <caret line="32" column="2" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/catalog/product/list.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="176" column="4" selection-start-line="176" selection-start-column="4" selection-end-line="176" selection-end-column="4" />
+        <state relative-caret-position="269">
+          <caret line="122" column="149" selection-start-line="122" selection-start-column="149" selection-end-line="122" selection-end-column="149" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#1472#9760#0#PHP" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" />
             <element signature="e#5516#5521#0#PHP" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#div#2;n#div#1;n#div#0;n#div#1;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
