@@ -32,6 +32,7 @@
 
 <default translate="label" module="page">
     <label>All Pages</label>
+    <remove name="catalog.leftnav"/>
     <block type="page/html" name="root" output="toHtml" template="page/3columns.phtml">
 
         <block type="page/html_head" name="head" as="head">
