@@ -134,43 +134,43 @@ $cat_ids = array_filter($subats_ids);
 
                     <?php $_collectionSize = $_productCollection->count() ?>
                     <?php $_columnCount = $this->getColumnCount(); ?>
-
-                        <div class="category-products">
-                            <?php $i = 0;
-                            foreach ($_productCollection
-
-                                     as $_product): ?>
-                                <div class="single_collection">
-                                    <div class="collection_img"
-                                         style="background-image: url(<?php echo $this->helper('catalog/image')->init
-                                         ($_product,
-                                             'small_image')->resize(270, 180); ?>)">
-                                        <img style="display: none;"
-                                             src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(270, 180); ?>"
-                                             width="270" height="180">
-                                    </div>
-                                    <div class="collection_text">
-                                        <h5>
-                                            <a href="<?php echo $_product->getProductUrl() ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?></a>
-                                        </h5>
-                                        <div class="box">
+                             <?php $i = 0;
+                            foreach ($_productCollection as $_product): ?>
+                                <div class="grid-item">
+                                    <div class="single_collection">
+                                        <a href="<?php echo $_product->getProductUrl() ?>">
+                                            <div class="small-img"
+                                                 style="background-image: url(<?php echo $this->helper('catalog/image')->init
+                                                 ($_product,
+                                                     'small_image')->resize(280, 280); ?>)">
+                                                <img class="img-responsive" style="display: none;"
+                                                     src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(280, 280); ?>"
+                                                     width="270" height="180">
+                                            </div>
+                                        </a>
+                                        <a href="<?php echo $_product->getProductUrl() ?>">
+                                            <h5 style="height: 42px;"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?></h5>
                                             <img src="//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/Dama-Logo.svg?0"
-                                                 width="80" height="20" alt="Logo"/>
-                                            <p> <?php
-                                                if($cperl = $_product->getResource()->getAttribute('c_perl')) {
+                                                 height="" width="35" class="img-responsive">
+                                            <?php
+                                            if ($cperl = $_product->getResource()->getAttribute('c_perl')) {
 
 
-                                                    echo $cperl->getFrontend()->getValue($_product);
-                                                }
-                                                ?></p>
-                                        </div>
+                                                echo "<p>" . $cperl->getFrontend()->getValue($_product) . "</p>";
+                                            }
+                                            ?>
+                                        </a>
+
+
+                                        <p class="desk-show collection-price"><?php echo $this->getPriceHtml($_product, true) ?></p>
+
                                     </div>
                                 </div>
                             <?php endforeach ?>
                         </div>
                         <script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd', 'even', 'first', 'last'])</script>
                     <?php endif; ?>
-                </div>
+
             <?php endif; ?>
         <?php } ?>
     </div>
