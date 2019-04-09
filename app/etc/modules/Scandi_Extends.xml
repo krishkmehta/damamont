@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Scandi_Extends
+ *
+ * @category Scandi
+ * @package Scandi_Extends
+ * @author Katrina Jostsone <info@scandiweb.com>
+ * @copyright Copyright (c) 2018 Scandiweb, Ltd (http://scandiweb.com)
+ * @license http://opensource.org/licenses/afl-3.0.php Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Scandi_Extends>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Scandi_Extends>
+    </modules>
+</config>
