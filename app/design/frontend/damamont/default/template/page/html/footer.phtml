@@ -24,19 +24,23 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
+<div class="mobile-contact">
+	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer-address-block')->toHtml(); 
+	?> 
+</div>
+
+<?php
+
+$filter = Mage::getModel('widget/template_filter');
+echo $filter->filter('{{widget type="SSSWidget/footerlink"}}');
+
+?>
 <div class="footer-container container">
 	<div class="col-md-5 newsletter_wrap">
 		<div class="footer">
-			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer-address-block')->toHtml(); 
-			?> 
 
 			<?php echo $this->getChildHtml() ?>
-			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('follow-us')->toHtml();
-
-            $filter = Mage::getModel('widget/template_filter');
-            echo $filter->filter('{{widget type="SSSWidget/footerlink"}}');
-
-            ?>
+			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('follow-us')->toHtml(); ?>
 		</div>
 		<?php echo $this->getCopyright() ?>
 		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('terms-privacy-link')->toHtml(); ?>

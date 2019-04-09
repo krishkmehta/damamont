@@ -1,3 +1,17 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:none;outline:0;font-weight:;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;text-decoration:none;margin:0;padding:0;}
+table{border-collapse:separate;border-spacing:0}
+blockquote:before,blockquote:after,q:before,q:after{content:""}
+*{margin:0;padding:0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+article, aside, details, figcaption, figure, footer, hgroup, menu, nav, section {display: block; }                                
+ol, ul { list-style: none;}
+blockquote, q { quotes: none;}
+:focus { outline: 0;}
+table { border-collapse: collapse; border-spacing: 0;}
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+a{text-decoration:none; position:relative; color:#000;}
+audio,video,canvas {max-width: 100%;}
+.clear{clear:both; font-size:1px; display:table;}
+
 body, html{font-family: 'Abel', sans-serif; margin: 0; padding: 0; min-height: 100%;}
 #header{position: fixed; -webkit-transition:all 0.5s ease; -o-transition:all 0.5s ease; transition:all 0.5s ease; background: transparent; z-index: 9999; padding-top: 0px; padding-bottom: 0px; top: 0; left: 0; width: 100%}
 .header-bg{background:#c7b299; height:40px;}
@@ -189,7 +203,7 @@ body, html{font-family: 'Abel', sans-serif; margin: 0; padding: 0; min-height: 1
     .newsletter_wrap input{width: 232px; float: left; height: 40px; border: none; border-bottom: 1px solid #c4c4c4;}
     .newsletter_wrap button{border: 1px solid #c4c4c4; color:grey; font-size:20px; letter-spacing:0.200em; text-transform: uppercase; letter-spacing: 1.5px; background: transparent; padding:10px 18px; margin-left: 10px; line-height: 1; display: inline-block;}
 
-    .follow-us{ padding-left: 0; list-style: none;}
+    .follow-us{ padding-left: 0; list-style: none;     padding-bottom: 30px;}
     .follow-us li{display: inline-block; margin-top: 5px; font-size: 25px; padding:0 10px; vertical-align: middle;}
     .follow-us li a{color: grey;}
     .follow-us li a:hover{color: #F7931E;}
@@ -687,8 +701,6 @@ video {
 }
 .category-title{
 	background: #D2D2D2 url(https://cdn.shopify.com/s/files/1/2405/7229/files/Header_WAP.png?4838809553363972814) no-repeat center center;
-	padding-top: 36px;
-	padding-bottom: 36px;
 }
 .review-slider .owl-dots {
 	text-align: center;
@@ -749,29 +761,24 @@ video {
 
 
 	.white-bg:after, .social-banner:before{display: none;}
-/* .preal-fact{padding-top: 150px;}
-.preal-fact2{padding-top: 0; margin-bottom: 0; padding-bottom:0;} */
-.social-banner{height: auto; padding-top: 50px; padding-bottom: 50px;}
-.socila-banner-text{margin: 25px auto;}
-.social-banner h2 a{font-size: 45px;}
-.featured-inner img{max-width: 300px; }
-/* .home_collection{padding-top: 70px} */
-/* .home_collection h2{margin-top: 50px;} */
-/* .social-banner h2, .social-banner h2 a{text-align: center;} */
-.collection-btn li{width: 39px;}
-.payment-info{padding: 5px 20px;}
-.order-item{padding: 25px 12px 12px 12px;}
-.item-img{margin-right: 15px;}
-.blog-tittle{font-size: 70px;}
-.footer-inner{-ms-flex-wrap: wrap;flex-wrap: wrap;}
-.footer-inner .col-md-2, .footer-inner .col-md-3, .footer-inner .col-md-7{width: 100%;}
-.footer-inner{max-height: 250px; overflow-y:scroll; }
-.newsletter_wrap{padding-left:15px;}
-.sub-nav{margin-left: 250px;}
-#header nav li{padding: 0 7px;}
-
-
-
+    .social-banner{height: auto; padding-top: 50px; padding-bottom: 50px;}
+    .socila-banner-text{margin: 25px auto;}
+    .social-banner h2 a{font-size: 45px;}
+    .featured-inner img{max-width: 300px; }
+    .collection-btn li{width: 39px;}
+    .payment-info{padding: 5px 20px;}
+    .order-item{padding: 25px 12px 12px 12px;}
+    .item-img{margin-right: 15px;}
+    .blog-tittle{font-size: 70px;}
+    .footer-inner{-ms-flex-wrap: wrap;flex-wrap: wrap;}
+    .footer-inner .col-md-2, .footer-inner .col-md-3, .footer-inner .col-md-7{width: 100%;}
+    .footer-inner{max-height: 250px; overflow-y:scroll; }
+    .newsletter_wrap{padding-left:15px;}
+    .newsletter_wrap-inner {
+        margin-bottom: 40px;
+    }
+    .sub-nav{margin-left: 250px;}
+    #header nav li{padding: 0 7px;}
 }
 @media only screen and (max-width: 992px) {
 	.header__nav-button { display: block; }
