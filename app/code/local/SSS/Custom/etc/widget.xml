@@ -3,5 +3,27 @@
     <SSSWidget_Footerlink type="SSSWidget/footerlink">
         <name>Footer Links</name>
         <description type="desc">Footer link into footer</description>
+        <parameters>
+            <items>
+                <visible>1</visible>
+                <label>Items</label>
+                <type>array</type> <!-- Use "array" type -->
+                <helper_block>
+                    <type>mp_widgetarray/adminhtml_widget_array</type>
+                    <data>
+                        <columns>
+                            <text translate="label">
+                                <label>Text</label>
+                            </text>
+                            <col2 translate="label">
+                                <label>Col 2</label>
+                            </col2>
+                            <!-- Add more columns as needed. -->
+                            <!-- Node name will become field name. -->
+                        </columns>
+                    </data>
+                </helper_block>
+            </items>
+        </parameters>
     </SSSWidget_Footerlink>
 </widgets>

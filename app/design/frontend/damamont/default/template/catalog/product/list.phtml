@@ -142,10 +142,11 @@ $cat_ids = array_filter($subats_ids);
                                      as $_product): ?>
                                 <div class="single_collection">
                                     <div class="collection_img"
-                                         style="background-image: url(<?php $this->helper('catalog/image')->init($_product,
+                                         style="background-image: url(<?php echo $this->helper('catalog/image')->init
+                                         ($_product,
                                              'small_image')->resize(270, 180); ?>)">
                                         <img style="display: none;"
-                                             src="<?php $this->helper('catalog/image')->init($_product, 'small_image')->resize(270, 180); ?>"
+                                             src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(270, 180); ?>"
                                              width="270" height="180">
                                     </div>
                                     <div class="collection_text">
@@ -156,7 +157,11 @@ $cat_ids = array_filter($subats_ids);
                                             <img src="//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/Dama-Logo.svg?0"
                                                  width="80" height="20" alt="Logo"/>
                                             <p> <?php
-                                                echo $_product->getResource()->getAttribute('c_perl')->getFrontend()->getValue($_product);
+                                                if($cperl = $_product->getResource()->getAttribute('c_perl')) {
+
+
+                                                    echo $cperl->getFrontend()->getValue($_product);
+                                                }
                                                 ?></p>
                                         </div>
                                     </div>
