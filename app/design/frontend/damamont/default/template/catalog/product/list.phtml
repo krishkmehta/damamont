@@ -33,18 +33,21 @@
 ?>
 <?php $currentCategory = Mage::registry('current_category') ?>
 <?php
+$subats_ids = array();
 
-/* Load category by id*/
-$cat = Mage::getModel('catalog/category')->load($currentCategory->getId());
+if($currentCategory){
+    $cat = Mage::getModel('catalog/category')->load($currentCategory->getId());
 
 
-/*Returns comma separated ids*/
-$subcats = $cat->getChildren();
+    /*Returns comma separated ids*/
+    $subcats = $cat->getChildren();
 
 //Print out categories string
 
-$subats_ids = explode(',', $subcats);
-$cat_ids = array_filter($subats_ids);
+    $subats_ids = explode(',', $subcats);
+    $subats_ids = array_filter($subats_ids);
+}
+
 ?>
 <div class="container-fluid collection-wrap">
     <div class="row">
