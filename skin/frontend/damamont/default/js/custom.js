@@ -19,10 +19,10 @@ CustomAccordion.prototype.dropdown = function (e) {
     console.log(jQuery(this));
 
     var $this = jQuery(this),
-        $next = $this.next();
+    $next = $this.next();
 
-        $next.slideToggle();
-        $this.toggleClass('open')
+    $next.slideToggle();
+    $this.toggleClass('open')
 
     if (!e.data.multiple) {
         $el.find('a.heading_acc').next().not($next).slideUp().prev().removeClass('open');
@@ -69,7 +69,16 @@ jQuery(window).scroll(function () {
 
 jQuery(document).ready(function () {
 
-
+    jQuery(".header-minicart").click(function(){
+        jQuery('.backdrop').addClass('active');
+    });
+    jQuery('.backdrop').click(function(){
+        jQuery(this).removeClass('active');
+        jQuery('#header-cart').removeClass('skip-active');
+        jQuery('.skip-cart').removeClass('skip-active');
+        
+        
+    });
     jQuery('.search-icon').click(function () {
         jQuery(this).addClass('search-active');
         jQuery(this).closest('.input-box').addClass('is_search_active')
