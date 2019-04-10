@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package    Leytech_RatingStars
+ * @author     Chris Nolan (chris@leytech.co.uk)
+ * @copyright  Copyright (c) 2017 Leytech
+ * @license    https://opensource.org/licenses/MIT  The MIT License  (MIT)
+ */
+-->
+<layout version="0.1.0">
+    <!-- Product reviews page -->
+    <review_product_list translate="label">
+        <reference name="head">
+            <action method="addJs" ifconfig="leytech_ratingstars/settings/include_jquery">
+                <script>leytech/ratingstars/jquery/jquery-3.2.1.min.js</script>
+            </action>
+            <action method="addJs" ifconfig="leytech_ratingstars/settings/include_jquery">
+                <script>leytech/ratingstars/jquery/noConflict.js</script>
+            </action>
+            <action method="addJs" ifconfig="leytech_ratingstars/settings/enabled">
+                <script>leytech/ratingstars/rateyo/jquery.rateyo.min.js</script>
+            </action>
+            <action method="addItem" ifconfig="leytech_ratingstars/settings/enabled">
+                <type>js_css</type>
+                <script>leytech/ratingstars/rateyo/jquery.rateyo.css</script>
+            </action>
+        </reference>
+        <reference name="product.review.form">
+            <action method="setTemplate">
+                <template helper="leytech_ratingstars/switchTemplate" />
+            </action>
+        </reference>
+    </review_product_list>
+</layout>
