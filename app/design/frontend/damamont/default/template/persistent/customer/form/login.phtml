@@ -39,26 +39,27 @@
         <div class="dama-contact-wrap">
             <img class="img-responsive" src="<?php echo $this->getSkinurl()?>/images/dama-fade-logo.png" alt="">
             <div class="account-login">
-                <div class="page-title">
-                    <h2><?php echo $this->__('Login') ?></h2>
-                </div>
+
                 <?php echo $this->getMessagesBlock()->toHtml() ?>
                 <?php /* Extensions placeholder */ ?>
                 <?php echo $this->getChildHtml('customer.form.login.extra')?>
                 <div class="small-contact-wrap">
+                    <div class="page-title">
+                        <h2><?php echo $this->__('Login') ?></h2>
+                    </div>
                     <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="login-form">
                         <?php echo $this->getBlockHtml('formkey'); ?>
                         <div class="col2-set">
-                            <div class="col-1 new-users">
+                           <!--  <div class="col-1 new-users">
                                 <div class="content">
                                     <h2><?php echo $this->__('New Customers') ?></h2>
                                     <p><?php echo $this->__('By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.') ?></p>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-2 registered-users">
                                 <div class="content">
-                                    <h2><?php echo $this->__('Registered Customers') ?></h2>
-                                    <p class="mb-1"><?php echo $this->__('If you have an account with us, please log in.') ?></p>
+                                   <!--  <h2><?php echo $this->__('Registered Customers') ?></h2>
+                                    <p class="mb-1"><?php echo $this->__('If you have an account with us, please log in.') ?></p> -->
                                     <ul class="form-list">
                                         <li>
                                             <div class="input-box">
@@ -73,36 +74,37 @@
                                         <?php echo $this->getChildHtml('form.additional.info'); ?>
                                     </ul>
                                     <!-- <p class="required"><?php echo $this->__('* Required Fields') ?></p> -->
-                                    <button type="submit" class="add-btn btn--full button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Sign In')) ?>" name="send" id="send2"><span><span><?php echo $this->__('Sign In') ?></span></span></button>
-                                </div>
+                                    <button type="submit" class="add-btn btn--full button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Sign In')) ?>" name="send" id="send2"><?php echo $this->__('Sign In') ?>
+                                </button>
                             </div>
                         </div>
-                        <div class="col2-set">
-                            <div class="col-1 new-users">
-                                <div class="buttons-set">
-                                    <p>
-                                        <a href="javascript:void(0)" onclick="window.location='<?php echo $this->getCreateAccountUrl() ?>'"> <?php echo $this->__('Create an Account') ?>
-                                    </a>
+                    </div>
+                    <div class="col2-set">
+                        <div class="col-1 new-users">
+                            <div class="buttons-set">
+                                <p>
+                                    <a href="javascript:void(0)" onclick="window.location='<?php echo $this->getCreateAccountUrl() ?>'"> <?php echo $this->__('Create an Account') ?>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-2 registered-users">
+                        <div class="buttons-set">
+                            <p>
+                                <a href="<?php echo $this->getForgotPasswordUrl() ?>" class="f-left">
+                                    <?php echo $this->__('Forgot Your Password?') ?></a>
+                                </p>
+                                <p>
+
                                 </p>
                             </div>
                         </div>
-                        <div class="col-2 registered-users">
-                            <div class="buttons-set">
-                                <p>
-                                    <a href="<?php echo $this->getForgotPasswordUrl() ?>" class="f-left">
-                                        <?php echo $this->__('Forgot Your Password?') ?></a>
-                                    </p>
-                                    <p>
-
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 <style>
