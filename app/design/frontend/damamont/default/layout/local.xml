@@ -39,9 +39,23 @@
 				<name>js/custom.js</name>
 				<params/>
 			</action>
+			<action method="addJs" ifconfig="leytech_ratingstars/settings/include_jquery">
+				<script>leytech/ratingstars/jquery/jquery-3.2.1.min.js</script>
+			</action>
+			<action method="addJs" ifconfig="leytech_ratingstars/settings/include_jquery">
+				<script>leytech/ratingstars/jquery/noConflict.js</script>
+			</action>
+			<action method="addJs" ifconfig="leytech_ratingstars/settings/enabled">
+				<script>leytech/ratingstars/rateyo/jquery.rateyo.min.js</script>
+			</action>
+			<action method="addItem" ifconfig="leytech_ratingstars/settings/enabled">
+				<type>js_css</type>
+				<script>leytech/ratingstars/rateyo/jquery.rateyo.css</script>
+			</action>
 		</reference>
 		<reference name="after_body_start">
 			<block type="core/template" name="after_body_start_script" template="page/html/after_body_start.phtml" />
 		</reference>
+
 	</default>
 </layout> 

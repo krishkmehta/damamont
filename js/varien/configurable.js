@@ -122,6 +122,7 @@ Product.Config.prototype = {
     },
 
     configureElement : function(element) {
+
         this.reloadOptionLabels(element);
         if(element.value){
             this.state[element.config.id] = element.value;

@@ -95,7 +95,7 @@ Product.Gallery.prototype = {
         files.each( function(item) {
             if (!item.response.isJSON()) {
                 try {
-                    console.log(item.response);
+                //    console.log(item.response);
                 } catch (e2) {
                     alert(item.response);
                 }
@@ -225,7 +225,7 @@ Product.Gallery.prototype = {
         var elems = $$(selector);
         if (!elems[0]) {
             try {
-                console.log(selector);
+             //   console.log(selector);
             } catch (e2) {
                 alert(selector);
             }
