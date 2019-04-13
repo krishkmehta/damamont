@@ -19,10 +19,10 @@ CustomAccordion.prototype.dropdown = function (e) {
     console.log(jQuery(this));
 
     var $this = jQuery(this),
-        $next = $this.next();
+    $next = $this.next();
 
-        $next.slideToggle();
-        $this.toggleClass('open')
+    $next.slideToggle();
+    $this.toggleClass('open')
 
     if (!e.data.multiple) {
         $el.find('a.heading_acc').next().not($next).slideUp().prev().removeClass('open');
@@ -69,10 +69,26 @@ jQuery(window).scroll(function () {
 
 jQuery(document).ready(function () {
 
-
+    jQuery("#overlay").click(function(){
+        jQuery(this).removeClass('is-active');
+        jQuery('.input-box').removeClass('is_search_active');
+    });
+    jQuery(".header-minicart .skip-cart").click(function(){
+        jQuery('.backdrop').addClass('active');
+    });
+    jQuery('.backdrop').click(function(){
+        jQuery(this).removeClass('active');
+        jQuery('#header-cart').removeClass('skip-active');
+        jQuery('.skip-cart').removeClass('skip-active');
+    });
+    jQuery('.skip-link-close').click(function(){
+        jQuery('.backdrop').removeClass('active');
+    });
+    
     jQuery('.search-icon').click(function () {
         jQuery(this).addClass('search-active');
         jQuery(this).closest('.input-box').addClass('is_search_active')
+        jQuery('#overlay').addClass('is-active');
     });
     jQuery('.menu-close-mobile').click(function () {
         jQuery('.main-navigation').removeClass('nav-active');

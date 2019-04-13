@@ -27,7 +27,8 @@
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
 <div class="grid">
     <div class="dama-contact-wrap">
-        <img src="//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/dama-fade-logo.png?0" class="img-responsive" height="" width="">
+
+        <img src="<?php echo $this->getSkinUrl('images/dama-fade-logo.png') ?>" class="img-responsive">
         <div class="dc">
             <h2>Contact Us</h2>
             <h5>D’AMA customer with a question? We are here for You.</h5>
