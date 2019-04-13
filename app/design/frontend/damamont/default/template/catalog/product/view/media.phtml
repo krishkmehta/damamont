@@ -33,69 +33,68 @@
 /* @var $this Mage_Catalog_Block_Product_View_Media */
 ?>
 <?php
+$media_path = Mage::getBaseUrl('media') . 'catalog/product';
 $_product = $this->getProduct();
 $_helper = $this->helper('catalog/output');
 ?>
+<script>
+    var S_IMAGES = [];
+</script>
 <?php
 //if($_product->getTypeId() == \Magento\ConfigurableProduct\Model\Product\Type\Configurable::TYPE_CODE) {
 
-    $productId = $_product->getId(); //config product id
-    $product = Mage::getModel('catalog/product')->load($productId);
-    $configurable = Mage::getModel('catalog/product_type_configurable')->setProduct($product);
-    $simpleCollection = $configurable->getUsedProductCollection()->addAttributeToSelect('*')->addFilterByRequiredOptions();
+$productId = $_product->getId(); //config product id
+$product = Mage::getModel('catalog/product')->load($productId);
+$configurable = Mage::getModel('catalog/product_type_configurable')->setProduct($product);
+$simpleCollection = $configurable->getUsedProductCollection()->addAttributeToSelect('*')->addFilterByRequiredOptions();
 
 
-    foreach ($simpleCollection as $simple) {
-        $product = Mage::getModel('catalog/product')->load($simple->getId());
-        $images = $product->getMediaGalleryImages();
+foreach ($simpleCollection as $simple) {
+    $product = Mage::getModel('catalog/product')->load($simple->getId());
+    $images = $product->getMediaGalleryImages();
+    $collection_Image = '';
 
-//   echo $product->get();
-        $i = 0;
-        ?>
-        <div id="thumbnail-gallery" style="display: none"
-             class="product_image product_image<?php echo $product->getId();
-             ?>">
+    foreach ($images as $_image): ?>
 
+        <?php if ($this->isGalleryImageVisible($_image)): ?>
             <?php
-            foreach ($images as $_image): ?>
-                <?php if ($this->isGalleryImageVisible($_image)): ?>
-
-                    <div class="grid-item">
-                        <div class="single-colllection img_wrapper">
-                            <div class="small-img">
-                                <img class="img-responsive"
-                                     src="<?php echo $this->getGalleryImageUrl($_image); ?>"
-                                     alt="<?php echo $product->getName(); ?>"></div>
-                        </div>
-                    </div>
-
-                <?php endif; ?>
-            <?php endforeach; ?>
-        </div>
+            $collection_Image .= '<div class="grid-item"><div class="single-colllection img_wrapper"><div class="small-img" style="padding-top:0px"><img class="img-responsive" src="' . $this->getGalleryImageUrl($_image) . '" alt="' . $product->getName() . '"></div></div></div>'; ?>
+        <?php endif; ?>
+    <?php endforeach; ?>
+    <?php if ($video = $product->getUploadVideo()): ?>
         <?php
+        $collection_Image .= '<div class="grid-item"><div class="single-colllection" style="height: 370px;"><div class="small-img" style="padding-top:0px"><video class="video-background" src="' . $media_path . $video . '" loop="" controls="" autoplay="" muted="" playsinline=""></video></div></div></div>';?>
+    <?php endif; ?>
 
+    <script>
+         S_IMAGES.push({'<?php echo $product->getId(); ?>':'<?php echo $collection_Image; ?>'})
+    </script>
 
-    }
-//}
+    <?php
+
+}
+$main_collection = ''
 ?>
-<div id="thumbnail-gallery" class="product_image product_image<?php echo $this->getProduct()->getId(); ?>">
+<div id="thumbnail-gallery"
+     class="product_image product_image<?php echo $this->getProduct()->getId(); ?>">
 
     <?php $i = 0;
     foreach ($this->getGalleryImages() as $_image): ?>
         <?php if ($this->isGalleryImageVisible($_image)): ?>
-            <div class="grid-item">
-                <div class="single-colllection img_wrapper">
-                    <div class="small-img">
-                        <img
-                                class="gallery-image img-responsive"
-                                src="<?php echo $this->getGalleryImageUrl($_image); ?>"
-                                data-zoom-image="<?php echo $this->getGalleryImageUrl($_image); ?>"/>
-                    </div>
-                </div>
-            </div>
+            <?php
+
+            $main_collection .= '<div class="grid-item"><div class="single-colllection img_wrapper"><div class="small-img" style="padding-top:0px"><img class="gallery-image img-responsive" src="' . $this->getGalleryImageUrl($_image) . '" data-zoom-image="' . $this->getGalleryImageUrl($_image) . '" /></div></div></div>'; ?>
         <?php endif; ?>
 
     <?php endforeach; ?>
+    <?php if ($video = $_product->getUploadVideo()): ?>
+        <?php
+        $main_collection .= '<div class="grid-item"><div class="single-colllection" style="height: 370px;"><div class="small-img" style="padding-top:0px"><video class="video-background" src="' . $media_path . $video . '" loop="" controls="" muted="" playsinline="" autoplay=""></video></div></div></div>'; ?>
+    <?php endif; ?>
+    <?php echo $main_collection; ?>
+    <script>
+        S_IMAGES.push({'<?php echo $_product->getId(); ?>':'<?php echo $main_collection; ?>'});
+    </script>
 </div>
 
 

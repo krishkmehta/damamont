@@ -35,23 +35,26 @@
 <?php
 $subats_ids = array();
 
-if($currentCategory){
+if($currentCategory ) {
     $cat = Mage::getModel('catalog/category')->load($currentCategory->getId());
 
+    if($cat->getCollectionCategory()){
+        /*Returns comma separated ids*/
+        $subcats = $cat->getChildren();
 
-    /*Returns comma separated ids*/
-    $subcats = $cat->getChildren();
 
-//Print out categories string
+        $subats_ids = explode(',', $subcats);
+        $subats_ids = array_filter($subats_ids);
 
-    $subats_ids = explode(',', $subcats);
-    $subats_ids = array_filter($subats_ids);
+    }
+
+
 }
 
 ?>
 <div class="container-fluid collection-wrap">
     <div class="row">
-        <?php if (count($cat_ids) > 0) { ?>
+        <?php if (count($subats_ids) > 0) { ?>
             <div class="container mallz">
                 <div class="collection-row">
 

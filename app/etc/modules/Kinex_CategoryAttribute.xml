@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Kinex_CategoryAttribute>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Kinex_CategoryAttribute>
+    </modules>
+</config>

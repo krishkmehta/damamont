@@ -120,6 +120,27 @@
                     <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
                 <?php endif; ?>
 
+                <div class="customAccordion">
+                    <ul class="accordion">
+                        <?php if($tech_info = $_product->getTechInfo()) :?>
+                        <li>
+                            <a href="javascript:;" class="heading_acc">Techincal Info</a>
+                            <div class="footer-shop-list" style="width: 100%; display: none;">
+                                <?php echo $tech_info;?>
+                            </div>
+                        </li>
+                        <?php endif; ?>
+                        <?php if($ship_info = $_product->getShippingInfo()): ?>
+                        <li>
+                            <a href="javascript:;" class="heading_acc">Shipping Information</a>
+                            <div class="footer-shop-list" style="width: 100%; display: none;">
+                               <?php echo $ship_info; ?>
+                            </div>
+                        </li>
+                        <?php endif; ?>
+                    </ul>
+                </div>
+
 
             </div>
         </div>
@@ -179,9 +200,15 @@
 
 </div>
 <div class="row">
+    <?php echo $this->getChildHtml('product_additional_data_custom') ?>
+    <?php echo $this->getChildHtml('product_additional_data') ?>
+
+
+    </div>
+</div>
+<div class="row">
 
     <?php echo $this->getChildHtml('upsell_products') ?>
-    <?php //echo $this->getChildHtml('product_additional_data') ?>
 
 </div>
 
