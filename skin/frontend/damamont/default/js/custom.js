@@ -33,6 +33,14 @@ jQuery(document).ready(function ($) {
 
 
     var accordion = new CustomAccordion($('.accordion'), false);
+    var accordion1 = new CustomAccordion($('.description-accordion'), false);
+
+    jQuery(document).on('click',
+        '.collection-review .rating-links a,' +
+        '.collection-review .no-rating a',function (e) {
+        e.preventDefault();
+
+    })
 
     jQuery('.product-carousel').owlCarousel({
         loop: true,

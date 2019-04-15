@@ -67,34 +67,34 @@ foreach ($simpleCollection as $simple) {
     <?php endif; ?>
 
     <script>
-         S_IMAGES.push({'<?php echo $product->getId(); ?>':'<?php echo $collection_Image; ?>'})
-    </script>
+       S_IMAGES.push({'<?php echo $product->getId(); ?>':'<?php echo $collection_Image; ?>'})
+   </script>
 
-    <?php
+   <?php
 
 }
 $main_collection = ''
 ?>
 <div id="thumbnail-gallery"
-     class="product_image product_image<?php echo $this->getProduct()->getId(); ?>">
+class="product_image product_image<?php echo $this->getProduct()->getId(); ?>">
 
-    <?php $i = 0;
-    foreach ($this->getGalleryImages() as $_image): ?>
-        <?php if ($this->isGalleryImageVisible($_image)): ?>
-            <?php
-
-            $main_collection .= '<div class="grid-item"><div class="single-colllection img_wrapper"><div class="small-img" style="padding-top:0px"><img class="gallery-image img-responsive" src="' . $this->getGalleryImageUrl($_image) . '" data-zoom-image="' . $this->getGalleryImageUrl($_image) . '" /></div></div></div>'; ?>
-        <?php endif; ?>
-
-    <?php endforeach; ?>
-    <?php if ($video = $_product->getUploadVideo()): ?>
+<?php $i = 0;
+foreach ($this->getGalleryImages() as $_image): ?>
+    <?php if ($this->isGalleryImageVisible($_image)): ?>
         <?php
-        $main_collection .= '<div class="grid-item"><div class="single-colllection" style="height: 370px;"><div class="small-img" style="padding-top:0px"><video class="video-background" src="' . $media_path . $video . '" loop="" controls="" muted="" playsinline="" autoplay=""></video></div></div></div>'; ?>
+
+        $main_collection .= '<div class="grid-item"><div class="single-colllection img_wrapper"><div class="small-img" style="padding-top:0px"><img class="gallery-image img-responsive" src="' . $this->getGalleryImageUrl($_image) . '" data-zoom-image="' . $this->getGalleryImageUrl($_image) . '" /></div></div></div>'; ?>
     <?php endif; ?>
-    <?php echo $main_collection; ?>
-    <script>
-        S_IMAGES.push({'<?php echo $_product->getId(); ?>':'<?php echo $main_collection; ?>'});
-    </script>
+
+<?php endforeach; ?>
+<?php if ($video = $_product->getUploadVideo()): ?>
+    <?php
+    $main_collection .= '<div class="grid-item"><div class="single-colllection"><div class="small-img"><video class="video-background" src="' . $media_path . $video . '" loop="" controls="" muted="" playsinline="" autoplay=""></video></div></div></div>'; ?>
+<?php endif; ?>
+<?php echo $main_collection; ?>
+<script>
+    S_IMAGES.push({'<?php echo $_product->getId(); ?>':'<?php echo $main_collection; ?>'});
+</script>
 </div>
 
 
