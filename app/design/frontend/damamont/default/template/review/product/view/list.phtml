@@ -26,62 +26,45 @@
 ?>
 
 <?php $_items = $this->getReviewsCollection()->getItems();?>
-<div class="box-collateral box-reviews" id="customer-reviews">
+<div class="box-collateral box-reviews customers-wrap" id="customer-reviews">
     <?php if (count($_items)):?>
         <div class="review-heading">
-            <h2>
+            <h3>
                 <?php echo $this->__('WHAT OUR CUSTOMERS ARE SAYINGs') ?>
-            </h2>
+            </h3>
         </div>
-        <div class="owl-carousel product-carousel" id="customer-reviews-wrap">
+        <div class="owl-carousel product-carousel review-slider" id="customer-reviews-wrap">
             <?php foreach ($_items as $_review): ?>
                 <div class="item">
-                    <a href="<?php echo $this->getReviewUrl($_review->getId()) ?>">
-                        <?php echo $this->escapeHtml($_review->getTitle()) ?>
-                    </a>
+                    <div class="review-inner">
+                        <h6>
+                            <a href="<?php echo $this->getReviewUrl($_review->getId()) ?>">
+                                <?php echo $this->escapeHtml($_review->getTitle()) ?>
+                            </a>
+                        </h6>
+                        <div class="ratings">
+                            <?php $_votes = $_review->getRatingVotes(); ?>
 
-                    <dd>
-                        <?php $_votes = $_review->getRatingVotes(); ?>
-
-                        <?php echo nl2br($this->escapeHtml($_review->getDetail())) ?>
-
-
-                        <?php if (count($_votes)): ?>
-                            <table class="ratings-table">
-                                <colgroup>
-                                    <col class="review-label"/>
-                                    <col class="review-value"/>
-                                </colgroup>
-                                <tbody>
+                            <?php echo nl2br($this->escapeHtml($_review->getDetail())) ?>
+                            <?php if (count($_votes)): ?>
                                 <?php foreach ($_votes as $_vote): ?>
-                                    <tr>
-                                        <th><?php echo $this->escapeHtml($_vote->getRatingCode()) ?></th>
-                                        <td>
-                                            <div class="rating-box">
-                                                <div class="rating"
-                                                     style="width:<?php echo $_vote->getPercent() ?>%;"></div>
-                                            </div>
-                                        </td>
-                                    </tr>
+
+                                    <div class="rating-box">
+                                        <div class="rating"
+                                        style="width:<?php echo $_vote->getPercent() ?>%;"></div>
+                                    </div>
+                                    <?php echo $this->escapeHtml($_vote->getRatingCode()) ?>
                                 <?php endforeach; ?>
-                                </tbody>
-                            </table>
-                        <?php endif; ?>
-
-
-                        <span class="review-meta">
-                    <?php echo $this->__('Review by %s', $this->escapeHtml($_review->getNickname())) ?>
-                    /
-                   <?php echo $this->__('(Posted on %s)', $this->formatDate($_review->getCreatedAt()), 'long') ?>
-                </span>
-                    </dd>
+                            <?php endif; ?>
+                        </div>  
+                    </div>
                 </div>
             <?php endforeach; ?>
         </div>
 
         <?php // echo $this->getChildHtml('toolbar') ?>
-    <?php elseif($this->getParentBlock()): ?>
-        <?php echo $this->getParentBlock()->getReviewsSummaryHtml($this->getProduct(), 'short', true)?>
-    <?php endif;?>
-    <?php echo $this->getChildHtml('review_form') ?>
-</div>
+        <?php elseif($this->getParentBlock()): ?>
+            <?php echo $this->getParentBlock()->getReviewsSummaryHtml($this->getProduct(), 'short', true)?>
+        <?php endif;?>
+        <?php echo $this->getChildHtml('review_form') ?>
+    </div>
