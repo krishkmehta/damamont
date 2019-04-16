@@ -102,15 +102,15 @@
                             <?php if ($this->helper('wishlist')->isAllow() || $_compareUrl = $this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
                             <span class="or"><?php echo $this->__('OR') ?></span>
                         <?php endif; ?>
-                    <?php endif; ?>
+                    <?php endif; ?> 
                     <?php echo $this->getChildHtml('addto') ?>
-                    <?php echo $this->getChildHtml('sharing') ?>
+                    <?php // echo $this->getChildHtml('sharing') ?>
                 </div>
                 <?php echo $this->getChildHtml('extra_buttons') ?>
                 <?php elseif (!$_product->isSaleable()): ?>
                     <div class="add-to-box">
                         <?php echo $this->getChildHtml('addto') ?>
-                        <?php echo $this->getChildHtml('sharing') ?>
+                        <?php // echo $this->getChildHtml('sharing') ?>
                     </div>
                 <?php endif; ?>
             </div>
@@ -127,11 +127,11 @@
                     <li>
                         <a href="javascript:;" class="heading heading_acc">Shipping Information</a>
                         <div class="footer-shop-list">
-                         <?php echo $ship_info; ?>
-                     </div>
-                 </li>
-             <?php endif; ?>
-             <?php if($tech_info = $_product->getTechInfo()) :?>
+                           <?php echo $ship_info; ?>
+                       </div>
+                   </li>
+               <?php endif; ?>
+               <?php if($tech_info = $_product->getTechInfo()) :?>
                 <li>
                     <a href="javascript:;" class="heading_acc heading">Techincal Info</a>
                     <div class="footer-shop-list">
@@ -204,7 +204,7 @@
 </div>
 </div>
 <div class="container-fluid">
-   <div class="row why-shop-wrap"> 
+ <div class="row why-shop-wrap"> 
     <div class="container">
       <ul>
         <li>
