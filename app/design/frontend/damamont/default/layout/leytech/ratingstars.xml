@@ -9,7 +9,7 @@
 -->
 <layout version="0.1.0">
     <!-- Product reviews page -->
-    <review_product_list translate="label">
+    <catalog_product_view translate="label">
         <reference name="head">
             <action method="addJs" ifconfig="leytech_ratingstars/settings/include_jquery">
                 <script>leytech/ratingstars/jquery/jquery-3.2.1.min.js</script>
@@ -30,5 +30,5 @@
                 <template helper="leytech_ratingstars/switchTemplate" />
             </action>
         </reference>
-    </review_product_list>
+    </catalog_product_view>
 </layout>
