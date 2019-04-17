@@ -53,31 +53,31 @@
                                     <col class="review-value"/>
                                 </colgroup>
                                 <tbody>
-                                <?php foreach ($_votes as $_vote): ?>
-                                    <tr>
-                                        <th><?php echo $this->escapeHtml($_vote->getRatingCode()) ?></th>
-                                        <td>
-                                            <div class="rating-box">
-                                                <div class="rating"
-                                                     style="width:<?php echo $_vote->getPercent() ?>%;"></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                <?php endforeach; ?>
+                                    <?php foreach ($_votes as $_vote): ?>
+                                        <tr>
+                                            <th><?php echo $this->escapeHtml($_vote->getRatingCode()) ?></th>
+                                            <td>
+                                                <div class="rating-box">
+                                                    <div class="rating"
+                                                    style="width:<?php echo $_vote->getPercent() ?>%;"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         <?php endif; ?>
 
 
                         <span class="review-meta">
-                    <?php echo $this->__('Review by %s', $this->escapeHtml($_review->getNickname())) ?>
-                    /
-                   <?php echo $this->__('(Posted on %s)', $this->formatDate($_review->getCreatedAt()), 'long') ?>
-                </span>
+                            <?php echo $this->__('Review by %s', $this->escapeHtml($_review->getNickname())) ?>
+                            
+                            <?php echo $this->__('(Posted on %s)', $this->formatDate($_review->getCreatedAt()), 'long') ?>
+                        </span>
                     </dd>
                 </div>
             <?php endforeach; ?>
         </div>
 
-      <?php endif; ?>
+    <?php endif; ?>
 </div>

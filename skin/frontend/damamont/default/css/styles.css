@@ -233,9 +233,12 @@ body, html{font-family: 'Abel', sans-serif; margin: 0; padding: 0; min-height: 1
     	text-transform: uppercase;
     	font-size: 23px;
     }
-    .product-view-wrap .owl-nav img{
+    .product-view-wrap .owl-nav img,
+    .like-item-slide .owl-nav img,
+    .review-slider .owl-nav img{
     	height: 60px;
     }
+    .box-up-sell .ratings{display: none; }
     .nav-primary li{
     	padding-left: 12px;
     	padding-right: 12px;
@@ -730,15 +733,17 @@ video {
 	position: absolute;
 	left: -3%;
 	top: 50%;
-	max-width: 35px;
+	max-width: 55px;
 	transform: translateY(-50%);
 }
-
+.cart-table .button2{
+    font-size: 14px;
+}
 .review-slider .owl-next {
 	position: absolute;
 	right: -3%;
 	top: 50%;
-	max-width: 35px;
+	max-width: 55px;
 	transform: translateY(-50%);
 }
 .review-slider .owl-stage {
@@ -1578,9 +1583,13 @@ span.h3.cart__subtotal {
 
 .add-btn:hover, .add-btn:focus{ color:#fff;background:#F7931E}
 
-.product-view-wrap .owl-item img{width:auto; margin:0 auto}
-.product-view-wrap {position:relative}
-.product-view-wrap .owl-prev {
+.owl-nav img{width:auto; margin:0 auto}
+.product-view-wrap .owl-item img,
+.like-item-slide .owl-nav img{width:auto; margin:0 auto}
+.product-view-wrap,.like-item-slide,.review-slider {position:relative}
+.product-view-wrap .owl-prev,
+.like-item-slide .owl-prev,
+.review-slider .owl-prev{
 	position: absolute;
 	left: -50px;
 	top: 50%;
@@ -1588,7 +1597,9 @@ span.h3.cart__subtotal {
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
-.product-view-wrap .owl-next {
+.product-view-wrap .owl-next,
+.like-item-slide .owl-next,
+.review-slider .owl-next {
 	position: absolute;
 	right: -50px;
 	top: 50%;
@@ -1596,8 +1607,9 @@ span.h3.cart__subtotal {
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
-.product-view-wrap .item{border:1px solid transparent; padding:5px;}
-.product-view-wrap .item:hover{border:1px solid grey;}
+.product-view-wrap .item,
+.like-item-slide .item{border:1px solid transparent; padding:5px;}
+.product-view-wrap .item:hover,.like-item-slide .item:hover{border:1px solid grey;}
 
 
 .grid__item.large--two-thirds.push--large--one-sixth {
@@ -1762,7 +1774,7 @@ span#CartCount, span#CartCountt {
 	.about-left{width: 70%}
 	.about-right{width: 30%}
 	.section-right:before{width: 30%}
-	.product-view-wrap{width:87%; margin:0 auto;}
+	.product-view-wrap,.like-item-slide{margin:0 auto;}
 }
 
 /* about us css end */
@@ -1814,14 +1826,24 @@ span#CartCount, span#CartCountt {
 .about-right{padding: 25px 25px 60px;}
 /* about us css end*/
 
-.like-item-slide .owl-prev img, .like-item-slide .owl-next img, .product-view-wrap .owl-prev img, .product-view-wrap .owl-next img{width:17px;}
+.like-item-slide .owl-prev img, 
+.like-item-slide .owl-next img, 
+
+.product-view-wrap .owl-prev img, 
+.product-view-wrap .owl-next img,
+.review-slider .owl-next,.review-slider .owl-prev{width:17px;}
+
 .like-item-slide{width:80%; margin:0 auto;}
+
 .like-item-slide .owl-prev{left:-40px}
 .like-item-slide .owl-next{right:-40px;}
 .subtotal_warp{padding-right:49px;}
-.product-view-wrap{width:80%; margin:0 auto;}
-.product-view-wrap .owl-next{right:-32px;}
-.product-view-wrap .owl-prev{left:-32px;}
+.product-view-wrap,.like-item-slide{width:80%; margin:0 auto;}
+.product-view-wrap .owl-next,
+.like-item-slide .owl-next,
+.review-slider .owl-next{right:-32px;}
+.product-view-wrap .owl-prev,.like-item-slide .owl-prev,
+.review-slider .owl-prev{left:-32px;}
 
 }
 @media only screen and (max-width: 992px) {
@@ -3960,9 +3982,9 @@ cart-table tr {
   clear: both;
 }
 .cart-table span.or {
-  font-size: 9px;
-  padding: 0 5px;
-  text-transform: uppercase;
+    font-size: 14px;
+    padding: 0 5px;
+    text-transform: uppercase;
 }
 .cart-table .product-cart-image .cart-links,
 .cart-table .product-cart-info .btn-remove,
@@ -5018,7 +5040,10 @@ margin-left: 0;
 .button2:focus {
   outline: none;
 }
-
+input[type="radio"], input[type="checkbox"]{
+    display: inline-block;
+    vertical-align: bottom;
+}
 .button2 span,
 .button2 span span {
   line-height: 30px;
@@ -5026,13 +5051,13 @@ margin-left: 0;
   text-decoration: underline;
   text-transform: uppercase;
   display: inline-block;
-  color: #3399cc;
+  color: #f89521;
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 .button2 span:hover,
 .button2 span span:hover {
   text-decoration: none;
-  color: #246b8f;
+  color: #f9ae56;
 }
 
 @media only screen and (max-width: 770px) {
