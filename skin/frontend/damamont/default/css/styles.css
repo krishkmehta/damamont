@@ -166,7 +166,7 @@ body, html{font-family: 'Abel', sans-serif; margin: 0; padding: 0; min-height: 1
     	margin-top: 45px;
     }
     .preal-fact{display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row-reverse; flex-direction: row-reverse; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; position: relative; padding-top:0px;}
-    .border-img{width: 49.5%;}
+    .border-img{width: 47%;}
     .border-img img{width: 100%;}
     .brown-border{position: relative;}
     .brown-border a:after{position: absolute; content: ""; height: 90%; width: 90%; border: 1px solid grey; display: block; opacity: 0.48; top:5%; left: 5%; right: 5%; bottom: 5%; }
@@ -734,11 +734,13 @@ video {
     font-size: 18px;
 }
 .product-view-text h5 a{font-size:14px; letter-spacing:0.030em; color:#000; font-family: Georgia, serif;}
-.product-view-text h5 {font-size:18px; letter-spacing:0.030em; line-height: 1.5; font-weight: normal;color:#000; font-family: Georgia, serif; margin: 0;} .product-view-text p{font-size:12px; letter-spacing:0.030em; margin:0; font-family: Georgia, serif;}
+.product-view-text h5 {margin: 0; min-height: 54px;font-size:18px; letter-spacing:0.030em; line-height: 1.5; font-weight: normal;color:#000; font-family: Georgia, serif; margin: 0;} .product-view-text p{font-size:12px; letter-spacing:0.030em; margin:0; font-family: Georgia, serif;} 
 /* @media only screen and (max-width: 1200px) {
 .sub-nav{margin-left: 194px;}
   
 } */
+
+.price-box-buy{margin-top: 10px;}
 .col-right.sidebar{display: none; }
 
 .why-shop-wrap{background:#babfc2; margin-top:50px}
@@ -1637,9 +1639,13 @@ span.h3.cart__subtotal {
 }
 .product-view-wrap .item,
 .like-item-slide .item{border:1px solid transparent; padding:5px;}
-.product-view-wrap .item:hover,.like-item-slide .item:hover{border:1px solid grey;}
+.like-item-slide .item:hover{border:1px solid grey;}
 
-
+.action-btn .btn-full {
+    padding: 8px 8px;
+    border: 1px solid #d0d0d0;
+    font-size: 18px;
+}
 .grid__item.large--two-thirds.push--large--one-sixth {
 	padding: 50px 50px;
 	text-align: justify;

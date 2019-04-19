@@ -26,13 +26,18 @@
 ?>
 
 <?php if (($_products = $this->getProductCollection()) && $_products->getSize()): ?>
-<div class="container home_collections product-view-wrapper  spaceofsections">
-
-    <h2 class="aa text-left"><?php echo $this->__('D\'amalicious ideas') ?></h2>
-
+<div class="container home_collections spaceofsections text-center">
+    <div class="fix-position-wrap">
+        <div class="fix-position">
+            <h2>Picked for You</h2>
+        </div>
+    </div>
+</div>
+<div class="container">
     <div class="product-view-wrap product-carousel owl-carousel owl-loaded owl-drag">
         <?php echo $this->getPagerHtml() ?>
-        <?php $_columnCount = $this->getColumnCount(); ?>
+        <?php $_columnCount = 3 ?>
+        <?php // $_columnCount = $this->getColumnCount(); ?>
         <?php $i = 0;
         foreach ($_products->getItems() as $_product): ?>
 
@@ -42,7 +47,7 @@
                 <div class="product-view-text">
                     <h5><?php echo $this->stripTags($_product->getName(), null, true) ?></h5>
                     <?php echo $this->getPriceHtml($_product, true, '-widget-new-grid') ?>
-                    <div class="price-box">
+                    <div class="price-box-buy">
                         <a href="#" class="btn btn-cart">Buy Now</a>
                     </div>
                 </div>
