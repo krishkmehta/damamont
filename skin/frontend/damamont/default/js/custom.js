@@ -38,9 +38,9 @@ jQuery(document).ready(function ($) {
     jQuery(document).on('click',
         '.collection-review .rating-links a,' +
         '.collection-review .no-rating a',function (e) {
-        e.preventDefault();
+            e.preventDefault();
 
-    })
+        })
 
     jQuery('.product-carousel').owlCarousel({
         loop: true,
@@ -96,6 +96,7 @@ jQuery(document).ready(function () {
     jQuery('.search-icon').click(function () {
         jQuery(this).addClass('search-active');
         jQuery(this).closest('.input-box').addClass('is_search_active')
+        jQuery(this).next('input').focus();
         jQuery('#overlay').addClass('is-active');
     });
     jQuery('.menu-close-mobile').click(function () {
