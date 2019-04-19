@@ -61,6 +61,27 @@ jQuery(document).ready(function ($) {
             }
         }
     })
+
+    jQuery('.product-widget-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        dots: true,
+        nav: false,
+        navText: ["<img src='//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/LeftArrow.svg?0'>", "<img src='//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/RightArrow.svg?0'>"],
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 3
+            }
+        }
+    })
+
 });
 
 jQuery(window).scroll(function () {
