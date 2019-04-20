@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62bce157-2ade-489f-87fc-72e0ac8d9044" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/page.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/catalog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/catalog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/3columns.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/3columns.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/review/product/view/list.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/review/product/view/list.phtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +17,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/layout/catalog.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="117" column="95" selection-start-line="117" selection-start-column="95" selection-end-line="117" selection-end-column="95" />
+            <state relative-caret-position="391">
+              <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/review/product/view/review.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="734">
+              <caret line="80" selection-start-line="80" selection-end-line="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/review/product/view/list.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="57" column="52" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -24,16 +47,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/layout/local.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1325">
+            <state relative-caret-position="220">
               <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/layout/page.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
+            <state relative-caret-position="252">
               <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
             </state>
           </provider>
@@ -48,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/3columns.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-166">
-              <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
+            <state relative-caret-position="236">
+              <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -88,8 +111,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>reloadP</find>
-      <find>S_IMAGES</find>
       <find>con</find>
       <find>console.lo</find>
       <find>ok</find>
@@ -118,6 +139,8 @@
       <find>col-left sidebar col-left-first</find>
       <find>page-title category-title</find>
       <find>catalog/layer/view.phtml</find>
+      <find>catalog_category_layered</find>
+      <find>col-left sidebar</find>
     </findStrings>
     <replaceStrings>
       <replace>ssscustom</replace>
@@ -167,13 +190,11 @@
         <option value="$PROJECT_DIR$/app/design/frontend/rwd/default/template/catalog/product/view.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/local.xml" />
         <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/template/review/product/view/review.phtml" />
-        <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/template/review/product/view/list.phtml" />
         <option value="$PROJECT_DIR$/skin/frontend/damamont/default/js/app.js" />
         <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/leytech/ratingstars.xml" />
         <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/review/helper/summary.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/template/review/helper/summary.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/template/catalog/product/view.phtml" />
-        <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/catalog.xml" />
         <option value="$PROJECT_DIR$/js/lib/damamont/index.php" />
         <option value="$PROJECT_DIR$/js/leytech/ratingstars/rateyo/damamont/checkExist.php" />
         <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/template/catalog/product/widget/new/content/new_grid.phtml" />
@@ -182,8 +203,10 @@
         <option value="$PROJECT_DIR$/app/design/frontend/base/default/template/page/2columns-left.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/rwd/default/template/page/3columns.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/template/catalog/category/view.phtml" />
-        <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/3columns.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/page.xml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/catalog.xml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/template/review/product/view/list.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/3columns.phtml" />
       </list>
     </option>
   </component>
@@ -293,7 +316,7 @@
               <item name="damamont" type="462c0819:PsiDirectoryNode" />
               <item name="default" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="review" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
@@ -304,19 +327,7 @@
               <item name="damamont" type="462c0819:PsiDirectoryNode" />
               <item name="default" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name="catalog" type="462c0819:PsiDirectoryNode" />
-              <item name="category" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
-              <item name="damamont" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="design" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="damamont" type="462c0819:PsiDirectoryNode" />
-              <item name="default" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="review" type="462c0819:PsiDirectoryNode" />
               <item name="product" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -328,7 +339,9 @@
               <item name="damamont" type="462c0819:PsiDirectoryNode" />
               <item name="default" type="462c0819:PsiDirectoryNode" />
               <item name="template" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="review" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
@@ -539,12 +552,12 @@
       <workItem from="1554995115845" duration="2033000" />
       <workItem from="1555129344885" duration="3900000" />
       <workItem from="1555154496180" duration="10912000" />
-      <workItem from="1555697517362" duration="3569000" />
+      <workItem from="1555697517362" duration="5346000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58389000" />
+    <option name="totallyTimeSpent" value="60166000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="25" width="1313" height="743" extended-state="6" />
@@ -621,6 +634,10 @@
       </breakpoints>
     </breakpoint-manager>
   </component>
+  <component name="XPathView.XPathProjectComponent">
+    <history />
+    <find-history />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/code/community/Jvs/FileAttribute/Model/Attribute/Backend/File.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -682,20 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="96" column="69" selection-start-line="96" selection-start-column="69" selection-end-line="96" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/review/product/view/review.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="79" column="14" selection-start-line="30" selection-start-column="8" selection-end-line="79" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/review/product/view/list.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -901,13 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/3columns.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-166">
-          <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/rwd/default/layout/catalog.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -915,24 +911,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/layout/catalog.xml">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/layout/page.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="117" column="95" selection-start-line="117" selection-start-column="95" selection-end-line="117" selection-end-column="95" />
+        <state relative-caret-position="252">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/layout/local.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1325">
+        <state relative-caret-position="220">
           <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/layout/page.xml">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/layout/catalog.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+        <state relative-caret-position="391">
+          <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/review/product/view/review.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="734">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/review/product/view/list.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="57" column="52" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/3columns.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
         </state>
       </provider>
     </entry>
