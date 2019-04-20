@@ -42,6 +42,7 @@
                                 <?php echo $this->escapeHtml($_review->getTitle()) ?>
                             </a>
                         </h6>
+
                         <div class="ratings">
                             <?php $_votes = $_review->getRatingVotes(); ?>
 
@@ -53,9 +54,12 @@
                                         <div class="rating"
                                         style="width:<?php echo $_vote->getPercent() ?>%;"></div>
                                     </div>
-                                    <?php echo $this->escapeHtml($_vote->getRatingCode()) ?>
+
                                 <?php endforeach; ?>
                             <?php endif; ?>
+                            <?php
+                            echo $_review->getNickname();
+                            ?>
                         </div>  
                     </div>
                 </div>
