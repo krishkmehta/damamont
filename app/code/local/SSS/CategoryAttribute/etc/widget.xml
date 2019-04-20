@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <widgets>
-    <KinexWidget_CategoryList type="KinexWidget/categorylist">
+    <SSSWidget_CategoryList type="SSSWidget/categorylist">
         <name>Category List</name>
         <description type="desc">Category List On Home Page</description>
-    </KinexWidget_CategoryList>
+    </SSSWidget_CategoryList>
 </widgets>

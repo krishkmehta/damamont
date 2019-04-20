@@ -17,4 +17,15 @@
             </SSSWidget>
         </helpers>
     </global>
+     <frontend>
+         <routers>
+             <newsletter>
+                 <args>
+                     <modules>
+                         <SSS_Custom before="Mage_Newsletter_SubscriberController">SSS_Custom</SSS_Custom>
+                     </modules>
+                  </args>
+             </newsletter>
+         </routers>
+     </frontend>
 </config>

@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Kinex_CategoryAttribute>
+        <SSS_CategoryAttribute>
             <version>0.0.2</version>
-        </Kinex_CategoryAttribute>
+        </SSS_CategoryAttribute>
     </modules>
     <global>
         <blocks>
-            <KinexWidget>
-                <class>Kinex_CategoryAttribute_Block</class>
-            </KinexWidget>
+            <SSSWidget>
+                <class>SSS_CategoryAttribute_Block</class>
+            </SSSWidget>
         </blocks>
         <helpers>
-            <KinexWidget>
-                <class>Kinex_CategoryAttribute_Helper</class>
-            </KinexWidget>
+            <SSSWidget>
+                <class>SSS_CategoryAttribute_Helper</class>
+            </SSSWidget>
         </helpers>
         <resources>
             <km_category_attribute>
                 <setup>
-                    <module>Kinex_CategoryAttribute</module>
+                    <module>SSS_CategoryAttribute</module>
                 </setup>
                 <connection>
                     <use>core_setup</use>

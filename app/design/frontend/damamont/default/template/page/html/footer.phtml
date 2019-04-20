@@ -24,6 +24,13 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
+<div class="footer-container container">
+	<div class="col-md-5 newsletter_wrap">
+		<div class="footer">
+			<?php echo $this->getChildHtml() ?>
+			</div>
+		</div>
+	</div>
 <div class="mobile-contact">
 	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer-address-block')->toHtml(); 
 	?> 
@@ -39,7 +46,7 @@ echo $filter->filter('{{widget type="SSSWidget/footerlink"}}');
 	<div class="col-md-5 newsletter_wrap">
 		<div class="footer">
 
-			<?php echo $this->getChildHtml() ?>
+			
 			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('follow-us')->toHtml(); ?>
 		</div>
 		<?php echo $this->getCopyright() ?>

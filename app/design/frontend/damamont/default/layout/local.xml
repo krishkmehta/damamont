@@ -58,4 +58,16 @@
 		</reference>
 
 	</default>
+
+		<catalog_category_default>
+			<reference name="root">
+				<action method="setTemplate"><template>page/3columns.phtml</template></action>
+			</reference>
+		</catalog_category_default>
+		<catalog_category_layered>
+			<reference name="root">
+				<action method="setTemplate"><template>page/3columns.phtml</template></action>
+			</reference>
+		</catalog_category_layered>
+
 </layout> 

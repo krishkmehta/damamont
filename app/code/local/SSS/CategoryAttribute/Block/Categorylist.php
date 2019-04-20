@@ -1,6 +1,6 @@
 <?php
 
-class Kinex_CategoryAttribute_Block_Categorylist extends Mage_Core_Block_Template
+class SSS_CategoryAttribute_Block_Categorylist extends Mage_Core_Block_Template
     implements Mage_Widget_Block_Interface
 {
 
@@ -84,5 +84,3 @@ class Kinex_CategoryAttribute_Block_Categorylist extends Mage_Core_Block_Templat
 
     }
 }
-
-;

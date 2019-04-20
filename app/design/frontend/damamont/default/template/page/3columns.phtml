@@ -73,7 +73,7 @@
 
                         }
                         ?>
-                        <div class="">
+                        <div class="d">
 
                             <div class="page-title category-title">
                                 <div class="text">
@@ -90,8 +90,7 @@
                     }
                     ?>
 
-                    <?php
-                    if (!$cat->getCollectionCategory()): ?>
+                    <?php if (!$cat->getCollectionCategory()): ?>
                         <?php // This left_first block will display above the main content on smaller viewports ?>
                         <?php if ($_leftContent = $this->getChildHtml('left_first')): ?>
                             <div class="col-left sidebar col-left-first"><?php echo $_leftContent; ?></div>
