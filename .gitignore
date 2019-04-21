@@ -5,6 +5,8 @@
 
 /app/etc/local.xml
 
+/old
+
 /media/*
 !/media/.htaccess
 
