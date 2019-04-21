@@ -33,84 +33,92 @@
 <!DOCTYPE html>
 
 <!--[if lt IE 7 ]>
-<html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie6"> <![endif]-->
+    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>
-<html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie7"> <![endif]-->
+    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie7"> <![endif]-->
 <!--[if IE 8 ]>
-<html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie8"> <![endif]-->
+    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie8"> <![endif]-->
 <!--[if IE 9 ]>
-<html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js"> <!--<![endif]-->
+    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie9"> <![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js"> <!--<![endif]-->
 
-<head>
-    <?php echo $this->getChildHtml('head') ?>
-</head>
-<body<?php echo $this->getBodyClass() ? ' class="' . $this->getBodyClass() . '"' : '' ?>>
-<?php echo $this->getChildHtml('after_body_start') ?>
-<div class="wrapper">
-    <?php echo $this->getChildHtml('global_notices') ?>
-    <div class="page">
-        <?php echo $this->getChildHtml('header') ?>
-        <div class="main-container col3-layout">
-            <div class="main">
-                <?php echo $this->getChildHtml('breadcrumbs') ?>
-                <div class="col-wrapper">
-                    <?php $currentCategory = Mage::registry('current_category') ?>
-                    <?php
-                    $_helper = $this->helper('catalog/output');
-                    $subats_ids = array();
-                    if ($currentCategory) {
-                        $cat = Mage::getModel('catalog/category')->load($currentCategory->getId());
+    <head>
+        <?php echo $this->getChildHtml('head') ?>
+    </head>
+    <body<?php echo $this->getBodyClass() ? ' class="' . $this->getBodyClass() . '"' : '' ?>>
+    <?php echo $this->getChildHtml('after_body_start') ?>
+    <div class="wrapper">
+        <?php echo $this->getChildHtml('global_notices') ?>
+        <div class="page">
+            <?php echo $this->getChildHtml('header') ?>
+            <div class="main-container col3-layout">
+                <div class="main">
+                    <?php echo $this->getChildHtml('breadcrumbs') ?>
+                    <div class="col-wrapper">
+                        <?php $currentCategory = Mage::registry('current_category') ?>
+                        <?php
+                        $_helper = $this->helper('catalog/output');
+                        $subats_ids = array();
+                        if ($currentCategory) {
+                            $cat = Mage::getModel('catalog/category')->load($currentCategory->getId());
 
-                        if ($cat->getCollectionCategory()) {
-                            /*Returns comma separated ids*/
-                            $subcats = $cat->getChildren();
+                            if ($cat->getCollectionCategory()) {
+                                /*Returns comma separated ids*/
+                                $subcats = $cat->getChildren();
 
 
-                            $subats_ids = explode(',', $subcats);
-                            $subats_ids = array_filter($subats_ids);
+                                $subats_ids = explode(',', $subcats);
+                                $subats_ids = array_filter($subats_ids);
+
+                            }
+                            ?>
+                            <div class="breadcrumbs-wrap">
+
+                                <div class="page-title category-title">
+                                    <div class="text">
+
+                                        <h1>
+                                            &#46;<?php echo $_helper->categoryAttribute($cat, $cat->getName(), 'name') ?>
+                                        &#46;</h1>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <?php
 
                         }
                         ?>
-                        <div class="d">
-
-                            <div class="page-title category-title">
-                                <div class="text">
-
-                                    <h1>
-                                        &#46;<?php echo $_helper->categoryAttribute($cat, $cat->getName(), 'name') ?>
-                                        &#46;</h1>
+                        <div class="clearfix filter-col-wrap">
+                            <div class="container">
+                                <div class="row">
+                                    <?php if (!$cat->getCollectionCategory()): ?>
+                                        <?php // This left_first block will display above the main content on smaller viewports 
+$_leftContent = $this->getChildHtml('left_first')
+                                        ?>
+                                        <?php if ($_leftContent): ?>
+                                            <div class="col-md-2 col-sm-3 col-left sidebar col-left-first"><?php echo $_leftContent; ?></div>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+                                    <div class="<?php echo (!$cat->getCollectionCategory() && $_leftContent)?'col-md-10 col-sm-9':'col-md-12' ?>">
+                                        <?php echo $this->getChildHtml('global_messages') ?>
+                                        <?php echo $this->getChildHtml('content') ?>
+                                    </div>
                                 </div>
+                                <div class="col-left sidebar"><?php echo $this->getChildHtml('left') ?></div>
+                                <div class="col-right sidebar"><?php echo $this->getChildHtml('right') ?></div>
+
                             </div>
                         </div>
-
-                        <?php
-
-                    }
-                    ?>
-
-                    <?php if (!$cat->getCollectionCategory()): ?>
-                        <?php // This left_first block will display above the main content on smaller viewports ?>
-                        <?php if ($_leftContent = $this->getChildHtml('left_first')): ?>
-                            <div class="col-left sidebar col-left-first"><?php echo $_leftContent; ?></div>
-                        <?php endif; ?>
-                    <?php endif; ?>
-                    <div class="col-main">
-                        <?php echo $this->getChildHtml('global_messages') ?>
-                        <?php echo $this->getChildHtml('content') ?>
                     </div>
-                    <div class="col-left sidebar"><?php echo $this->getChildHtml('left') ?></div>
                 </div>
-                <div class="col-right sidebar"><?php echo $this->getChildHtml('right') ?></div>
             </div>
+            <?php echo $this->getChildHtml('footer_before') ?>
+            <?php echo $this->getChildHtml('footer') ?>
+            <?php echo $this->getChildHtml('global_cookie_notice') ?>
+            <?php echo $this->getChildHtml('before_body_end') ?>
         </div>
-        <?php echo $this->getChildHtml('footer_before') ?>
-        <?php echo $this->getChildHtml('footer') ?>
-        <?php echo $this->getChildHtml('global_cookie_notice') ?>
-        <?php echo $this->getChildHtml('before_body_end') ?>
     </div>
-</div>
-<?php echo $this->getAbsoluteFooter() ?>
+    <?php echo $this->getAbsoluteFooter() ?>
 </body>
 </html>
