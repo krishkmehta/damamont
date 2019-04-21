@@ -2059,6 +2059,7 @@ span#CartCount, span#CartCountt {
 .menu-close-mobile{
     display: none;
 }
+/* Quick link */
 .quick-link-wrap{
     margin-bottom: 40px;
 }
