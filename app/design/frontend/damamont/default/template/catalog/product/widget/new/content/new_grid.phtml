@@ -26,33 +26,37 @@
 ?>
 
 <?php if (($_products = $this->getProductCollection()) && $_products->getSize()): ?>
-    <div class="container home_collections product-view-wrapper  spaceofsections">
-
-        <h2 class="aa text-left"><?php echo $this->__('D\'amalicious ideas') ?></h2>
-
-        <div class="product-view-wrap product-carousel owl-carousel owl-loaded owl-drag">
-            <?php echo $this->getPagerHtml() ?>
-            <?php $_columnCount = $this->getColumnCount(); ?>
-            <?php $i = 0;
-            foreach ($_products->getItems() as $_product): ?>
-
-                <div class="item">
-                    <div class="product-view-img"
-                         style="background-image: url('<?php echo $this->helper('catalog/image')
-                             ->init($_product, 'small_image')->resize(270, 180) ?>');"><img class="productImage" style="display:
-                    none;" alt="" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')
-                            ->resize(270, 180) ?>" height="180" width="270">
-                        <div class="product-view-text">
-                            <h5><?php echo $this->stripTags($_product->getName(), null, true) ?></h5>
-                            <img alt="<?php echo $this->stripTags($_product->getName(), null, true) ?>"
-                                 src="http://damamont.arnaventerprises.co/media/wysiwyg/images/dama-logo-sm.png"
-                                 height="20" width="80">
-                            <p><?php echo $this->getPriceHtml($_product, true, '-widget-new-grid') ?>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach; ?>
+<div class="container home_collections spaceofsections text-center">
+    <div class="fix-position-wrap">
+        <div class="fix-position">
+            <h2>Picked for You</h2>
         </div>
     </div>
+</div>
+<div class="container">
+    <div class="product-view-wrap product-widget-carousel owl-carousel owl-loaded owl-drag">
+        <?php echo $this->getPagerHtml() ?>
+        <?php $_columnCount = 3 ?>
+        <?php // $_columnCount = $this->getColumnCount(); ?>
+        <?php $i = 0;
+        foreach ($_products->getItems() as $_product): ?>
+
+
+            <div class="item">
+                <div class="product-view-img"><img class="productImage" alt="" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')
+                ->resize(300, 300) ?>">
+                <div class="product-view-text">
+                    <h5><a href="<?php echo $_product->getProductUrl(); ?>" class=""><?php echo
+                            $this->stripTags($_product->getName(), null, true) ?></a></h5>
+                    <?php echo $this->getPriceHtml($_product, true, '-widget-new-grid') ?>
+                    <div class="price-box-buy">
+                        <a href="<?php echo $_product->getProductUrl(); ?>" class="btn btn-cart">Buy Now</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</div>
+</div>
 <?php endif; ?>

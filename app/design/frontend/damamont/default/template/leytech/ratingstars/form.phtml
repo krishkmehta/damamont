@@ -6,7 +6,7 @@
  * @license    https://opensource.org/licenses/MIT  The MIT License  (MIT)
  */
 ?>
-<div class="form-add review-adding-form">
+<div class="form-add review-adding-form small-contact-wrap">
     <h2><?php // echo $this->__('Write Your Own Review') ?></h2>
     <?php if ($this->getAllowWriteReviewFlag()): ?>
         <form action="<?php echo $this->getAction() ?>" method="post" id="review-form">
@@ -16,7 +16,7 @@
             <span><?php echo $this->escapeHtml($this->getProductInfo()->getName()) ?></span>
         </h3>
 
-        <div class="fieldset small-contact-wrap" style="margin-top:0">
+        <div class="fieldset " style="margin-top:0">
             <?php if( $this->getRatings() && $this->getRatings()->getSize()): ?>
             <h3><?php echo $this->__('How do you rate this product?') ?> <em class="required">*</em></h3>
             <div id="product-review-stars">

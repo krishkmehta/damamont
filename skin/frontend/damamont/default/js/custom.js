@@ -38,9 +38,9 @@ jQuery(document).ready(function ($) {
     jQuery(document).on('click',
         '.collection-review .rating-links a,' +
         '.collection-review .no-rating a',function (e) {
-        e.preventDefault();
+            e.preventDefault();
 
-    })
+        })
 
     jQuery('.product-carousel').owlCarousel({
         loop: true,
@@ -61,6 +61,27 @@ jQuery(document).ready(function ($) {
             }
         }
     })
+
+    jQuery('.product-widget-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        dots: true,
+        nav: false,
+        navText: ["<img src='//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/LeftArrow.svg?0'>", "<img src='//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/RightArrow.svg?0'>"],
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 3
+            }
+        }
+    })
+
 });
 
 jQuery(window).scroll(function () {
@@ -96,6 +117,7 @@ jQuery(document).ready(function () {
     jQuery('.search-icon').click(function () {
         jQuery(this).addClass('search-active');
         jQuery(this).closest('.input-box').addClass('is_search_active')
+        jQuery(this).next('input').focus();
         jQuery('#overlay').addClass('is-active');
     });
     jQuery('.menu-close-mobile').click(function () {
