@@ -82,14 +82,14 @@
                         ->load($menuId);
                     if ($menu->getIsActive()) {
                        $block = $this->getLayout()->createBlock('scandi_menumanager/custom')->setMenuId($menuId);
-                       if($block->_fillMenuTree()) {
+
                            ?>
                            <li class="menu-<?php echo $menuId; ?>">
                                <a href="#"><?php echo $menu->getTitle(); ?></a>
                                <?php echo $block->toHtml(); ?>
                            </li>
                            <?php
-                       }
+
                     }
                 }
 
