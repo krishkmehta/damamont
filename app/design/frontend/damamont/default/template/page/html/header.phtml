@@ -93,8 +93,9 @@
                     }
                 }
 
-
                 ?>
+                <li><?php echo  $this->getLayout()->createBlock("page/switch")->setTemplate('page/switch/languages.phtml')
+                        ->toHtml() ?></li>
             </ul>
         </div>
     </nav>
