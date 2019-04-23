@@ -75,7 +75,6 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
     {
         $this->setTemplate('scandi/menumanager/menu.phtml');
     }
-
     /**
      * Return loaded menu
      *
@@ -86,7 +85,6 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
         if ($this->_menuModel) {
             return $this->_menuModel;
         }
-
         if ($menuId = $this->getData('menu_id')) {
             $menu = Mage::getModel('scandi_menumanager/menu')
                 ->setStoreId(Mage::app()->getStore()->getId())
@@ -113,14 +111,13 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
      */
     public function getMenuHtml()
     {
+
         if ($this->getMenu() && $this->_fillMenuTree()) {
-            return '<ul class="menu-manager-menu menu-type-' . $this->_menuModel->getType() . ' '
+            return '<ul class="menu-manager-_fillMenuTreemenu menu-type-' . $this->_menuModel->getType() . ' '
                 . $this->_menuModel->getCssClass() . '">'
                 . $this->_getMenuHtml($this->_menu)
-                . $this->_getCustomHtml();
-                '</ul>';
+                . '</ul>';
         }
-
         return false;
     }
 
@@ -288,7 +285,7 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
      *
      * @return bool
      */
-    protected  function _fillMenuTree()
+    protected function _fillMenuTree()
     {
         $collection = $this->_getMenuItemCollection();
 
@@ -364,7 +361,9 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
         );
     }
 
-    protected function _getCustomHtml(){
-        return  $this->getLayout()->createBlock("page/switch")->setTemplate('page/switch/languages.phtml')->toHtml();
+    protected function _getCustomHtml()
+    {
+        return "<li>".$this->getLayout()->createBlock("page/switch")->setTemplate('page/switch/languages.phtml')
+        ->toHtml(). "</li>";
     }
 }
