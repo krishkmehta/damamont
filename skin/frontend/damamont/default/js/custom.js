@@ -82,7 +82,7 @@ jQuery(document).ready(function ($) {
         }
     })
 
-    var currencySwitcher = jQuery('#select-currency').selectric({
+    var currencySwitcher = jQuery('#select-language').selectric({
         openOnHover: false,
         onInit: function () {
             var selected = jQuery('.currency-switcher .selectric-items .selected span')[0];
