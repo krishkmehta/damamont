@@ -36,6 +36,12 @@
 			</action>
 			<action method="addItem">
 				<type>skin_js</type>
+				<name>js/jquery.selectric.min.js</name>
+				<params/>
+			</action>
+
+			<action method="addItem">
+				<type>skin_js</type>
 				<name>js/custom.js</name>
 				<params/>
 			</action>

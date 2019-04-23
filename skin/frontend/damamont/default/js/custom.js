@@ -19,7 +19,7 @@ CustomAccordion.prototype.dropdown = function (e) {
     console.log(jQuery(this));
 
     var $this = jQuery(this),
-    $next = $this.next();
+        $next = $this.next();
 
     $next.slideToggle();
     $this.toggleClass('open')
@@ -37,7 +37,7 @@ jQuery(document).ready(function ($) {
 
     jQuery(document).on('click',
         '.collection-review .rating-links a,' +
-        '.collection-review .no-rating a',function (e) {
+        '.collection-review .no-rating a', function (e) {
             e.preventDefault();
 
         })
@@ -82,6 +82,21 @@ jQuery(document).ready(function ($) {
         }
     })
 
+    var currencySwitcher = jQuery('#select-currency').selectric({
+        openOnHover: false,
+        onInit: function () {
+            var selected = jQuery('.currency-switcher .selectric-items .selected span')[0];
+            jQuery(selected).clone().prependTo('.currency-switcher .selectric .label');
+            jQuery('.currency-switcher .selectric-items .selected').remove();
+        }, optionsItemBuilder: function (itemData, element, index) {
+            return element.val().length ? '<span class="icon icon-' + itemData.text + '"></span>' + itemData.text : itemData.text;
+        }, onChange: function (element) {
+            var selected = jQuery('.currency-switcher .selectric-items .selected span')[0];
+            jQuery(selected).clone().prependTo('.currency-switcher .selectric .label');
+            jQuery(element).change();
+        }
+    });
+
 });
 
 jQuery(window).scroll(function () {
@@ -98,22 +113,22 @@ jQuery(window).scroll(function () {
 
 jQuery(document).ready(function () {
 
-    jQuery("#overlay").click(function(){
+    jQuery("#overlay").click(function () {
         jQuery(this).removeClass('is-active');
         jQuery('.input-box').removeClass('is_search_active');
     });
-    jQuery(".header-minicart .skip-cart").click(function(){
+    jQuery(".header-minicart .skip-cart").click(function () {
         jQuery('.backdrop').addClass('active');
     });
-    jQuery('.backdrop').click(function(){
+    jQuery('.backdrop').click(function () {
         jQuery(this).removeClass('active');
         jQuery('#header-cart').removeClass('skip-active');
         jQuery('.skip-cart').removeClass('skip-active');
     });
-    jQuery('.skip-link-close').click(function(){
+    jQuery('.skip-link-close').click(function () {
         jQuery('.backdrop').removeClass('active');
     });
-    
+
     jQuery('.search-icon').click(function () {
         jQuery(this).addClass('search-active');
         jQuery(this).closest('.input-box').addClass('is_search_active')
