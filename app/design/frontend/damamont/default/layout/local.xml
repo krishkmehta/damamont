@@ -30,6 +30,10 @@
 			</action>
 			<action method="addItem">
 				<type>skin_css</type>
+				<name>css/selectric.css</name>
+			</action>
+			<action method="addItem">
+				<type>skin_css</type>
 				<name>css/owl.carousel.min.css</name>
 			</action>
 			<action method="addItem">
