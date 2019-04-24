@@ -90,7 +90,7 @@ jQuery(document).ready(function ($) {
             jQuery('.form-language .selectric-items .selected').remove();
         }, optionsItemBuilder: function (itemData, element, index) {
             var flags = itemData.element.data('flag');
-            return element.val().length ? '<span style="background-image: url('+flags+')" class="ico ico-' + element.val() +  '"></span>' + itemData.text : itemData.text;
+            return element.val().length ? '<span style="background-image: url('+flags+')" class="ico ico-' + itemData.text +  '"></span>' + itemData.text : itemData.text;
 
         }, onChange: function (element) {
             var selected = jQuery('.form-language .selectric-items .selected span')[0];
@@ -154,10 +154,10 @@ jQuery(document).ready(function () {
     var headerHeight = jQuery('.header-container').outerHeight();
     jQuery('body:not(.cms-home)').css({'paddingTop': headerHeight});
 
-    jQuery(".popup-flag").simplePopup({ type: "html", htmlSelector: "#flag-container" });
-    jQuery(".popup-flag2").simplePopup({ type: "html", htmlSelector: "#flag-container2" });
+     jQuery(".popup-flag").simplePopup({ type: "html", htmlSelector: "#flag-container" });
+     jQuery(".popup-flag2").simplePopup({ type: "html", htmlSelector: "#flag-container2" });
 });
 jQuery(function() {
-    jQuery( '.mobile_menu #dl-menu' ).dlmenu();
+    jQuery( '#dl-menu' ).dlmenu();
 });
 
