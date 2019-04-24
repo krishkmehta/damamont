@@ -7,47 +7,6 @@
             <?php echo $this->getChildHtml('topSearch') ?>
             <?php echo $this->getChildHtml('currency_switcher') ?>
 
-            <div id="dl-menu" class="dl-menuwrapper">
-                <button class="dl-trigger">Open Menu</button>
-                <ul class="dl-menu">
-                    <li>
-                        <a href="#">NEW ARRIVALS</a>
-                    </li>
-                    <li>
-                        <a href="#">RINGS</a>
-                    </li>
-                    <li>
-                        <a href="#">EARRINGS</a>
-                    </li>
-                    <li>
-                        <a href="#">BRACELETS</a>
-                    </li>
-                    <li>
-                        <a href="#">NECKLACES</a>
-                    </li>
-                    <li>
-                        <a href="#">ACCESSORIES</a>
-                    </li>
-                    <li>
-                        <a href="#">SHOP BY COLLECTION</a>
-                        <ul class="dl-submenu">
-                            <li> <a href="#">COLLECTIONS</a> </li>
-                            <li><a href="#">STRETCH </a></li>
-                            <li><a href="#">VIVA D’AMA</a></li>
-                            <li><a href="#">ACRYLIC</a></li>
-                            <li><a href="#">D’AMA CASE</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">CONTACT US</a>
-                    </li>
-                    <li>
-                        <a href="#">GIFT CARDS</a>
-                    </li>
-
-                </ul>
-            </div>
-
         </div>
         <div class="col-3 text-center">
             <?php if ($this->getIsHomePage()): ?>
@@ -115,9 +74,12 @@
             <?php echo $this->getChildHtml('topMenu') ?>
         </div>
         <div class="mobile_menu">
-            <ul class="mboile_menu">
+
+            <div id="dl-menu" class="dl-menuwrapper">
+                <button class="dl-trigger">Open Menu</button>
+                <ul class="dl-menu">
                 <?php
-                $menus = array(1, 2, 3, 4);
+                $menus = array(1, 2);
                 foreach ($menus as $menuId) {
                     $menu = Mage::getModel('scandi_menumanager/menu')
                     ->setStoreId(Mage::app()->getStore()->getId())

@@ -113,8 +113,8 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
     {
 
         if ($this->getMenu() && $this->_fillMenuTree()) {
-            return '<ul class="menu-manager-_fillMenuTreemenu menu-type-' . $this->_menuModel->getType() . ' '
-            . $this->_menuModel->getCssClass() . '">'
+            return '<ul class="dl-submenu menu-type-' . $this->_menuModel->getType() . ' '
+            . '">'
             . $this->_getMenuHtml($this->_menu)
             . '</ul>';
         }

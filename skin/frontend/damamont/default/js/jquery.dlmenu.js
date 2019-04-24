@@ -13,7 +13,7 @@
 	'use strict';
 
 	// global
-	var Modernizr = window.Modernizr, $body = $( 'body' );
+	var Modernizr = window.ModernizrCustom, $body = $( 'body' );
 
 	$.DLMenu = function( options, element ) {
 		this.$el = $( element );

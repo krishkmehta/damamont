@@ -34,7 +34,7 @@
 			</action>
 			<action method="addItem">
 				<type>skin_js</type>
-				<name>js/modernizr.custom.js</name>
+				<name>js/modernizr.custom.min.js</name>
 				<params/>
 			</action>
 			<action method="addItem">
