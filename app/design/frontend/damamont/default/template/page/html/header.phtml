@@ -6,68 +6,110 @@
             <?php echo $this->getChildHtml('store_language') ?>
             <?php echo $this->getChildHtml('topSearch') ?>
             <?php echo $this->getChildHtml('currency_switcher') ?>
+
+            <div id="dl-menu" class="dl-menuwrapper">
+                <button class="dl-trigger">Open Menu</button>
+                <ul class="dl-menu">
+                    <li>
+                        <a href="#">NEW ARRIVALS</a>
+                    </li>
+                    <li>
+                        <a href="#">RINGS</a>
+                    </li>
+                    <li>
+                        <a href="#">EARRINGS</a>
+                    </li>
+                    <li>
+                        <a href="#">BRACELETS</a>
+                    </li>
+                    <li>
+                        <a href="#">NECKLACES</a>
+                    </li>
+                    <li>
+                        <a href="#">ACCESSORIES</a>
+                    </li>
+                    <li>
+                        <a href="#">SHOP BY COLLECTION</a>
+                        <ul class="dl-submenu">
+                            <li> <a href="#">COLLECTIONS</a> </li>
+                            <li><a href="#">STRETCH </a></li>
+                            <li><a href="#">VIVA D’AMA</a></li>
+                            <li><a href="#">ACRYLIC</a></li>
+                            <li><a href="#">D’AMA CASE</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">CONTACT US</a>
+                    </li>
+                    <li>
+                        <a href="#">GIFT CARDS</a>
+                    </li>
+
+                </ul>
+            </div>
+
         </div>
         <div class="col-3 text-center">
             <?php if ($this->getIsHomePage()): ?>
                 <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img
+                    src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>"/></a>
+                    <?php else: ?>
+                        <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img
                             src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>"/></a>
-            <?php else: ?>
-                <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img
-                            src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>"/></a>
-            <?php endif ?>
-        </div>
-        <div class="col-3">
-            <?php //echo $this->getChildHtml('topLinks') ?>
-            <!-- Cart -->
+                        <?php endif ?>
+                    </div>
+                    <div class="col-3">
+                        <?php //echo $this->getChildHtml('topLinks') ?>
+                        <!-- Cart -->
 
 
-            <div class="account-cart-wrapper">
-                <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>"
-                   data-target-element="#header-account">
-                             <span class="account-icon">
+                        <div class="account-cart-wrapper">
+                            <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>"
+                               data-target-element="#header-account">
+                               <span class="account-icon">
                                 <img height="28" src="<?php echo $this->getSkinUrl('images/user-icon.svg') ?>" alt=""/>
                             </span>
-                </a>
+                        </a>
 
-                <!-- Cart -->
+                        <!-- Cart -->
 
-                <div class="header-minicart">
-                    <?php echo $this->getChildHtml('minicart_head'); ?>
+                        <div class="header-minicart">
+                            <?php echo $this->getChildHtml('minicart_head'); ?>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
         <!-- <div class="quick-access">
                 <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
 
             </div> -->
 
-        <?php echo $this->getChildHtml('topContainer'); ?>
-    </div>
-    <nav class="main-navigation">
-        <div class="sub-menu-header clearfix">
-            <div class="profile-image pull-left">
-
-            </div>
-            <span class="pull-left profile-text-wrap"><div class="greeting"> Hello <?php
-                    if ($this->helper('customer')->isLoggedIn()) {
-                        echo Mage::getSingleton('customer/session')->getCustomer()->getName();
-                    } else {
-                        echo 'Guest';
-                    } ?>
+            <?php echo $this->getChildHtml('topContainer'); ?>
         </div>
-        <?php
-        if ($this->helper('customer')->isLoggedIn()) {
-            ?>
-            <a href="<?php echo Mage::getUrl('customer/account'); ?>">Account</a>
-            <a href="<?php echo Mage::getUrl('customer/account/logout'); ?>"><?php echo $this->__('Log out'); ?></a>
-        <?php } else {
-            ?>
-            <a href="<?php echo Mage::getUrl('customer/account/login'); ?>"><?php echo $this->__('Log in'); ?></a>
-            <span> or</span>
-            <a href="<?php echo Mage::getUrl('customer/account/create'); ?>"><?php echo $this->__('Sign Up');
+        <nav class="main-navigation">
+            <div class="sub-menu-header clearfix">
+                <div class="profile-image pull-left">
+
+                </div>
+                <span class="pull-left profile-text-wrap"><div class="greeting"> Hello <?php
+                if ($this->helper('customer')->isLoggedIn()) {
+                    echo Mage::getSingleton('customer/session')->getCustomer()->getName();
+                } else {
+                    echo 'Guest';
+                } ?>
+            </div>
+            <?php
+            if ($this->helper('customer')->isLoggedIn()) {
+                ?>
+                <a href="<?php echo Mage::getUrl('customer/account'); ?>">Account</a>
+                <a href="<?php echo Mage::getUrl('customer/account/logout'); ?>"><?php echo $this->__('Log out'); ?></a>
+            <?php } else {
+                ?>
+                <a href="<?php echo Mage::getUrl('customer/account/login'); ?>"><?php echo $this->__('Log in'); ?></a>
+                <span> or</span>
+                <a href="<?php echo Mage::getUrl('customer/account/create'); ?>"><?php echo $this->__('Sign Up');
                 ?></a>
-        <?php } ?>
-        <div class="menu-close-mobile">×</div>
+            <?php } ?>
+            <div class="menu-close-mobile">×</div>
         </div>
         <div id="utilities">
             <?php echo $this->getChildHtml('topMenu') ?>
@@ -78,25 +120,25 @@
                 $menus = array(1, 2, 3, 4);
                 foreach ($menus as $menuId) {
                     $menu = Mage::getModel('scandi_menumanager/menu')
-                        ->setStoreId(Mage::app()->getStore()->getId())
-                        ->load($menuId);
+                    ->setStoreId(Mage::app()->getStore()->getId())
+                    ->load($menuId);
                     if ($menu->getIsActive()) {
                        $block = $this->getLayout()->createBlock('scandi_menumanager/custom')->setMenuId($menuId);
 
-                           ?>
-                           <li class="menu-<?php echo $menuId; ?>">
-                               <a href="#"><?php echo $menu->getTitle(); ?></a>
-                               <?php echo $block->toHtml(); ?>
-                           </li>
-                           <?php
+                       ?>
+                       <li class="menu-<?php echo $menuId; ?>">
+                           <a href="#"><?php echo $menu->getTitle(); ?></a>
+                           <?php echo $block->toHtml(); ?>
+                       </li>
+                       <?php
 
-                    }
-                }
+                   }
+               }
 
-                ?>
-                <li><?php echo  $this->getLayout()->createBlock("page/switch")->setTemplate('page/switch/languages.phtml')
-                        ->toHtml() ?></li>
-            </ul>
-        </div>
-    </nav>
+               ?>
+               <li><?php echo  $this->getLayout()->createBlock("page/switch")->setTemplate('page/switch/languages.phtml')
+               ->toHtml() ?></li>
+           </ul>
+       </div>
+   </nav>
 </div>

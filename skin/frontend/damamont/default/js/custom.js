@@ -19,7 +19,7 @@ CustomAccordion.prototype.dropdown = function (e) {
     console.log(jQuery(this));
 
     var $this = jQuery(this),
-        $next = $this.next();
+    $next = $this.next();
 
     $next.slideToggle();
     $this.toggleClass('open')
@@ -89,7 +89,7 @@ jQuery(document).ready(function ($) {
             jQuery(selected).clone().prependTo('.currency-switcher .selectric .label');
             jQuery('.currency-switcher .selectric-items .selected').remove();
         }, optionsItemBuilder: function (itemData, element, index) {
-            return element.val().length ? '<span class="icon icon-' + itemData.text + '"></span>' + itemData.text : itemData.text;
+            return element.val().length ? '<span style="'+itemData.data('flag')+'" class="icon icon-' + itemData.text + '"></span>' + itemData.text : itemData.text;
         }, onChange: function (element) {
             var selected = jQuery('.currency-switcher .selectric-items .selected span')[0];
             jQuery(selected).clone().prependTo('.currency-switcher .selectric .label');
@@ -152,4 +152,8 @@ jQuery(document).ready(function () {
     var headerHeight = jQuery('.header-container').outerHeight();
     jQuery('body:not(.cms-home)').css({'paddingTop': headerHeight});
 
+
+});
+jQuery(function() {
+    jQuery( '#dl-menu' ).dlmenu();
 });

@@ -20,7 +20,10 @@
 				<rel>stylesheet</rel>
 				<href>https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css</href>
 			</action>
-			
+			<action method="addItem">
+				<type>skin_css</type>
+				<name>css/component.css</name>
+			</action>
 			<action method="addItem">
 				<type>skin_css</type>
 				<name>css/bootstrap.css</name>
@@ -31,7 +34,17 @@
 			</action>
 			<action method="addItem">
 				<type>skin_js</type>
+				<name>js/modernizr.custom.js</name>
+				<params/>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
 				<name>js/owl.carousel.min.js</name>
+				<params/>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/jquery.dlmenu.js</name>
 				<params/>
 			</action>
 			<action method="addItem">
@@ -40,6 +53,7 @@
 				<params/>
 			</action>
 
+			
 			<action method="addItem">
 				<type>skin_js</type>
 				<name>js/custom.js</name>
@@ -65,15 +79,15 @@
 
 	</default>
 
-		<catalog_category_default>
-			<reference name="root">
-				<action method="setTemplate"><template>page/3columns.phtml</template></action>
-			</reference>
-		</catalog_category_default>
-		<catalog_category_layered>
-			<reference name="root">
-				<action method="setTemplate"><template>page/3columns.phtml</template></action>
-			</reference>
-		</catalog_category_layered>
+	<catalog_category_default>
+		<reference name="root">
+			<action method="setTemplate"><template>page/3columns.phtml</template></action>
+		</reference>
+	</catalog_category_default>
+	<catalog_category_layered>
+		<reference name="root">
+			<action method="setTemplate"><template>page/3columns.phtml</template></action>
+		</reference>
+	</catalog_category_layered>
 
 </layout> 
