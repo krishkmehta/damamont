@@ -152,8 +152,9 @@ jQuery(document).ready(function () {
     var headerHeight = jQuery('.header-container').outerHeight();
     jQuery('body:not(.cms-home)').css({'paddingTop': headerHeight});
 
-
+    jQuery(".popup-flag").simplePopup({ type: "html", htmlSelector: "#flag-container" });
 });
 jQuery(function() {
     jQuery( '.mobile_menu #dl-menu' ).dlmenu();
 });
+

@@ -75,6 +75,7 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
     {
         $this->setTemplate('scandi/menumanager/menu.phtml');
     }
+
     /**
      * Return loaded menu
      *
@@ -87,8 +88,8 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
         }
         if ($menuId = $this->getData('menu_id')) {
             $menu = Mage::getModel('scandi_menumanager/menu')
-            ->setStoreId(Mage::app()->getStore()->getId())
-            ->load($menuId);
+                ->setStoreId(Mage::app()->getStore()->getId())
+                ->load($menuId);
 
             if ($menu->getIsActive()) {
                 if ($this->getData('custom_type')) {
@@ -114,9 +115,10 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
 
         if ($this->getMenu() && $this->_fillMenuTree()) {
             return '<ul class="dl-menu menu-type-' . $this->_menuModel->getType() . ' '
-            . '">'
-            . $this->_getMenuHtml($this->_menu)
-            . '</ul>';
+                . '">'
+                . $this->_getMenuHtml($this->_menu)
+                . $this->_getCustomHtml()
+                . '</ul>';
         }
         return false;
     }
@@ -322,9 +324,9 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
     protected function _getMenuItemCollection()
     {
         return Mage::getModel('scandi_menumanager/item')->getCollection()
-        ->addMenuFilter($this->_menuModel)
-        ->setPositionOrder()
-        ->addStatusFilter();
+            ->addMenuFilter($this->_menuModel)
+            ->setPositionOrder()
+            ->addStatusFilter();
     }
 
     /**
@@ -363,7 +365,7 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
 
     protected function _getCustomHtml()
     {
-        return "<li>".$this->getLayout()->createBlock("page/switch")->setTemplate('page/switch/languages.phtml')
-        ->toHtml(). "</li>";
+        return "<li>" . $this->getLayout()->createBlock("page/switch")->setTemplate('page/switch/languages.phtml')
+                ->toHtml() . "</li>";
     }
 }
