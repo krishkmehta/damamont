@@ -1,8 +1,7 @@
 <div class="header-container">
     <div class="backdrop"></div>
     <div class="header">
-        <img class="hamburger-menu" height="25" src="<?php echo $this->getSkinUrl('images/hamburger-menu.svg') ?>">
-        <div class="col-3">
+       <div class="col-3">
             <?php echo $this->getChildHtml('store_language') ?>
             <?php echo $this->getChildHtml('topSearch') ?>
             <?php echo $this->getChildHtml('currency_switcher') ?>
@@ -73,33 +72,32 @@
         <div id="utilities">
             <?php echo $this->getChildHtml('topMenu') ?>
         </div>
-        <div class="mobile_menu">
 
-            <div id="dl-menu" class="dl-menuwrapper">
-                <button class="dl-trigger">Open Menu</button>
-
-                <?php
-                $menus = array(1, 2);
-                foreach ($menus as $menuId) {
-                    $menu = Mage::getModel('scandi_menumanager/menu')
-                        ->setStoreId(Mage::app()->getStore()->getId())
-                        ->load($menuId);
-                    if ($menu->getIsActive()) {
-                        $block = $this->getLayout()->createBlock('scandi_menumanager/custom')->setMenuId($menuId);
-
-                        ?>
-
-                        <?php echo $block->toHtml(); ?>
-
-                        <?php
-
-                    }
-                }
-
-                ?>
-                <?php echo $this->getLayout()->createBlock("page/switch")->setTemplate('page/switch/languages.phtml')
-                    ->toHtml() ?>
-
-            </div>
     </nav>
+    <div class="mobile_menu">
+        <div id="dl-menu" class="dl-menuwrapper">
+            <button class="dl-trigger">Open Menu</button>
+
+            <?php
+            $menus = array(1, 2);
+            foreach ($menus as $menuId) {
+                $menu = Mage::getModel('scandi_menumanager/menu')
+                    ->setStoreId(Mage::app()->getStore()->getId())
+                    ->load($menuId);
+                if ($menu->getIsActive()) {
+                    $block = $this->getLayout()->createBlock('scandi_menumanager/custom')->setMenuId($menuId);
+
+                    ?>
+
+                    <?php echo $block->toHtml(); ?>
+
+                    <?php
+
+                }
+            }
+
+            ?>
+
+        </div>
+    </div>
 </div>
