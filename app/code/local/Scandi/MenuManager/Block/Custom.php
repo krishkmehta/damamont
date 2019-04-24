@@ -113,7 +113,7 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
     {
 
         if ($this->getMenu() && $this->_fillMenuTree()) {
-            return '<ul class="dl-submenu menu-type-' . $this->_menuModel->getType() . ' '
+            return '<ul class="dl-menu menu-type-' . $this->_menuModel->getType() . ' '
             . '">'
             . $this->_getMenuHtml($this->_menu)
             . '</ul>';
@@ -161,7 +161,7 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
             }
 
             if ($child->hasChildren()) {
-                $html .= '<ul class="level' . $childLevel . '">';
+                $html .= '<ul class="dl-submenu  level' . $childLevel . '">';
                 $html .= $this->_getMenuHtml($child);
                 $html .= '</ul>';
             }

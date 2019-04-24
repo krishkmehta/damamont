@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62bce157-2ade-489f-87fc-72e0ac8d9044" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/code/local/Scandi/MenuManager/Block/Custom.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/code/local/Scandi/MenuManager/Block/Custom.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skin/frontend/damamont/default/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/skin/frontend/damamont/default/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skin/frontend/damamont/default/js/jquery.dlmenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/skin/frontend/damamont/default/js/jquery.dlmenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skin/frontend/damamont/default/js/modernizr.custom.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,20 +13,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="81" column="35" lean-forward="true" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+            <state relative-caret-position="525">
+              <caret line="101" selection-start-line="101" selection-end-line="101" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/code/local/Scandi/MenuManager/Block/Custom.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="116" column="12" selection-start-line="116" selection-start-column="12" selection-end-line="116" selection-end-column="12" />
+            <state relative-caret-position="396">
+              <caret line="163" column="49" selection-start-line="163" selection-start-column="49" selection-end-line="163" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -181,9 +176,9 @@
         <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/local.xml" />
         <option value="$PROJECT_DIR$/skin/frontend/damamont/default/js/modernizr.custom.min.js" />
         <option value="$PROJECT_DIR$/skin/frontend/damamont/default/js/jquery.dlmenu.js" />
-        <option value="$PROJECT_DIR$/app/code/local/Scandi/MenuManager/Block/Custom.php" />
         <option value="$PROJECT_DIR$/skin/frontend/damamont/default/js/custom.js" />
         <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml" />
+        <option value="$PROJECT_DIR$/app/code/local/Scandi/MenuManager/Block/Custom.php" />
       </list>
     </option>
   </component>
@@ -412,7 +407,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65654000" />
+    <option name="totallyTimeSpent" value="65999000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="27" width="1313" height="741" extended-state="6" />
@@ -787,13 +782,6 @@
     <entry file="file://$PROJECT_DIR$/skin/frontend/damamont/default/js/jquery.selectric.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/local/Scandi/MenuManager/Block/Custom.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="116" column="12" selection-start-line="116" selection-start-column="12" selection-end-line="116" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/skin/frontend/damamont/default/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -810,8 +798,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="81" column="35" lean-forward="true" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+        <state relative-caret-position="525">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/local/Scandi/MenuManager/Block/Custom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="163" column="49" selection-start-line="163" selection-start-column="49" selection-end-line="163" selection-end-column="49" />
         </state>
       </provider>
     </entry>
