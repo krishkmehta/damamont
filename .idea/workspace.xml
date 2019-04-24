@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="62bce157-2ade-489f-87fc-72e0ac8d9044" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/code/local/Scandi/MenuManager/Block/Custom.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/code/local/Scandi/MenuManager/Block/Custom.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/design/frontend/base/default/layout/layerednav.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/base/default/layout/layerednav.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,11 +52,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="99" column="8" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
+              <caret line="99" selection-start-line="99" selection-end-line="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/code/community/FME/Layerednav/etc/config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="31" column="36" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/layout/layerednav.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="54" selection-start-line="52" selection-start-column="6" selection-end-line="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/layout/layerednav.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="54" lean-forward="true" selection-start-line="52" selection-start-column="11" selection-end-line="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/rwd/default/layout/layerednav.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="77" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -67,7 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>image.elevateZoom</find>
       <find>view</find>
       <find>review/re</find>
       <find>review_product_view</find>
@@ -97,6 +130,7 @@
       <find>dl-me</find>
       <find>alert</find>
       <find>slide</find>
+      <find>jqu</find>
     </findStrings>
     <replaceStrings>
       <replace>ssscustom</replace>
@@ -117,7 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/code/local/SSS/Block/FooterLinK.php" />
         <option value="$PROJECT_DIR$/app/code/local/SSS/Custom/Helper/data.php" />
         <option value="$PROJECT_DIR$/app/etc/modules/Kinex_Custom.xml" />
         <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/ssscustom/ssscustom.xml" />
@@ -167,6 +200,8 @@
         <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/local.xml" />
         <option value="$PROJECT_DIR$/app/code/local/Scandi/MenuManager/Block/Custom.php" />
         <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/base/default/layout/layerednav.xml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/layerednav.xml" />
       </list>
     </option>
   </component>
@@ -208,7 +243,42 @@
               <item name="damamont" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="local" type="462c0819:PsiDirectoryNode" />
+              <item name="community" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="community" type="462c0819:PsiDirectoryNode" />
+              <item name="FME" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="community" type="462c0819:PsiDirectoryNode" />
+              <item name="FME" type="462c0819:PsiDirectoryNode" />
+              <item name="Layerednav" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="community" type="462c0819:PsiDirectoryNode" />
+              <item name="FME" type="462c0819:PsiDirectoryNode" />
+              <item name="Layerednav" type="462c0819:PsiDirectoryNode" />
+              <item name="etc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="community" type="462c0819:PsiDirectoryNode" />
+              <item name="Leytech" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
@@ -216,26 +286,6 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="local" type="462c0819:PsiDirectoryNode" />
-              <item name="Scandi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
-              <item name="damamont" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="local" type="462c0819:PsiDirectoryNode" />
-              <item name="Scandi" type="462c0819:PsiDirectoryNode" />
-              <item name="MenuManager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
-              <item name="damamont" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="local" type="462c0819:PsiDirectoryNode" />
-              <item name="Scandi" type="462c0819:PsiDirectoryNode" />
-              <item name="MenuManager" type="462c0819:PsiDirectoryNode" />
-              <item name="Block" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
@@ -264,6 +314,33 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="design" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="damamont" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -278,6 +355,43 @@
             <path>
               <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
               <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="rwd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="rwd" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="rwd" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
               <item name="skin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -285,6 +399,21 @@
               <item name="damamont" type="462c0819:PsiDirectoryNode" />
               <item name="skin" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="skin" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="skin" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
@@ -310,6 +439,36 @@
               <item name="default" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="skin" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="skin" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="skin" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="rwd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="skin" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="rwd" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -325,11 +484,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/design/frontend/damamont/default/layout" />
       <recent name="$PROJECT_DIR$/skin/frontend/damamont/default/js" />
       <recent name="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page" />
       <recent name="$PROJECT_DIR$/js/lib/damamont" />
       <recent name="$PROJECT_DIR$/app/design/frontend/damamont/default/template/catalog/product/widget/new/content" />
-      <recent name="$PROJECT_DIR$/app/design/frontend/damamont/default/template/review/product/view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/skin/frontend/damamont/default/js" />
@@ -395,7 +554,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67415000" />
+    <option name="totallyTimeSpent" value="68346000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="27" width="1313" height="741" extended-state="6" />
@@ -477,30 +636,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/persistent/customer/form/register.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4080">
-          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/layout/paypaluk.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/customer/form/register.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="78" column="26" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/persistent/customer/form/login.phtml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/rwd/default/layout/leytech/ratingstars.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -794,7 +929,35 @@
     <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="99" column="8" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
+          <caret line="99" selection-start-line="99" selection-end-line="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/FME/Layerednav/etc/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="31" column="36" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/layout/layerednav.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="54" selection-start-line="52" selection-start-column="6" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/rwd/default/layout/layerednav.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="77" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/layout/layerednav.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="54" lean-forward="true" selection-start-line="52" selection-start-column="11" selection-end-line="54" />
         </state>
       </provider>
     </entry>
