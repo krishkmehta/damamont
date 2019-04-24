@@ -1,7 +1,7 @@
 <div class="header-container">
     <div class="backdrop"></div>
     <div class="header">
-     <div class="col-3">
+       <div class="col-3">
         <?php echo $this->getChildHtml('store_language') ?>
         <?php echo $this->getChildHtml('topSearch') ?>
         <?php echo $this->getChildHtml('currency_switcher') ?>
@@ -23,8 +23,8 @@
 
                     <div class="account-cart-wrapper">
                         <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>"
-                           data-target-element="#header-account">
-                           <span class="account-icon">
+                         data-target-element="#header-account">
+                         <span class="account-icon">
                             <img height="28" src="<?php echo $this->getSkinUrl('images/user-icon.svg') ?>" alt=""/>
                         </span>
                     </a>
@@ -77,7 +77,8 @@
     </nav>
     <div class="mobile_menu">
         <div id="dl-menu" class="dl-menuwrapper">
-            <button class="dl-trigger">Open Menu</button>
+            <img height="28" src="<?php echo $this->getSkinUrl('images/user-icon.svg') ?>" alt=""/>
+            <button class="dl-trigger"> <img src="<?php echo $this->getSkinUrl('images/hamburger-menu.svg') ?>" alt=""></button>
 
 
             <?php
