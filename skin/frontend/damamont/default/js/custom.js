@@ -82,20 +82,22 @@ jQuery(document).ready(function ($) {
         }
     })
 
-    // var currencySwitcher = jQuery('#select-language').selectric({
-    //     openOnHover: false,
-    //     onInit: function () {
-    //         // var selected = jQuery('.currency-switcher .selectric-items .selected span')[0];
-    //         // jQuery(selected).clone().prependTo('.currency-switcher .selectric .label');
-    //         // jQuery('.currency-switcher .selectric-items .selected').remove();
-    //     }, optionsItemBuilder: function (itemData, element, index) {
-    //         // return element.val().length ? '<span style="'+itemData.data('flag')+'" class="icon icon-' + itemData.text + '"></span>' + itemData.text : itemData.text;
-    //     }, onChange: function (element) {
-    //         // var selected = jQuery('.currency-switcher .selectric-items .selected span')[0];
-    //         // jQuery(selected).clone().prependTo('.currency-switcher .selectric .label');
-    //         // jQuery(element).change();
-    //     }
-    // });
+    var currencySwitcher = jQuery('.select-language').selectric({
+        openOnHover: false,
+        onInit: function () {
+            var selected = jQuery('.form-language .selectric-items .selected span')[0];
+            jQuery(selected).clone().prependTo('.form-language .selectric .label');
+            jQuery('.form-language .selectric-items .selected').remove();
+        }, optionsItemBuilder: function (itemData, element, index) {
+            var flags = itemData.element.data('flag');
+            return element.val().length ? '<span style="background-image: url('+flags+')" class="ico ico-' + element.val() +  '"></span>' + itemData.text : itemData.text;
+
+        }, onChange: function (element) {
+            var selected = jQuery('.form-language .selectric-items .selected span')[0];
+            jQuery(selected).clone().prependTo('.form-language .selectric .label');
+            jQuery(element).change();
+        }
+    });
 
 });
 
@@ -153,6 +155,7 @@ jQuery(document).ready(function () {
     jQuery('body:not(.cms-home)').css({'paddingTop': headerHeight});
 
     jQuery(".popup-flag").simplePopup({ type: "html", htmlSelector: "#flag-container" });
+    jQuery(".popup-flag2").simplePopup({ type: "html", htmlSelector: "#flag-container2" });
 });
 jQuery(function() {
     jQuery( '.mobile_menu #dl-menu' ).dlmenu();
