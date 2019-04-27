@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62bce157-2ade-489f-87fc-72e0ac8d9044" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/code/local/Scandi/MenuManager/Block/Custom.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/code/local/Scandi/MenuManager/Block/Custom.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/switch/flags.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/switch/flags.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/switch/languages.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/switch/languages.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skin/frontend/damamont/default/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/skin/frontend/damamont/default/js/custom.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,20 +24,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="60" column="74" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="74" />
+            <state relative-caret-position="100">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="n#div#0;n#div#1;n#div#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/code/local/Scandi/MenuManager/Block/Custom.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="151" column="61" selection-start-line="151" selection-start-column="61" selection-end-line="151" selection-end-column="61" />
+            <state relative-caret-position="113">
+              <caret line="153" column="20" selection-start-line="153" selection-start-column="20" selection-end-line="153" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -150,8 +148,8 @@
         <option value="$PROJECT_DIR$/skin/frontend/damamont/default/js/custom.js" />
         <option value="$USER_HOME$/Downloads/footer (2).php" />
         <option value="$USER_HOME$/Downloads/footer.php" />
-        <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml" />
         <option value="$PROJECT_DIR$/app/code/local/Scandi/MenuManager/Block/Custom.php" />
+        <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml" />
       </list>
     </option>
   </component>
@@ -523,18 +521,18 @@
       <workItem from="1555697517362" duration="5346000" />
       <workItem from="1556165185817" duration="4000" />
       <workItem from="1556211723398" duration="4501000" />
-      <workItem from="1556368403003" duration="2225000" />
+      <workItem from="1556368403003" duration="2566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78171000" />
+    <option name="totallyTimeSpent" value="78512000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="27" width="1313" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27940017" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27940017" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -604,7 +602,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml</url>
-          <line>14</line>
+          <line>31</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
@@ -936,17 +934,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml">
+    <entry file="file://$PROJECT_DIR$/app/code/local/Scandi/MenuManager/Block/Custom.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="60" column="74" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="74" />
+        <state relative-caret-position="113">
+          <caret line="153" column="20" selection-start-line="153" selection-start-column="20" selection-end-line="153" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/code/local/Scandi/MenuManager/Block/Custom.php">
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="151" column="61" selection-start-line="151" selection-start-column="61" selection-end-line="151" selection-end-column="61" />
+        <state relative-caret-position="100">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
