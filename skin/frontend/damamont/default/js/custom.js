@@ -85,16 +85,17 @@ jQuery(document).ready(function ($) {
     var currencySwitcher = jQuery('.select-language').selectric({
         openOnHover: false,
         onInit: function () {
-            var selected = jQuery('.form-language .selectric-items .selected span')[0];
-            jQuery(selected).clone().prependTo('.form-language .selectric .label');
-            jQuery('.form-language .selectric-items .selected').remove();
+            var selected = jQuery('#select-language .selectric-items .selected span')[0];
+            jQuery(selected).clone().prependTo('#select-language .selectric .label');
+            jQuery('#select-language .selectric-items .selected').remove();
+            var selected1 = jQuery('#select-language1 .selectric-items .selected span')[0];
+            jQuery(selected1).clone().prependTo('#select-language1 .selectric .label');
+            jQuery('#select-language1 .selectric-items .selected').remove();
         }, optionsItemBuilder: function (itemData, element, index) {
             var flags = itemData.element.data('flag');
             return element.val().length ? '<span style="background-image: url('+flags+')" class="ico ico-' + itemData.text +  '"></span>' + itemData.text : itemData.text;
 
         }, onChange: function (element) {
-            var selected = jQuery('.form-language .selectric-items .selected span')[0];
-            jQuery(selected).clone().prependTo('.form-language .selectric .label');
             jQuery(element).change();
         }
     });
