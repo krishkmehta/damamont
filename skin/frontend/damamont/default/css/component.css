@@ -868,35 +868,12 @@ All this is done for any sub-level being entered.
 	overflow-y: auto;
 	/*height: 100vh;*/
 }
-#dl-menu{
+/*#dl-menu{
 	position: absolute;
 }
-
-.simplePopup {
-	display:none;
-	position:fixed;
-	border:4px solid #808080;
-	background:#fff;
-	z-index:3;
-	padding:12px;
-	width:70%;
-	min-width:70%;
-}
-
-.simplePopupClose {
-	float:right;
-	cursor:pointer;
-	margin-left:10px;
-	margin-bottom:10px;
-}
-
-.simplePopupBackground {
-	display:none;
-	background:#000;
-	position:fixed;
-	height:100%;
-	width:100%;
-	top:0;
-	left:0;
-	z-index:1;
-}
+.header .flag_list{
+	max-width: 25px;
+	display: inline-block;
+	position: absolute;
+	top: 30px;
+}*/
