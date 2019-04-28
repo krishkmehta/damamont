@@ -5,6 +5,7 @@ var CustomAccordion = function (el, multiple) {
 
     // Variables privadas
     console.log(this.el);
+
     var links = this.el.find('a.heading_acc');
 
     // Evento
@@ -19,7 +20,7 @@ CustomAccordion.prototype.dropdown = function (e) {
     console.log(jQuery(this));
 
     var $this = jQuery(this),
-    $next = $this.next();
+        $next = $this.next();
 
     $next.slideToggle();
     $this.toggleClass('open')
@@ -31,7 +32,7 @@ CustomAccordion.prototype.dropdown = function (e) {
 
 jQuery(document).ready(function ($) {
 
-    jQuery(document).on('click', '.close-menu', function(e){
+    jQuery(document).on('click', '.close-menu', function (e) {
         alert("The span element was clicked.");
     });
     var accordion = new CustomAccordion($('.accordion'), false);
@@ -90,12 +91,12 @@ jQuery(document).ready(function ($) {
             var selected = jQuery('#select-language .selectric-items .selected span')[0];
             jQuery(selected).clone().prependTo('#select-language .selectric .label');
             jQuery('#select-language .selectric-items .selected').remove();
-            var selected1 = jQuery('#select-language1 .selectric-items .selected span')[0];
-            jQuery(selected1).clone().prependTo('#select-language1 .selectric .label');
-            jQuery('#select-language1 .selectric-items .selected').remove();
+            //var selected1 = jQuery('#select-language1 .selectric-items .selected span')[0];
+            //jQuery(selected1).clone().prependTo('#select-language1 .selectric .label');
+            //jQuery('#select-language1 .selectric-items .selected').remove();
         }, optionsItemBuilder: function (itemData, element, index) {
             var flags = itemData.element.data('flag');
-            return element.val().length ? '<span style="background-image: url('+flags+')" class="ico ico-' + itemData.text +  '"></span>' + itemData.text : itemData.text;
+            return element.val().length ? '<span style="background-image: url(' + flags + ')" class="ico ico-' + itemData.text + '"></span>' + itemData.text : itemData.text;
 
         }, onChange: function (element) {
             jQuery(element).change();
@@ -156,11 +157,19 @@ jQuery(document).ready(function () {
     ;
     var headerHeight = jQuery('.header-container').outerHeight();
     jQuery('body:not(.cms-home)').css({'paddingTop': headerHeight});
-
-    jQuery(".popup-flag").simplePopup({ type: "html", htmlSelector: "#flag-container" });
-    jQuery(".popup-flag2").simplePopup({ type: "html", htmlSelector: "#flag-container2" });
+    // jQuery(".popup-flag2").simplePopup({ type: "html", htmlSelector: "#flag-container2" });
 });
-jQuery(function() {
-    jQuery( '#dl-menu' ).dlmenu();
+
+jQuery(document).ready(function ($) {
+
+    jQuery('.popup-flag').click(function () {
+
+        jQuery('#flag-container').simplePopup();
+    });
+
+})
+
+jQuery(function () {
+    jQuery('#dl-menu').dlmenu();
 });
 

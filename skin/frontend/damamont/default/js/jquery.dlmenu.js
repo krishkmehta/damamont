@@ -68,9 +68,12 @@
 			this.open = false;
 			this.$trigger = this.$el.children( '.dl-trigger' );
 			this.$menu = this.$el.children( 'ul.dl-menu' );
-			this.$menuitems = this.$menu.find( 'li:not(.dl-back)' );
-			this.$el.find( 'ul.dl-submenu' ).prepend( '<li><div class="close-menu">X</div></li><li class="dl-back"><a href="#">back</a></li>' );
+			this.$el.find( 'ul.dl-submenu' ).prepend( '<li class="close-menu"><div >X</div></li><li class="dl-back"><a' +
+				' href="#">back</a></li>' );
+			this.$menuitems = this.$menu.find( 'li:not(.dl-back,.close-menu)' );
+
 			this.$back = this.$menu.find( 'li.dl-back' );
+			this.$closeMenu = this.$menu.find( 'li.close-menu' );
 		},
 		_initEvents : function() {
 
@@ -123,6 +126,13 @@
 				else {
 					self.options.onLinkClick( $item, event );
 				}
+
+			} );
+
+			this.$closeMenu.on( 'click.dlmenu', function( event ) {
+
+				self._closeMenu();
+				return false;
 
 			} );
 

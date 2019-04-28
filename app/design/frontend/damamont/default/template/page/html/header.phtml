@@ -8,8 +8,8 @@
             $menus = array(1, 2);
             foreach ($menus as $menuId) {
                 $menu = Mage::getModel('scandi_menumanager/menu')
-                ->setStoreId(Mage::app()->getStore()->getId())
-                ->load($menuId);
+                    ->setStoreId(Mage::app()->getStore()->getId())
+                    ->load($menuId);
                 if ($menu->getIsActive()) {
                     echo $this->getLayout()->createBlock('scandi_menumanager/custom')->setMenuId($menuId)->toHtml();
                 }
@@ -19,16 +19,16 @@
         </div>
 
         <div class="col-3">
-          <?php echo $this->getChildHtml('store_language') ?>
-          <?php echo $this->getChildHtml('topSearch') ?>
-          <?php echo $this->getChildHtml('currency_switcher') ?>
+            <?php echo $this->getChildHtml('store_language') ?>
+            <?php echo $this->getChildHtml('topSearch') ?>
+            <?php echo $this->getChildHtml('currency_switcher') ?>
 
-      </div>
-      <div class="col-3 text-center">
-        <?php if ($this->getIsHomePage()): ?>
-            <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
-                <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>"/>
-            </a>
+        </div>
+        <div class="col-3 text-center">
+            <?php if ($this->getIsHomePage()): ?>
+                <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
+                    <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>"/>
+                </a>
             <?php else: ?>
                 <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
                     <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>"/>
@@ -38,24 +38,27 @@
         <div class="col-3">
             <div class="account-cart-wrapper">
                 <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>"
-                 data-target-element="#header-account">
+                   data-target-element="#header-account">
                  <span class="account-icon">
                     <img height="28" src="<?php echo $this->getSkinUrl('images/user-icon.svg') ?>" alt=""/>
                 </span>
-            </a>
+                </a>
 
-            <div class="header-minicart">
-                <?php echo $this->getChildHtml('minicart_head'); ?>
+                <div class="header-minicart">
+                    <?php echo $this->getChildHtml('minicart_head'); ?>
+                </div>
             </div>
         </div>
+        <?php echo $this->getChildHtml('topContainer'); ?>
     </div>
-    <?php echo $this->getChildHtml('topContainer'); ?>
-</div>
-<nav class="main-navigation">
-    <div id="utilities">
-        <?php echo $this->getChildHtml('topMenu') ?>
-    </div>
-</nav>
-
-<!--        </div>-->
+    <nav class="main-navigation">
+        <div id="utilities">
+            <?php echo $this->getChildHtml('topMenu') ?>
+        </div>
+    </nav>
+    <?php
+    echo $this->getLayout()->createBlock("page/switch")->setTemplate('page/switch/flags_list.phtml')
+        ->toHtml()
+    ?>
+    <!--        </div>-->
 </div>
