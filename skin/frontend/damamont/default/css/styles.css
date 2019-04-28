@@ -2183,7 +2183,7 @@ span#CartCount, span#CartCountt {
     padding: 6px 10px;
 }
 @media only screen and (min-width: 768px) {
-    .mobile_menu{display: none;}
+    .mobile_menu,#dl-menu{display: none;} 
     .sub-menu-header{display: none; }
     .quick-link-wrap{display: none; }
     form#search_mini_form{margin-left: 75px;}

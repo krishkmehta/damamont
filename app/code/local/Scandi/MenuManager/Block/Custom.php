@@ -88,8 +88,8 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
         }
         if ($menuId = $this->getData('menu_id')) {
             $menu = Mage::getModel('scandi_menumanager/menu')
-                ->setStoreId(Mage::app()->getStore()->getId())
-                ->load($menuId);
+            ->setStoreId(Mage::app()->getStore()->getId())
+            ->load($menuId);
 
             if ($menu->getIsActive()) {
                 if ($this->getData('custom_type')) {
@@ -115,10 +115,11 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
 
         if ($this->getMenu() && $this->_fillMenuTree()) {
             return '<ul class="dl-menu menu-type-' . $this->_menuModel->getType() . ' '
-                . '">'
-                . $this->_getMenuHtml($this->_menu)
-                . $this->_getCustomHtml()
-                . '</ul>';
+            . '">'
+            . $this->__welcomeHtml()
+            . $this->_getMenuHtml($this->_menu)
+            . $this->_getCustomHtml()
+            . '</ul>';
         }
         return false;
     }
@@ -148,10 +149,10 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
 
             $html .= '<li class="' . $this->_getMenuItemClasses($child) . '">';
 
-            if ($child->getFullUrl()) {
+            if ($child->getFullUrl() && $child->getCssClass() !='customhtml') {
                 $html .= '<a href="' . $child->getFullUrl() . '" ' . $child->getType() . '>';
             } else {
-                $html .= '<span>';
+                $html .= '<div>';
             }
 
             $html .= '<span>' . $this->escapeHtml($child->getTitle()) . '</span>';
@@ -159,7 +160,7 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
             if ($child->getFullUrl()) {
                 $html .= '</a>';
             } else {
-                $html .= '</span>';
+                $html .= '</div>';
             }
 
             if ($child->hasChildren()) {
@@ -324,9 +325,9 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
     protected function _getMenuItemCollection()
     {
         return Mage::getModel('scandi_menumanager/item')->getCollection()
-            ->addMenuFilter($this->_menuModel)
-            ->setPositionOrder()
-            ->addStatusFilter();
+        ->addMenuFilter($this->_menuModel)
+        ->setPositionOrder()
+        ->addStatusFilter();
     }
 
     /**
@@ -365,7 +366,29 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
 
     protected function _getCustomHtml()
     {
-        return "<li>" . $this->getLayout()->createBlock("page/switch")->setTemplate('page/switch/languages.phtml')
-                ->toHtml() . "</li>";
+        return "<li  class='text-center' >" . $this->getLayout()->createBlock("page/switch")->setTemplate('page/switch/languages.phtml')
+        ->toHtml() . "</li>";
     }
+
+    protected function __welcomeHtml(){
+
+        $wc = '<li><div class="sub-menu-header clearfix">
+        <div class="profile-image pull-left"></div>';
+        $wc .= '<span class="pull-left profile-text-wrap"><div class="greeting">';
+        $wc .= $this->__('Hello ');
+        if (Mage::getSingleton('customer/session')->isLoggedIn()) :
+         $wc .= Mage::getSingleton('customer/session')->getCustomer()->getName();
+     $links =  '<a href="'.Mage::getUrl('customer/account').'">'.$this->__('Account').'</a>';
+     $links .='<span> or</span>';
+     $links .= '<a href="'.Mage::getUrl('customer/account/logout').$this->__('Log out').'</a>';
+ else:
+  $links =  '<a href="'.Mage::getUrl('customer/account/login').'">'.$this->__('Login').'</a>';
+  $links .='<span> or</span>';
+  $links .= '<a href="'.Mage::getUrl('customer/account/create').$this->__('Sign Up').'</a>';
+
+endif;
+
+$wc.= $links."</span></div></li>";
+return $wc;
+}
 }

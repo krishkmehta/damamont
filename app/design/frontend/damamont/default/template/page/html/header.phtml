@@ -1,83 +1,9 @@
 <div class="header-container">
     <div class="backdrop"></div>
     <div class="header">
-       <div class="col-3">
-        <?php echo $this->getChildHtml('store_language') ?>
-        <?php echo $this->getChildHtml('topSearch') ?>
-        <?php echo $this->getChildHtml('currency_switcher') ?>
-
-    </div>
-    <div class="col-3 text-center">
-        <?php if ($this->getIsHomePage()): ?>
-            <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img
-                src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>"/></a>
-                <?php else: ?>
-                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img
-                        src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>"/></a>
-                    <?php endif ?>
-                </div>
-                <div class="col-3">
-                    <?php //echo $this->getChildHtml('topLinks') ?>
-                    <!-- Cart -->
-
-
-                    <div class="account-cart-wrapper">
-                        <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>"
-                         data-target-element="#header-account">
-                         <span class="account-icon">
-                            <img height="28" src="<?php echo $this->getSkinUrl('images/user-icon.svg') ?>" alt=""/>
-                        </span>
-                    </a>
-
-                    <!-- Cart -->
-
-                    <div class="header-minicart">
-                        <?php echo $this->getChildHtml('minicart_head'); ?>
-                    </div>
-                </div>
-            </div>
-        <!-- <div class="quick-access">
-                <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
-
-            </div> -->
-
-            <?php echo $this->getChildHtml('topContainer'); ?>
-        </div>
-        <nav class="main-navigation">
-            <div class="sub-menu-header clearfix"> 
-                <div class="profile-image pull-left">
-
-                </div>
-                <span class="pull-left profile-text-wrap"><div class="greeting"> Hello <?php
-                if ($this->helper('customer')->isLoggedIn()) {
-                    echo Mage::getSingleton('customer/session')->getCustomer()->getName();
-                } else {
-                    echo 'Guest';
-                } ?>
-            </div>
-
-            <?php
-            if ($this->helper('customer')->isLoggedIn()) {
-                ?>
-                <a href="<?php echo Mage::getUrl('customer/account'); ?>">Account</a>
-                <a href="<?php echo Mage::getUrl('customer/account/logout'); ?>"><?php echo $this->__('Log out'); ?></a>
-            <?php } else {
-                ?>
-                <a href="<?php echo Mage::getUrl('customer/account/login'); ?>"><?php echo $this->__('Log in'); ?></a>
-                <span> or</span>
-                <a href="<?php echo Mage::getUrl('customer/account/create'); ?>"><?php echo $this->__('Sign Up');
-                ?></a>
-            <?php } ?>
-            <div class="menu-close-mobile">×</div>
-        </div>
-        <div id="utilities">
-            <?php echo $this->getChildHtml('topMenu') ?>
-        </div>
-
-    </nav>
-    <div class="mobile_menu">
         <div id="dl-menu" class="dl-menuwrapper">
-            <button class="dl-trigger"> <img src="<?php echo $this->getSkinUrl('images/hamburger-menu.svg') ?>" alt=""></button>
+            <button class="dl-trigger">Open Menu</button>
+
             <?php
             $menus = array(1, 2);
             foreach ($menus as $menuId) {
@@ -85,25 +11,51 @@
                 ->setStoreId(Mage::app()->getStore()->getId())
                 ->load($menuId);
                 if ($menu->getIsActive()) {
-                    $block = $this->getLayout()->createBlock('scandi_menumanager/custom')->setMenuId($menuId);
-
-                    ?>
-
-                    <?php echo $block->toHtml(); ?>
-
-                    <?php
-
+                    echo $this->getLayout()->createBlock('scandi_menumanager/custom')->setMenuId($menuId)->toHtml();
                 }
             }
 
             ?>
+        </div>
 
+        <div class="col-3">
+          <?php echo $this->getChildHtml('store_language') ?>
+          <?php echo $this->getChildHtml('topSearch') ?>
+          <?php echo $this->getChildHtml('currency_switcher') ?>
+
+      </div>
+      <div class="col-3 text-center">
+        <?php if ($this->getIsHomePage()): ?>
+            <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
+                <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>"/>
+            </a>
+            <?php else: ?>
+                <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
+                    <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>"/>
+                </a>
+            <?php endif ?>
+        </div>
+        <div class="col-3">
+            <div class="account-cart-wrapper">
+                <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>"
+                 data-target-element="#header-account">
+                 <span class="account-icon">
+                    <img height="28" src="<?php echo $this->getSkinUrl('images/user-icon.svg') ?>" alt=""/>
+                </span>
+            </a>
+
+            <div class="header-minicart">
+                <?php echo $this->getChildHtml('minicart_head'); ?>
+            </div>
         </div>
     </div>
+    <?php echo $this->getChildHtml('topContainer'); ?>
 </div>
+<nav class="main-navigation">
+    <div id="utilities">
+        <?php echo $this->getChildHtml('topMenu') ?>
+    </div>
+</nav>
 
-
-<a class="popup-flag btn btn-primary">Inline Content</a>
-<div id="flag-container">
-    dafdsf
+<!--        </div>-->
 </div>

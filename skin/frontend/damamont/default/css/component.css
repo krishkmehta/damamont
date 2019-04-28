@@ -1,14 +1,3 @@
-@font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot');
-	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/icomoon.woff') format('woff'),
-	url('../fonts/icomoon.ttf') format('truetype'),
-	url('../fonts/icomoon.svg#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
 /* Common styles of menus */
 
 .dl-menuwrapper {
@@ -20,6 +9,7 @@
 	perspective: 1000px;
 	-webkit-perspective-origin: 50% 200%;
 	perspective-origin: 50% 200%;
+	z-index: 1010;
 }
 
 .dl-menuwrapper:first-child {
@@ -27,19 +17,32 @@
 }
 
 .dl-menuwrapper button {
-	width: 23px;
-	background: none;
+	background: #ccc;
 	border: none;
-	top: -46px;
-	left: 10px;
-	position: absolute;
+	width: 48px;
+	height: 45px;
+	text-indent: -900em;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	outline: none;
 }
 
-.dl-menuwrapper button:hover,
-.dl-menuwrapper button.dl-active,
-.dl-menuwrapper ul {
+.dl-menuwrapper button:hover{
 	background: #aaa;
 }
+
+.dl-menuwrapper button:after {
+	content: '';
+	position: absolute;
+	width: 68%;
+	height: 5px;
+	background: #fff;
+	top: 10px;
+	left: 16%;
+	box-shadow: 0 10px 0 #fff, 0 20px 0 #fff;
+}
+
 .dl-menuwrapper ul {
 	padding: 0;
 	list-style: none;
@@ -147,7 +150,6 @@ All this is done for any sub-level being entered.
 .dl-menuwrapper > .dl-submenu {
 	position: absolute;
 	width: 100%;
-	top: 50px;
 	left: 0;
 	margin: 0;
 }
@@ -178,20 +180,7 @@ All this is done for any sub-level being entered.
 	-webkit-animation: MenuAnimOut5 0.4s ease;
 	animation: MenuAnimOut5 0.4s ease;
 }
-.newsletter_wrap-inner .validation-failed{
-	border-color: red;
-}
-.newsletter_wrap-inner .validation-advice{
-	color: red;
-}
-.selectric-items .ico {
-	height: 16px;
-	width: 19px;
-	display: inline-block;
-	background-size: contain;
-	background-repeat: no-repeat;
-	margin-right: 7px;
-}
+
 @-webkit-keyframes MenuAnimOut1 {
 	0% { }
 	50% {
@@ -816,4 +805,69 @@ All this is done for any sub-level being entered.
 .demo-5 .dl-menuwrapper button.dl-active,
 .demo-5 .dl-menuwrapper ul {
 	background: #643771;
+}
+
+
+
+.dl-menuwrapper li a{
+	color: #000;
+	text-decoration: none;
+	border-bottom: 1px solid #e0e0e0;
+}
+.demo-1 .dl-menuwrapper ul{
+	background: #fff;
+}
+.dl-menuwrapper .dl-menu{
+	border: 1px solid #e0e0e0;
+	position: fixed;
+	background: #fff;
+	top: 0;
+}
+
+/*Extra */
+.sub-menu-header {
+	background: #808080;
+	min-height: 52px;
+	padding: 6px 10px;
+}
+.pull-left {
+	float: left !important;
+}
+.profile-text-wrap {
+	line-height: 1.4;
+	color: #fff;
+	padding-left: 10px;
+}
+.profile-image {
+	height: 45px;
+	width: 45px;
+	border-radius: 50%;
+	background: #fff;
+}
+.no-touch .dl-menuwrapper .profile-text-wrap li a:hover{
+	background: none;
+}
+.dl-menuwrapper .profile-text-wrap a:hover{
+	background: none;
+}
+.dl-menuwrapper .profile-text-wrap a{
+	padding: 0;
+	background: none;
+	display: inline;
+	
+}
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+
+.dl-menuwrapper .dl-menu.dl-menuopen{
+	overflow-y: auto;
+	/*height: 100vh;*/
+}
+#dl-menu{
+	position: absolute;
 }

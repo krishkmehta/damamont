@@ -8,9 +8,9 @@
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
-;( function( $, window, undefined ) {
+ ;( function( $, window, undefined ) {
 
-	'use strict';
+ 	'use strict';
 
 	// global
 	var Modernizr = window.ModernizrCustom, $body = $( 'body' );
@@ -41,18 +41,18 @@
 			this._config();
 			
 			var animEndEventNames = {
-					'WebkitAnimation' : 'webkitAnimationEnd',
-					'OAnimation' : 'oAnimationEnd',
-					'msAnimation' : 'MSAnimationEnd',
-					'animation' : 'animationend'
-				},
-				transEndEventNames = {
-					'WebkitTransition' : 'webkitTransitionEnd',
-					'MozTransition' : 'transitionend',
-					'OTransition' : 'oTransitionEnd',
-					'msTransition' : 'MSTransitionEnd',
-					'transition' : 'transitionend'
-				};
+				'WebkitAnimation' : 'webkitAnimationEnd',
+				'OAnimation' : 'oAnimationEnd',
+				'msAnimation' : 'MSAnimationEnd',
+				'animation' : 'animationend'
+			},
+			transEndEventNames = {
+				'WebkitTransition' : 'webkitTransitionEnd',
+				'MozTransition' : 'transitionend',
+				'OTransition' : 'oTransitionEnd',
+				'msTransition' : 'MSTransitionEnd',
+				'transition' : 'transitionend'
+			};
 			// animation end event name
 			this.animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ] + '.dlmenu';
 			// transition end event name
@@ -69,7 +69,7 @@
 			this.$trigger = this.$el.children( '.dl-trigger' );
 			this.$menu = this.$el.children( 'ul.dl-menu' );
 			this.$menuitems = this.$menu.find( 'li:not(.dl-back)' );
-			this.$el.find( 'ul.dl-submenu' ).prepend( '<li class="dl-back"><a href="#">back</a></li>' );
+			this.$el.find( 'ul.dl-submenu' ).prepend( '<li><div class="close-menu">X</div></li><li class="dl-back"><a href="#">back</a></li>' );
 			this.$back = this.$menu.find( 'li.dl-back' );
 		},
 		_initEvents : function() {
@@ -93,16 +93,16 @@
 				event.stopPropagation();
 
 				var $item = $(this),
-					$submenu = $item.children( 'ul.dl-submenu' );
+				$submenu = $item.children( 'ul.dl-submenu' );
 
 				if( $submenu.length > 0 ) {
 
 					var $flyin = $submenu.clone().css( 'opacity', 0 ).insertAfter( self.$menu ),
-						onAnimationEndFn = function() {
-							self.$menu.off( self.animEndEventName ).removeClass( self.options.animationClasses.classout ).addClass( 'dl-subview' );
-							$item.addClass( 'dl-subviewopen' ).parents( '.dl-subviewopen:first' ).removeClass( 'dl-subviewopen' ).addClass( 'dl-subview' );
-							$flyin.remove();
-						};
+					onAnimationEndFn = function() {
+						self.$menu.off( self.animEndEventName ).removeClass( self.options.animationClasses.classout ).addClass( 'dl-subview' );
+						$item.addClass( 'dl-subviewopen' ).parents( '.dl-subviewopen:first' ).removeClass( 'dl-subviewopen' ).addClass( 'dl-subview' );
+						$flyin.remove();
+					};
 
 					setTimeout( function() {
 						$flyin.addClass( self.options.animationClasses.classin );
@@ -129,10 +129,10 @@
 			this.$back.on( 'click.dlmenu', function( event ) {
 				
 				var $this = $( this ),
-					$submenu = $this.parents( 'ul.dl-submenu:first' ),
-					$item = $submenu.parent(),
+				$submenu = $this.parents( 'ul.dl-submenu:first' ),
+				$item = $submenu.parent(),
 
-					$flyin = $submenu.clone().insertAfter( self.$menu );
+				$flyin = $submenu.clone().insertAfter( self.$menu );
 
 				var onAnimationEndFn = function() {
 					self.$menu.off( self.animEndEventName ).removeClass( self.options.animationClasses.classin );
@@ -170,10 +170,10 @@
 		},
 		_closeMenu : function() {
 			var self = this,
-				onTransitionEndFn = function() {
-					self.$menu.off( self.transEndEventName );
-					self._resetMenu();
-				};
+			onTransitionEndFn = function() {
+				self.$menu.off( self.transEndEventName );
+				self._resetMenu();
+			};
 			
 			this.$menu.removeClass( 'dl-menuopen' );
 			this.$menu.addClass( 'dl-menu-toggle' );
@@ -225,7 +225,7 @@
 				var instance = $.data( this, 'dlmenu' );
 				if ( !instance ) {
 					logError( "cannot call methods on dlmenu prior to initialization; " +
-					"attempted to call method '" + options + "'" );
+						"attempted to call method '" + options + "'" );
 					return;
 				}
 				if ( !$.isFunction( instance[options] ) || options.charAt(0) === "_" ) {
