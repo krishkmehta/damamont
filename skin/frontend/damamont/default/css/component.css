@@ -178,7 +178,20 @@ All this is done for any sub-level being entered.
 	-webkit-animation: MenuAnimOut5 0.4s ease;
 	animation: MenuAnimOut5 0.4s ease;
 }
-
+.newsletter_wrap-inner .validation-failed{
+	border-color: red;
+}
+.newsletter_wrap-inner .validation-advice{
+	color: red;
+}
+.selectric-items .ico {
+	height: 16px;
+	width: 19px;
+	display: inline-block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-right: 7px;
+}
 @-webkit-keyframes MenuAnimOut1 {
 	0% { }
 	50% {
