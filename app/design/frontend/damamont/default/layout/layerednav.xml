@@ -46,12 +46,12 @@
     </layerednav_front_search>
 
     <catalog_category_layered>
-        <!--<remove name="catalog.leftnav"/>-->
+        <remove name="catalog.leftnav"/>
         <reference name="head">
             <action method="addCss"><stylesheet>css/FME/fme_layered_nav.css</stylesheet></action>
             <action method="addItem"><type>skin_js</type><name>js/FME/fme_layered_nav.js</name></action>
-            <!--<action method="addItem"><type>skin_js</type><name>js/FME/jquery.min.js</name></action>-->
-            <!--<action method="addItem"><type>skin_js</type><name>js/FME/noconflict.js</name></action>-->
+            <action method="addItem"><type>skin_js</type><name>js/FME/jquery.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/FME/noconflict.js</name></action>
 
         </reference>
         <reference name="left_first">
