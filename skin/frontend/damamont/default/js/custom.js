@@ -170,7 +170,4 @@ jQuery(document).ready(function ($) {
     jQuery('body:not(.cms-home)').css('paddingTop', headerHeight);
 });
 
-jQuery(function () {
-    jQuery('#dl-menu').dlmenu();
-});
 
