@@ -1,15 +1,9 @@
 var jQuery = jQuery.noConflict(true);
 var CustomAccordion = function (el, multiple) {
-    console.log(el);
     this.el = el || {};
     this.multiple = multiple || false;
 
-    // Variables privadas
-    console.log(this.el);
-
     var links = this.el.find('a.heading_acc');
-
-    // Evento
     links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown);
     links.first().trigger('click').addClass('open');
 }
@@ -17,8 +11,6 @@ var CustomAccordion = function (el, multiple) {
 CustomAccordion.prototype.dropdown = function (e) {
 
     var $el = e.data.el;
-
-    console.log(jQuery(this));
 
     var $this = jQuery(this),
     $next = $this.next();
