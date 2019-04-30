@@ -878,7 +878,7 @@ All this is done for any sub-level being entered.
 	top: 30px;
 }
 #flag-container{
-	width: 240px;
+	width: 140px;
 }
 .selectric-wrapper .label{
 	text-align: left;
@@ -891,4 +891,14 @@ All this is done for any sub-level being entered.
 	margin-right: 7px;
 	margin-top: -3px;
 	vertical-align: middle;
+}
+.selectric-items ul li span {
+	height: 15px;
+	width: 28px;
+	display: inline-block;
+	background-size: contain;
+	object-fit: none;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	margin-right: 4px;
 }
