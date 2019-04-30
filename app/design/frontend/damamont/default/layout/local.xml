@@ -16,6 +16,21 @@
 				<rel>stylesheet</rel>
 				<href>https://fonts.googleapis.com/css?family=Abel</href>
 			</action>
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/modernizr.custom.min.js</name>
+				<params/>
+			</action>
+
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/jquery.dlmenu.js</name>
+				<params/>
+			</action>
+
+			<action method="addItem"><type>skin_js</type><name>js/FME/jquery.min.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/FME/noconflict.js</name></action>
+
 			<action method="addLinkRel">
 				<rel>stylesheet</rel>
 				<href>https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css</href>
@@ -36,11 +51,7 @@
 				<type>skin_css</type>
 				<name>css/owl.carousel.min.css</name>
 			</action>
-			<action method="addItem">
-				<type>skin_js</type>
-				<name>js/modernizr.custom.min.js</name>
-				<params/>
-			</action>
+
 			<action method="addItem">
 				<type>skin_js</type>
 				<name>js/owl.carousel.min.js</name>
@@ -51,11 +62,7 @@
 				<name>js/jquery.simple-popup.js</name>
 				<params/>
 			</action>
-			<action method="addItem">
-				<type>skin_js</type>
-				<name>js/jquery.dlmenu.js</name>
-				<params/>
-			</action>
+
 			<action method="addItem">
 				<type>skin_js</type>
 				<name>js/jquery.selectric.min.js</name>

@@ -258,4 +258,7 @@
 		return this;
 	};
 
+    $(document).ready(function () {
+        $('#dl-menu').dlmenu();
+    })
 } )( jQuery, window );
