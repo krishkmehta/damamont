@@ -121,3 +121,6 @@ div.fme-filter dd li{overflow:hidden;}
 .color span { font-family:Arial; text-align: left; font-size:12px; color:#999; margin-top: -3px; }
 div.fme-filter dd a:hover { color:#09F; text-decoration:none; }
 div.fme-filter dd a { font-family:Arial; font-size:12px; color:#333; text-decoration:none; }
+#fme_filters_list ol li span{
+    display: none;
+}
