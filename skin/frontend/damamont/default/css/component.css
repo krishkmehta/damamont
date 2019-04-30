@@ -9,7 +9,7 @@
 	perspective: 1000px;
 	-webkit-perspective-origin: 50% 200%;
 	perspective-origin: 50% 200%;
-	z-index: 1010;
+	z-index: 990;
 }
 
 .dl-menuwrapper:first-child {
@@ -17,30 +17,10 @@
 }
 
 .dl-menuwrapper button {
-	background: #ccc;
+	background: none;
 	border: none;
-	width: 48px;
-	height: 45px;
-	text-indent: -900em;
-	overflow: hidden;
-	position: relative;
-	cursor: pointer;
-	outline: none;
-}
-
-.dl-menuwrapper button:hover{
-	background: #aaa;
-}
-
-.dl-menuwrapper button:after {
-	content: '';
-	position: absolute;
-	width: 68%;
-	height: 5px;
-	background: #fff;
-	top: 10px;
-	left: 16%;
-	box-shadow: 0 10px 0 #fff, 0 20px 0 #fff;
+	width: 20px;
+	margin-top: 11px;
 }
 
 .dl-menuwrapper ul {
@@ -71,23 +51,44 @@
 
 .dl-menuwrapper li.dl-back > a {
 	padding-left: 30px;
-	background: rgba(0,0,0,0.1);
+	text-align: center;
 }
-
+.dl-submenu .close-menu div{
+	text-indent: -9999px;
+}
+.dl-submenu .close-menu:after{
+	content: '';
+	position: absolute;
+	background: url(../images/close.png);
+	display: block;
+	height: 25px;
+	width: 25px;
+	background-repeat: no-repeat;
+	top: 5px;
+	right: -3px;
+	text-align: center;
+	cursor: pointer;
+}
+.dl-back{
+	text-transform: capitalize;
+}
 .dl-menuwrapper li.dl-back:after,
 .dl-menuwrapper li > a:not(:only-child):after {
 	position: absolute;
-	top: 0;
+	top: 50%;
 	line-height: 50px;
-	font-family: 'icomoon';
-	speak: none;
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
-	content: "\e000";
-}
+	-moz-osx-font-smoothing: grayscale;
+	content: "\f054";
+	margin-top: -8px;
+} 
 
 .dl-menuwrapper li.dl-back:after {
 	left: 10px;
-	color: rgba(212,204,198,0.3);
 	-webkit-transform: rotate(180deg);
 	transform: rotate(180deg);
 }
@@ -854,7 +855,7 @@ All this is done for any sub-level being entered.
 	padding: 0;
 	background: none;
 	display: inline;
-	
+	color: #fff;
 }
 .clearfix:before, .clearfix:after {
 	content: " ";
@@ -902,3 +903,73 @@ All this is done for any sub-level being entered.
 	vertical-align: middle;
 	margin-right: 4px;
 }
+
+.header .dl-menuwrapper .flag_list {
+	position: static;
+	top: 0;
+	padding: 0;
+	display: inline-block;
+	margin: 20px 0 18px;
+}
+
+.header .dl-menuwrapper .flag_list img {
+	height: 15px;
+	width: 45px;
+}
+
+.header .dl-menuwrapper .flag_list a {
+	padding: 0;
+}
+.sub-menu-header .close-menu{
+	right: 10px;
+	top: 11px;
+	position: absolute;
+	cursor: pointer;
+}
+.dl-submenu .close-menu{
+	position: absolute;
+	right: 7px;
+	top: 12px;
+	z-index: 99;
+	height: 30px;
+	width: 30px;
+	text-align: center;
+}
+#flag-container.simplePopup{
+	z-index: 9999;
+}
+.custome-search-active{
+	z-index: 0 !important;
+}
+@media (max-width: 767px){
+	.header .flag_list{
+		display: none;
+	}
+}
+/*.fme-filter a.fme_layered_attribute {
+    padding-left: 25px;
+}
+.fme-filter a.fme_layered_attribute:before{
+	padding-left: 25px;
+	background: transparent url(../../images/FME/Check-Box.png) no-repeat scroll 0px 3px;
+	content: '';
+	display: block;
+	height: 18px;
+	width: 15px;
+	position: absolute;
+	left: 4px;
+	}*/
+	/*Collection page*/
+	#fme_filters_list .color{
+		margin-bottom: 0;
+	}
+	.fme_layered_dt .color{
+		margin-bottom: 0;
+	}
+	.price-container{
+		display: none;
+
+	}
+	#fme_layered_product_type .color span{
+		vertical-align: top;
+	}

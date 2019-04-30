@@ -2,14 +2,14 @@
     <div class="backdrop"></div>
     <div class="header">
         <div id="dl-menu" class="dl-menuwrapper">
-            <button class="dl-trigger">Open Menu</button>
+            <button class="dl-trigger"><img src="<?php echo $this->getSkinurl('images/hamburger-menu.svg')?>"></button>
 
             <?php
             $menus = array(1, 2);
             foreach ($menus as $menuId) {
                 $menu = Mage::getModel('scandi_menumanager/menu')
-                    ->setStoreId(Mage::app()->getStore()->getId())
-                    ->load($menuId);
+                ->setStoreId(Mage::app()->getStore()->getId())
+                ->load($menuId);
                 if ($menu->getIsActive()) {
                     echo $this->getLayout()->createBlock('scandi_menumanager/custom')->setMenuId($menuId)->toHtml();
                 }
@@ -29,19 +29,19 @@
                 <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
                     <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>"/>
                 </a>
-            <?php else: ?>
-                <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
-                    <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>"/>
-                </a>
-            <?php endif ?>
-        </div>
-        <div class="col-3">
-            <div class="account-cart-wrapper">
-                <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>"
-                   data-target-element="#header-account">
-                 <span class="account-icon">
-                    <img height="28" src="<?php echo $this->getSkinUrl('images/user-icon.svg') ?>" alt=""/>
-                </span>
+                <?php else: ?>
+                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
+                        <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>"/>
+                    </a>
+                <?php endif ?>
+            </div>
+            <div class="col-3">
+                <div class="account-cart-wrapper">
+                    <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>"
+                     data-target-element="#header-account">
+                     <span class="account-icon">
+                        <img height="28" src="<?php echo $this->getSkinUrl('images/user-icon.svg') ?>" alt=""/>
+                    </span>
                 </a>
 
                 <div class="header-minicart">
@@ -58,7 +58,7 @@
     </nav>
     <?php
     echo $this->getLayout()->createBlock("page/switch")->setTemplate('page/switch/flags_list.phtml')
-        ->toHtml()
+    ->toHtml()
     ?>
     <!--        </div>-->
 </div>

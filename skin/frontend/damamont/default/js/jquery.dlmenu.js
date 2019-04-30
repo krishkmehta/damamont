@@ -80,7 +80,7 @@
 			var self = this;
 
 			this.$trigger.on( 'click.dlmenu', function() {
-				
+				$('#search_mini_form').toggleClass('custome-search-active');
 				if( self.open ) {
 					self._closeMenu();
 				} 
@@ -130,7 +130,7 @@
 			} );
 
 			this.$closeMenu.on( 'click.dlmenu', function( event ) {
-
+				$('#search_mini_form').removeClass('custome-search-active');
 				self._closeMenu();
 				return false;
 

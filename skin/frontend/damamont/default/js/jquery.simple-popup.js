@@ -23,14 +23,14 @@
          Private Variables
          *******************************/
 
-        var object = $(this);
-        var settings = $.extend(defaults, options);
+         var object = $(this);
+         var settings = $.extend(defaults, options);
 
         /******************************
          Public Methods
          *******************************/
 
-        var methods = {
+         var methods = {
 
             init: function() {
 
@@ -45,7 +45,7 @@
              Append HTML
              *******************************/
 
-            appendHTML: function() {
+             appendHTML: function() {
 
                 // if this has already been added we don't need to add it again
                 if ($('.simplePopupBackground').length === 0) {
@@ -63,10 +63,11 @@
              Set Event Handlers
              *******************************/
 
-            setEventHandlers: function() {
+             setEventHandlers: function() {
 
                 $(".simplePopupClose, .simplePopupBackground").on("click", function (event) {
                     methods.hidePopup();
+                    jQuery('#overlay').removeClass('is-active');
                 });
 
                 $(window).on("resize", function(event){
@@ -126,12 +127,12 @@
         };
 
         if (methods[options]) { // $("#element").pluginName('methodName', 'arg1', 'arg2');
-            return methods[options].apply(this, Array.prototype.slice.call(arguments, 1));
+        return methods[options].apply(this, Array.prototype.slice.call(arguments, 1));
         } else if (typeof options === 'object' || !options) { 	// $("#element").pluginName({ option: 1, option:2 });
-            return methods.init.apply(this);
-        } else {
-            $.error( 'Method "' +  method + '" does not exist in simple popup plugin!');
-        }
-    };
+        return methods.init.apply(this);
+    } else {
+        $.error( 'Method "' +  method + '" does not exist in simple popup plugin!');
+    }
+};
 
 })(jQuery);

@@ -20,7 +20,7 @@ CustomAccordion.prototype.dropdown = function (e) {
     console.log(jQuery(this));
 
     var $this = jQuery(this),
-        $next = $this.next();
+    $next = $this.next();
 
     $next.slideToggle();
     $this.toggleClass('open')
@@ -165,8 +165,15 @@ jQuery(document).ready(function ($) {
     jQuery('.popup-flag').click(function () {
 
         jQuery('#flag-container').simplePopup();
+        jQuery('#overlay').addClass('is-active');
     });
 
+    jQuery('.sub-menu-header .close-menu').click(function(){
+        jQuery('#search_mini_form').removeClass('custome-search-active');
+        jQuery('.dl-trigger').removeClass('dl-active');
+        jQuery('.dl-menu').removeClass('dl-menuopen');
+
+    });
 })
 
 jQuery(function () {
