@@ -1,3 +1,4 @@
+var jQuery = jQuery.noConflict(true);
 var CustomAccordion = function (el, multiple) {
     console.log(el);
     this.el = el || {};
@@ -30,11 +31,8 @@ CustomAccordion.prototype.dropdown = function (e) {
     }
 }
 
-jQuery(document).ready(function ($) {
 
-    jQuery(document).on('click', '.close-menu', function (e) {
-        alert("The span element was clicked.");
-    });
+jQuery(document).ready(function ($) {
     var accordion = new CustomAccordion($('.accordion'), false);
     var accordion1 = new CustomAccordion($('.description-accordion'), false);
 
@@ -168,13 +166,9 @@ jQuery(document).ready(function ($) {
         jQuery('#overlay').addClass('is-active');
     });
 
-    jQuery('.sub-menu-header .close-menu').click(function(){
-        jQuery('#search_mini_form').removeClass('custome-search-active');
-        jQuery('.dl-trigger').removeClass('dl-active');
-        jQuery('.dl-menu').removeClass('dl-menuopen');
-
-    });
-})
+    var headerHeight = jQuery('.header-container').outerHeight();
+    jQuery('body:not(.cms-home)').css('paddingTop', headerHeight);
+});
 
 jQuery(function () {
     jQuery('#dl-menu').dlmenu();

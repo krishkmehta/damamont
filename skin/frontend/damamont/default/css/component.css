@@ -1,8 +1,6 @@
 /* Common styles of menus */
 
 .dl-menuwrapper {
-	width: 100%;
-	max-width: 300px;
 	float: left;
 	position: relative;
 	-webkit-perspective: 1000px;
@@ -46,9 +44,11 @@
 }
 
 .no-touch .dl-menuwrapper li a:hover {
-	background: rgba(255,248,213,0.1);
+	background: none;
 }
-
+.is-active .dl-menuwrapper{
+	z-index: 970;
+}
 .dl-menuwrapper li.dl-back > a {
 	padding-left: 30px;
 	text-align: center;
@@ -868,6 +868,7 @@ All this is done for any sub-level being entered.
 .dl-menuwrapper .dl-menu.dl-menuopen{
 	overflow-y: auto;
 	/*height: 100vh;*/
+	width: 240px;
 }
 #dl-menu{
 	position: absolute;

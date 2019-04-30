@@ -376,7 +376,7 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
     protected function __welcomeHtml()
     {
 
-        $wc = '<li><div class="sub-menu-header clearfix">
+        $wc = '<li class="custom-close-menu"><div class="sub-menu-header clearfix">
         <div class="profile-image pull-left"></div>';
         $wc .= '<span class="close-menu"><img src="'.$this->getSkinurl('images/close-white.png').'"></span><span class="pull-left profile-text-wrap"><div class="greeting">';
         $wc .= $this->__('Hello ');

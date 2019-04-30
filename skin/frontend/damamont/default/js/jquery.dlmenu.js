@@ -70,10 +70,9 @@
 			this.$menu = this.$el.children( 'ul.dl-menu' );
 			this.$el.find( 'ul.dl-submenu' ).prepend( '<li class="close-menu"><div >X</div></li><li class="dl-back"><a' +
 				' href="#">back</a></li>' );
-			this.$menuitems = this.$menu.find( 'li:not(.dl-back,.close-menu)' );
-
+			this.$menuitems = this.$menu.find( 'li:not(.dl-back,.close-menu,.custom-close-menu)' );
 			this.$back = this.$menu.find( 'li.dl-back' );
-			this.$closeMenu = this.$menu.find( 'li.close-menu' );
+			this.$closeMenu = this.$menu.find( 'li.close-menu,li.custom-close-menu span.close-menu' );
 		},
 		_initEvents : function() {
 

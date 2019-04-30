@@ -52,7 +52,6 @@
             <action method="addItem"><type>skin_js</type><name>js/FME/fme_layered_nav.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/FME/jquery.min.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/FME/noconflict.js</name></action>
-
         </reference>
         <reference name="left_first">
 
