@@ -974,3 +974,55 @@ All this is done for any sub-level being entered.
 	#fme_layered_product_type .color span{
 		vertical-align: top;
 	}
+	.block-title{
+		text-align: center;
+		color: #000;
+	}
+	/*#fme_filters_list.no-display{
+		display: block;
+		}*/
+		@media (max-width: 991px){
+			body #fme_filters_list{
+				position: fixed;
+				top: 50%;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				z-index: 9999;
+				background: #fff;
+				max-width: 340px;
+				margin: 0 auto;
+				overflow-y: auto;
+				height: 373px;
+				margin-top: -170px;
+			}
+			.catalog-category-view .breadcrumbs-wrap{
+				margin-bottom: 0;
+			}
+			.block-title{
+				margin-bottom: 15px;
+			}
+			.block-title img{
+				max-width: 36px;
+				margin-right: 9px;
+			}
+			.mobile-element img{
+				max-width: 33px;
+			}
+			.mobile-element{
+				border-top: 1px solid #ccc;
+				text-transform: uppercase;
+				font-weight: 600;
+				color: #000;
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+		}
+		@media (min-width: 992px){
+			.mobile-element{
+				display: none;
+			}
+			.block-title{
+				display: none;
+			}
+		}

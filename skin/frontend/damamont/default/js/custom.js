@@ -112,6 +112,7 @@ jQuery(document).ready(function () {
     jQuery("#overlay").click(function () {
         jQuery(this).removeClass('is-active');
         jQuery('.input-box').removeClass('is_search_active');
+        jQuery('#fme_filters_list').toggleClass('no-display');
     });
     jQuery(".header-minicart .skip-cart").click(function () {
         jQuery('.backdrop').addClass('active');
@@ -148,6 +149,14 @@ jQuery(document).ready(function () {
     var headerHeight = jQuery('.header-container').outerHeight();
     jQuery('body:not(.cms-home)').css({'paddingTop': headerHeight});
     // jQuery(".popup-flag2").simplePopup({ type: "html", htmlSelector: "#flag-container2" });
+    jQuery(document).on('click', '.mobile-element', function(){
+        jQuery('#fme_filters_list').addClass('no-display');
+        jQuery('#overlay').removeClass('is-active');
+    });
+    jQuery(document).on('click', '.filter-toggle', function(){
+        jQuery('#fme_filters_list').toggleClass('no-display');
+        jQuery('#overlay').addClass('is-active');
+    });
 });
 
 jQuery(document).ready(function ($) {

@@ -6,20 +6,35 @@ div.fme-filter a.adj-nav-pad2 {padding-left:5px}
 div.fme-filter a.adj-nav-pad3 {padding-left:10px}
 
 /*price ranges*/
-div.fme-filter a.adj-nav-price {}
+div.fme-filter a.adj-nav-price {} 
 div.fme-filter a.adj-nav-price-selected {font-weight: bold}
 
 /*attributes*/
 #fme_layered_color span{display: none; }
-div.fme-filter a.fme_layered_attribute{padding-left: 8px;}
-div.fme-filter a.fme_layered_attribute:before{ content: ''; display: inline-block;     
-height: 17px;
-width: 17px;
-left: 5px;
-top: 1px;
-padding-left: 0;position:absolute;padding-left:25px;  background:transparent url(../../images/FME/Check-Box.png) no-repeat scroll 0px 1px;}
-div.fme-filter a.fme_layered_attribute_selected:before{background-position: 0px -17px;}
-div.fme-filter a.fme_layered_attribute_selected {padding-left:25px; /*border:dotted;*/ background-position: 0px -16px; font-weight: bold; overflow:hidden;}
+div.fme-filter a.fme_layered_attribute{padding-left: 9px;}
+div.fme-filter a.fme_layered_attribute:before{ 
+    content: ''; display: inline-block;     
+    height: 14px;
+    width: 14px;
+    right: 10px;
+    top: 4px;
+    padding-left: 0;
+    position:absolute;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+div.fme-filter a.fme_layered_attribute_selected:after{
+    content: '';
+    display: block;
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    right: 13px;
+    background: #000;
+    top: 7px;
+    border-radius: 50%;
+}
+div.fme-filter a.fme_layered_attribute_selected {background-position: 0px -16px; font-weight: bold; overflow:hidden;}
 div.fme-filter a.fme_layered_swatches {padding:0px 0px 5px 0px;}
 div.fme-filter a.fme_layered_swatches_selected {opacity:0.5}
 
@@ -49,7 +64,11 @@ div.price_slider div.handle { top:3px; width:14px; height:23px; background: tran
 }
 .price-container {
     width: 200px;
-    
+
+}
+#fme_filters_list ol{
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 #fme_filters_list{
    border-color: #cccccc;
@@ -60,11 +79,11 @@ div.price_slider div.handle { top:3px; width:14px; height:23px; background: tran
    border-top: 0;
 }
 .fme_loading_filters img{
-	left:48%;
-	top:45%;
-	display:block;
-	position:fixed;
-	z-index:900;
+   left:48%;
+   top:45%;
+   display:block;
+   position:fixed;
+   z-index:900;
 }
 
 .fme_layered_clear_all {
@@ -75,10 +94,14 @@ div.price_slider div.handle { top:3px; width:14px; height:23px; background: tran
     padding:3px 10px;
     color:#1f5070;
     font-weight:bold;
-    font-size:1em;
+    font-size: 0.9em;
+    text-transform: uppercase;
     text-align:center;
 } 
-
+#fme_filters_list .btn-remove{
+    border: none;
+    margin-top: -2px;
+}
 .fme-filter dt{
     cursor:pointer;
     -moz-user-select: none;
@@ -88,13 +111,12 @@ div.price_slider div.handle { top:3px; width:14px; height:23px; background: tran
     border-width: 1px;
     color: #636363;
     display: block;
-    font-family: "Raleway","Helvetica Neue",Verdana,Arial,sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: normal;
-    line-height: 1.4;
+    line-height: 1.2;
     margin: 0;
-    padding: 7px 8px 7px 4px;
+    padding: 6px 8px 6px 8px;
     position: relative;
     text-rendering: optimizespeed;
     text-transform: uppercase;
@@ -110,7 +132,7 @@ div.fme-filter dd {
 div.fme-filter dd li{overflow:hidden;}
 
 
-.color {  clear:both; margin:6px 0 6px 0; width: 100% ; }
+.color {  clear:both; width: 100% ; }
 
 .color .color_box { width:17px; height:17px; float:left; display:block; border:1px solid #f4f4f4; margin-right:4px; }
 
@@ -121,6 +143,10 @@ div.fme-filter dd li{overflow:hidden;}
 .color span { font-family:Arial; text-align: left; font-size:12px; color:#999; margin-top: -3px; }
 div.fme-filter dd a:hover { color:#09F; text-decoration:none; }
 div.fme-filter dd a { font-family:Arial; font-size:12px; color:#333; text-decoration:none; }
+#fme_filters_list .btn-remove:after{
+    line-height: 17px;
+    color: #000;
+}
 #fme_filters_list ol li span{
     display: none;
 }
