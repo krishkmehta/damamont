@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62bce157-2ade-489f-87fc-72e0ac8d9044" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/catalog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/catalog.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/layerednav.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/layerednav.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/switch/flags_list.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/switch/flags_list.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skin/frontend/damamont/default/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/skin/frontend/damamont/default/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skin/frontend/damamont/default/js/jquery.dlmenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/skin/frontend/damamont/default/js/jquery.dlmenu.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +13,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/switch/flags_list.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="36" column="134" selection-start-line="36" selection-start-column="134" selection-end-line="36" selection-end-column="134" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/code/community/FME/Layerednav/Block/Layer/Filter/Price.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -53,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/layout/catalog.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
@@ -65,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skin/frontend/damamont/default/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="171" lean-forward="true" selection-start-line="171" selection-end-line="171" />
+            <state relative-caret-position="325">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
               </folding>
@@ -194,14 +199,14 @@
         <option value="$PROJECT_DIR$/app/code/local/Scandi/MenuManager/Block/Custom.php" />
         <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/html/header.phtml" />
         <option value="$PROJECT_DIR$/skin/frontend/damamont/default/js/jquery.simple-popup.js" />
-        <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/switch/flags_list.phtml" />
         <option value="$PROJECT_DIR$/app/etc/local.xml" />
         <option value="$USER_HOME$/Downloads/fma_layerednavigation-master (1)/fma_layerednavigation-master/app/design/frontend/base/default/template/layerednav/layer.phtml" />
         <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/layerednav.xml" />
-        <option value="$PROJECT_DIR$/skin/frontend/damamont/default/js/custom.js" />
         <option value="$PROJECT_DIR$/skin/frontend/damamont/default/js/jquery.dlmenu.js" />
         <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/local.xml" />
         <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/layout/catalog.xml" />
+        <option value="$PROJECT_DIR$/skin/frontend/damamont/default/js/custom.js" />
+        <option value="$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/switch/flags_list.phtml" />
       </list>
     </option>
   </component>
@@ -270,7 +275,30 @@
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="damamont" type="462c0819:PsiDirectoryNode" />
               <item name="default" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="damamont" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="switch" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="damamont" type="b2602c69:ProjectViewProjectNode" />
@@ -437,12 +465,12 @@
       <workItem from="1556368403003" duration="5553000" />
       <workItem from="1556464257263" duration="8038000" />
       <workItem from="1556554530020" duration="2683000" />
-      <workItem from="1556641749653" duration="666000" />
+      <workItem from="1556641749653" duration="925000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92886000" />
+    <option name="totallyTimeSpent" value="93145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="27" width="1313" height="741" extended-state="6" />
@@ -461,7 +489,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.062809914" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.4842975" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -701,13 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/switch/flags_list.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/rwd/default/layout/catalog.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1875">
@@ -795,16 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skin/frontend/damamont/default/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="171" lean-forward="true" selection-start-line="171" selection-end-line="171" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/skin/frontend/damamont/default/js/jquery.dlmenu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -840,6 +851,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="198" lean-forward="true" selection-start-line="198" selection-end-line="198" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin/frontend/damamont/default/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/damamont/default/template/page/switch/flags_list.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="36" column="134" selection-start-line="36" selection-start-column="134" selection-end-line="36" selection-end-column="134" />
         </state>
       </provider>
     </entry>
