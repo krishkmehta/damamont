@@ -71,19 +71,19 @@ div.price_slider div.handle { top:3px; width:14px; height:23px; background: tran
     padding-bottom: 8px;
 }
 #fme_filters_list{
-   border-color: #cccccc;
-   border-style: solid;
-   border-width: 1px;
-   margin: 0;
-   padding: 0;  
-   border-top: 0;
+ border-color: #cccccc;
+ border-style: solid;
+ border-width: 1px;
+ margin: 0;
+ padding: 0;  
+ border-top: 0;
 }
 .fme_loading_filters img{
-   left:48%;
-   top:45%;
-   display:block;
-   position:fixed;
-   z-index:900;
+ left:48%;
+ top:45%;
+ display:block;
+ position:fixed;
+ z-index:900;
 }
 
 .fme_layered_clear_all {
@@ -138,14 +138,18 @@ div.fme-filter dd li{overflow:hidden;}
 
 .color a { font-family:Arial; font-size:12px; color:#333; text-decoration:none; }
 
-.color a:hover { color:#09F; text-decoration:none; }
+.color a:hover { color:#f89521; text-decoration:none; }
 
 .color span { font-family:Arial; text-align: left; font-size:12px; color:#999; margin-top: -3px; }
-div.fme-filter dd a:hover { color:#09F; text-decoration:none; }
+div.fme-filter dd a:hover { color:#f89521; text-decoration:none; }
 div.fme-filter dd a { font-family:Arial; font-size:12px; color:#333; text-decoration:none; }
 #fme_filters_list .btn-remove:after{
-    line-height: 17px;
+    line-height: 20px;
     color: #000;
+}
+#fme_filters_list .btn-remove:hover, #fme_filters_list .btn-previous:hover{
+    background: #484848;
+    color:#fff;
 }
 #fme_filters_list ol li span{
     display: none;

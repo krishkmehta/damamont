@@ -35,7 +35,7 @@
 .dl-menuwrapper li a {
 	display: block;
 	position: relative;
-	padding: 15px 20px;
+	padding: 12px 20px;
 	font-size: 16px;
 	line-height: 20px;
 	font-weight: 300;
@@ -50,7 +50,7 @@
 	z-index: 970;
 }
 .dl-menuwrapper li.dl-back > a {
-	padding-left: 30px;
+	padding-left: 22px;
 	text-align: center;
 }
 .dl-submenu .close-menu div{
@@ -819,10 +819,50 @@ All this is done for any sub-level being entered.
 	background: #fff;
 }
 .dl-menuwrapper .dl-menu{
-	border: 1px solid #e0e0e0;
+	border: 1px solid #808080;
 	position: fixed;
 	background: #fff;
 	top: 0;
+}
+#flag-container{
+	background: #fff;
+	max-width: 240px;
+	width: 100%;
+	border: 1px solid #808080;
+	padding: 20px 15px
+}
+#flag-container .simplePopupClose:hover{
+	opacity: 0.8;
+}
+#flag-container .simplePopupClose{
+	position: absolute;
+	top: 3px;
+	right: 7px;
+	text-indent: -9999px;
+	height: 25px;
+	width: 25px;
+	overflow: hidden;
+	top: 7px;
+	right: 0px;
+	cursor: pointer;
+}
+#flag-container .simplePopupClose:before{
+	content: '';
+	display: block;
+	
+	background: url(../images/close.png);
+	height: 25px;
+	width: 25px;
+	background-repeat: no-repeat;
+	
+	text-align: center;
+	cursor: pointer;
+}
+.form-language label{
+	margin-bottom: 8px;
+}
+.form-language{
+	display: block;
 }
 
 /*Extra */
@@ -879,9 +919,6 @@ All this is done for any sub-level being entered.
 	position: absolute;
 	top: 30px;
 }
-#flag-container{
-	width: 140px;
-}
 .selectric-wrapper .label{
 	text-align: left;
 }
@@ -910,7 +947,7 @@ All this is done for any sub-level being entered.
 	top: 0;
 	padding: 0;
 	display: inline-block;
-	margin: 20px 0 18px;
+	margin: 13px 0 8px;
 }
 
 .header .dl-menuwrapper .flag_list img {
@@ -938,6 +975,9 @@ All this is done for any sub-level being entered.
 }
 #flag-container.simplePopup{
 	z-index: 9999;
+}
+.dl-menu>li.active>a{
+	color: #d0d0d0;
 }
 .custome-search-active{
 	z-index: 0 !important;
@@ -981,7 +1021,7 @@ All this is done for any sub-level being entered.
 	/*#fme_filters_list.no-display{
 		display: block;
 		}*/
-		@media (max-width: 991px){
+		@media (max-width: 767px){
 			body #fme_filters_list{
 				position: fixed;
 				top: 50%;
@@ -1018,7 +1058,7 @@ All this is done for any sub-level being entered.
 				padding-bottom: 20px;
 			}
 		}
-		@media (min-width: 992px){
+		@media (min-width: 768px){
 			.mobile-element{
 				display: none;
 			}
