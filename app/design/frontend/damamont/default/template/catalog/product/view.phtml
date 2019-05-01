@@ -242,7 +242,99 @@
         </div>
     </div>
 </div>
-<div class="col-main">
+
+<!-- Product New Page -->
+<div class="product-wrap">
+    <div class="product-title-wrap">
+        <h4 class="product-title" itemprop="name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h4>
+        <h5 class="subheading">Freshwater Cultured Pearl Bracelet with Stainless steel beads. </h5>
+    </div>  
+    <div class=" product-grid clearfix" id="product_mainslider">
+        <?php echo $this->getChildHtml('media') ?>
+    </div>
+    <div class="text-center">
+        <div class="heading-1">Price: </div>
+        <div class="price-amount pb-1 heading-2">
+            $65.00
+        </div>   
+        <div class="color-switcher pb-1">
+            <div class="heading-1">Color: </div>
+            <ul>
+                <li class="color-1"> </li>
+                <li class="color-2"> </li>
+                <li class="color-3"> </li>
+                <li class="color-4"> </li>
+                <li class="color-5"> </li>
+                <li class="color-6"> </li>
+                <li class="color-7"> </li>
+            </ul>
+        </div> 
+        <div class="size-wrap">
+            <div class="heading-1">Size: </div>
+            <select name="" id="">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+            </select>
+        </div>
+        <div class="add-to-cart-wrap">
+            <a href="#" class="add-to-cart btn"> Buy Now</a>
+        </div>
+        <div class="shipping-information">
+            <ul>
+                <li>
+                    <img src="#" alt="">
+                    <span>Shipping:</span> 
+                    2-5 day delivery.
+                </li>
+                <li>
+                 <img src="#" alt="">
+                 <span>Payments:</span> 
+                 Credit Cards, PayPal.
+             </li>
+             <li>
+               <img src="#" alt="">
+               <span>Returns:</span> 
+               Easy returns within 30 days.
+           </li>
+       </ul>
+   </div>
+   <div class="product-detail">
+     <h5>Product Details</h5>
+     <div class="icon-info">
+         <img src="" alt="">
+         <div class="heading-1">Freshwater Cultured Pearls</div>
+         <span>Button Shape to perfectly model on the wrist. Size 5.5-6 mm.</span>
+
+     </div>
+     <div class="icon-info">
+         <img src="" alt="">
+         <div class="heading-1">Stainelss Steel Beads</div>
+         <span>To ensure the best durability over time.</span>
+
+     </div>
+     <div class="icon-info">
+         <img src="" alt="">
+         <div class="heading-1">Stretch </div>
+         <span>Hand-strung with elastic string. One size fits all wrist sizes.</span>
+     </div>
+     <div class="heading-1">Size: </div>
+     <div class="other-detail">
+         <span>Fitting: </span>
+         The bracelet fits almost all wrist sizes as it is elastic. Max wrist cirumference is 30 cm.
+         <span>Height: </span>
+         10 cm
+         <span>Width: </span>
+         5 cm
+     </div>
+     <div class="heading-1"> Colors: </div>
+     <div class="other-detail">
+         <span>Different colors available:</span> Click on the color button above the buy now button to view the different colors.
+     </div>
+ </div>
+
+ <!-- Product New Page End -->
+
+ <div class="col-main">
 
     <div class="row">
         <?php echo $this->getChildHtml('product_additional_data_custom') ?>

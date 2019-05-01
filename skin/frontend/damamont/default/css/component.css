@@ -1018,51 +1018,66 @@ All this is done for any sub-level being entered.
 		text-align: center;
 		color: #000;
 	}
-	/*#fme_filters_list.no-display{
-		display: block;
-		}*/
-		@media (max-width: 767px){
-			body #fme_filters_list{
-				position: fixed;
-				top: 50%;
-				right: 0;
-				left: 0;
-				bottom: 0;
-				z-index: 9999;
-				background: #fff;
-				max-width: 340px;
-				margin: 0 auto;
-				overflow-y: auto;
-				height: 373px;
-				margin-top: -170px;
-			}
-			.catalog-category-view .breadcrumbs-wrap{
-				margin-bottom: 0;
-			}
-			.block-title{
-				margin-bottom: 15px;
-			}
-			.block-title img{
-				max-width: 36px;
-				margin-right: 9px;
-			}
-			.mobile-element img{
-				max-width: 33px;
-			}
-			.mobile-element{
-				border-top: 1px solid #ccc;
-				text-transform: uppercase;
-				font-weight: 600;
-				color: #000;
-				padding-top: 20px;
-				padding-bottom: 20px;
-			}
+	@media (max-width: 767px){
+		body #fme_filters_list{
+			position: fixed;
+			top: 50%;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			z-index: 9999;
+			background: #fff;
+			max-width: 340px;
+			margin: 0 auto;
+			overflow-y: auto;
+			height: 373px;
+			margin-top: -170px;
 		}
-		@media (min-width: 768px){
-			.mobile-element{
-				display: none;
-			}
-			.block-title{
-				display: none;
-			}
+		.catalog-category-view .breadcrumbs-wrap{
+			margin-bottom: 0;
 		}
+		.block-title{
+			margin-bottom: 15px;
+		}
+		.block-title img{
+			max-width: 36px;
+			margin-right: 9px;
+		}
+		.mobile-element img{
+			max-width: 33px;
+		}
+		.mobile-element{
+			border-top: 1px solid #ccc;
+			text-transform: uppercase;
+			font-weight: 600;
+			color: #000;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+	}
+	@media (min-width: 768px){
+		.mobile-element{
+			display: none;
+		}
+		.block-title{
+			display: none;
+		}
+	}
+
+	/*New Product Page*/
+	.product-title-wrap{
+		padding: 5px 5px;
+	}
+	.product-title-wrap .subheading{
+		color: #808080;
+	}
+	.product-wrap #thumbnail-gallery .grid-item{
+		width: 100%;
+		padding-top: 0;
+	}
+	.heading-1{
+		color: #000;
+	}
+	.heading-2,.heading-1{
+		font-size: 18px;
+	}
