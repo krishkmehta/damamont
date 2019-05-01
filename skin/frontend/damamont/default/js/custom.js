@@ -113,7 +113,6 @@ jQuery(document).ready(function () {
         jQuery(this).removeClass('is-active');
         jQuery('.input-box').removeClass('is_search_active');
         jQuery('#fme_filters_list').addClass('no-display');
-        jQuery('#flag-container').simplePopup();
     });
     jQuery(".header-minicart .skip-cart").click(function () {
         jQuery('.backdrop').addClass('active');
