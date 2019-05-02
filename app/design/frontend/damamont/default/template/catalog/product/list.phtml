@@ -121,6 +121,8 @@ if($currentCategory ) {
                                 <h5>
                                     <a href="<?php echo $_product->getProductUrl() ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?></a>
                                 </h5>
+
+
                                 <div class="box">
                                     <img src="//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/Dama-Logo.svg?0"
                                     width="80" height="20" alt="Logo"/>
@@ -158,13 +160,33 @@ if($currentCategory ) {
                                     <h5 style="height: 42px;"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?></h5>
                                     <img src="<?php echo $this->getSkinUrl('images/logo.svg') ?>"
                                     height="" width="35" class="img-responsive">
-                                    <?php
-                                    if ($cperl = $_product->getResource()->getAttribute('c_perl')) {
 
 
-                                        echo "<p>" . $cperl->getFrontend()->getValue($_product) . "</p>";
-                                    }
-                                    ?>
+                                     <?php if($_product->isConfigurable()): ?>
+
+                                         <?php $attributes = $_product->getTypeInstance(true)->getConfigurableAttributes($_product) ?>
+                                         <?php if(count($attributes)): ?>
+
+                                                 <?php foreach($attributes as $att): ?>
+                                                     <?php $pAtt=$att->getProductAttribute();
+
+                                                     $allProducts = $_product->getTypeInstance(true)->getUsedProducts(null, $_product);
+                                                     $frontValues =array() ?>
+                                                    <?php if('Color' == $pAtt->getFrontendLabel()): ?>
+
+                                                             <?php foreach($allProducts as $p): ?>
+
+                                                                 <?php if(!$p->isSaleable()) continue; ?>
+                                                                 <?php $out=$p->getAttributeText($pAtt->getName()); ?>
+                                                                 <?php $frontValues[$out]=$out; ?>
+                                                             <?php endforeach ?>
+                                                             <p><?php echo implode(',', $frontValues) ?></p>
+
+                                                    <?php endif; ?>
+                                                 <?php endforeach ?>
+
+                                         <?php endif ?>
+                                     <?php endif ?>
                                 </a>
 
 
