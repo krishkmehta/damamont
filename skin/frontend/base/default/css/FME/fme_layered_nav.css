@@ -71,19 +71,19 @@ div.price_slider div.handle { top:3px; width:14px; height:23px; background: tran
     padding-bottom: 8px;
 }
 #fme_filters_list{
- border-color: #cccccc;
- border-style: solid;
- border-width: 1px;
- margin: 0;
- padding: 0;  
- border-top: 0;
+   border-color: #cccccc;
+   border-style: solid;
+   border-width: 1px;
+   margin: 0;
+   padding: 0;  
+   border-top: 0;
 }
 .fme_loading_filters img{
- left:48%;
- top:45%;
- display:block;
- position:fixed;
- z-index:900;
+   left:48%;
+   top:45%;
+   display:block;
+   position:fixed;
+   z-index:900;
 }
 
 .fme_layered_clear_all {
