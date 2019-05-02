@@ -58,12 +58,17 @@
                     <div class="col-wrapper">
                         <?php $currentCategory = Mage::registry('current_category') ?>
                         <?php
+                        $is_cat =false;
+
+
+
                         $_helper = $this->helper('catalog/output');
                         $subats_ids = array();
                         if ($currentCategory) {
                             $cat = Mage::getModel('catalog/category')->load($currentCategory->getId());
-
+                            
                             if ($cat->getCollectionCategory()) {
+                                $is_cat = true;
                                 /*Returns comma separated ids*/
                                 $subcats = $cat->getChildren();
 
@@ -89,18 +94,21 @@
 
                         }
                         ?>
-                        <div class="clearfix filter-col-wrap">
+
+                           <div class="clearfix filter-col-wrap">
                             <div class="container">
                                 <div class="row">
-                                    <?php if (!$cat->getCollectionCategory()): ?>
-                                        <?php // This left_first block will display above the main content on smaller viewports 
+
+                                    <?php if (!$is_cat): ?>
+
+                                        <?php // This left_first block will display above the main content on smaller viewports
 $_leftContent = $this->getChildHtml('left_first')
                                         ?>
                                         <?php if ($_leftContent): ?>
                                             <div class="col-md-2 col-sm-3 col-left sidebar col-left-first"><?php echo $_leftContent; ?></div>
                                         <?php endif; ?>
                                     <?php endif; ?>
-                                    <div class="<?php echo (!$cat->getCollectionCategory() && $_leftContent)?'col-md-10 col-sm-9':'col-md-12' ?>">
+                                    <div class="<?php echo (!$is_cat && $_leftContent)?'col-md-10 col-sm-9':'col-md-12' ?>">
                                         <?php echo $this->getChildHtml('global_messages') ?>
                                         <?php echo $this->getChildHtml('content') ?>
                                     </div>

@@ -35,6 +35,26 @@ jQuery(document).ready(function ($) {
 
         })
 
+    jQuery('.product-media-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        dots: true,
+        nav: true,
+        navText: ["<img src='//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/LeftArrow.svg?0'>", "<img src='//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/RightArrow.svg?0'>"],
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
+
     jQuery('.product-carousel').owlCarousel({
         loop: true,
         margin: 10,
