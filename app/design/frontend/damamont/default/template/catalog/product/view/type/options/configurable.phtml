@@ -32,44 +32,44 @@ $_jsonConfig = $this->getJsonConfig();
 $_renderers = $this->getChild('attr_renderers')->getSortedChildren();
 ?>
 <?php if ($_product->isSaleable() && count($_attributes)): ?>
-    <dl>
-        <?php foreach ($_attributes as $_attribute): ?>
-            <?php
-            $_rendered = false;
-            foreach ($_renderers as $_rendererName):
-                $_renderer = $this->getChild('attr_renderers')->getChild($_rendererName);
-                if (method_exists($_renderer, 'shouldRender') && $_renderer->shouldRender($_attribute, $_jsonConfig)):
-                    $_renderer->setProduct($_product);
-                    $_renderer->setAttributeObj($_attribute);
-                    echo $_renderer->toHtml();
-                    $_rendered = true;
-                    break;
-                endif;
-            endforeach;
+<dl>
+    <?php foreach ($_attributes as $_attribute): ?>
+        <?php
+        $_rendered = false;
+        foreach ($_renderers as $_rendererName):
+            $_renderer = $this->getChild('attr_renderers')->getChild($_rendererName);
+            if (method_exists($_renderer, 'shouldRender') && $_renderer->shouldRender($_attribute, $_jsonConfig)):
+                $_renderer->setProduct($_product);
+            $_renderer->setAttributeObj($_attribute);
+            echo $_renderer->toHtml();
+            $_rendered = true;
+            break;
+        endif;
+    endforeach;
 
-            if (!$_rendered):
-                ?>
-                <dt><label class="required"><?php echo $_attribute->getLabel() ?></label></dt>
-                <dd<?php if ($_attribute->decoratedIsLast) { ?> class="last"<?php } ?>>
-                    <div class="input-box">
-                        <select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]"
-                                id="attribute<?php echo $_attribute->getAttributeId() ?>"
-                                class="required-entry super-attribute-select">
-                            <option><?php echo $this->__('Choose an Option...') ?></option>
-                        </select>
-                    </div>
-                </dd>
-            <?php endif; ?>
-        <?php endforeach; ?>
-    </dl>
-    <script type="text/javascript">
-        var spConfig = new Product.Config(<?php echo $_jsonConfig ?>);
-    </script>
+    if (!$_rendered):
+        ?>
+        <dt><label class="required"><?php echo $_attribute->getLabel() ?></label></dt>
+        <dd<?php if ($_attribute->decoratedIsLast) { ?> class="last"<?php } ?>>
+        <div class="input-box">
+            <select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]"
+                id="attribute<?php echo $_attribute->getAttributeId() ?>"
+                class="required-entry super-attribute-select">
+                <option><?php echo $this->__('Choose an Option...') ?></option>
+            </select>
+        </div>
+    </dd>
+<?php endif; ?>
+<?php endforeach; ?>
+</dl>
+<script type="text/javascript">
+    var spConfig = new Product.Config(<?php echo $_jsonConfig ?>);
+</script>
 
-    <script>
-        var last_v = ''
+<script>
+    var last_v = ''
 
-        var Pirate = Class.create();
+    var Pirate = Class.create();
         // inherit from Person class:
         Pirate.prototype = Object.extend(spConfig, {
 
@@ -98,51 +98,51 @@ $_renderers = $this->getChild('attr_renderers')->getSortedChildren();
                         var printi = false;
 
                         for (km = 0; km < S_IMAGES.length; km++) {
-                              if (printi || last_v == pro[0]) {
-                                break;
-                            }
+                          if (printi || last_v == pro[0]) {
+                            break;
+                        }
 
-                            if (S_IMAGES[km][pro[0]] != 'undefined' && S_IMAGES[km][pro[0]] != null &&
-                                S_IMAGES[km][pro[0]]
-                                != ''
+                        if (S_IMAGES[km][pro[0]] != 'undefined' && S_IMAGES[km][pro[0]] != null &&
+                            S_IMAGES[km][pro[0]]
+                            != ''
                             ) {
-                                printi = true;
-                                last_v = pro[0];
-                                jQuery('#thumbnail-gallery').html(S_IMAGES[km][pro[0]])
-                            }
-                        }
-                        if (!printi) {
-                            for (km = 0; km < S_IMAGES.length; km++) {
-
-                                if (S_IMAGES[km][this.config.productId] != 'undefined' && S_IMAGES[km][this.config.productId] != null &&
-                                    S_IMAGES[km][this.config.productId]
-                                    != ''
-                                ) {
-                                    printi = true;
-                                    last_v = this.config.productId;
-                                    jQuery('#thumbnail-gallery').html(S_IMAGES[km][this.config.productId])
-                                }
-                            }
-                        }
-
-                    } else {
-                        for (km = 0; km < S_IMAGES.length; km++) {
-
-                            if (S_IMAGES[km][this.config.productId] != 'undefined' && S_IMAGES[km][this.config.productId] != null &&
-                                S_IMAGES[km][this.config.productId]
-                                != ''
-                            ) {
-                                jQuery('#thumbnail-gallery').html(S_IMAGES[km][this.config.productId])
-                            }
-                        }
+                            printi = true;
+                        last_v = pro[0];
+                        jQuery('#thumbnail-gallery').html(S_IMAGES[km][pro[0]])
                     }
                 }
-            },
-        });
-    </script>
+                if (!printi) {
+                    for (km = 0; km < S_IMAGES.length; km++) {
 
-    <script>
-        var Pirate = Class.create();
+                        if (S_IMAGES[km][this.config.productId] != 'undefined' && S_IMAGES[km][this.config.productId] != null &&
+                            S_IMAGES[km][this.config.productId]
+                            != ''
+                            ) {
+                            printi = true;
+                        last_v = this.config.productId;
+                        jQuery('#thumbnail-gallery').html(S_IMAGES[km][this.config.productId])
+                    }
+                }
+            }
+
+        } else {
+            for (km = 0; km < S_IMAGES.length; km++) {
+
+                if (S_IMAGES[km][this.config.productId] != 'undefined' && S_IMAGES[km][this.config.productId] != null &&
+                    S_IMAGES[km][this.config.productId]
+                    != ''
+                    ) {
+                    jQuery('#thumbnail-gallery').html(S_IMAGES[km][this.config.productId])
+            }
+        }
+    }
+}
+},
+});
+</script>
+
+<script>
+    var Pirate = Class.create();
         // inherit from Person class:
         Pirate.prototype = Object.extend(new Product.Config(<?php echo $this->getJsonConfig() ?>), {
             // redefine the speak method

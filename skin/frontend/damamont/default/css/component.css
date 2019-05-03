@@ -1065,19 +1065,27 @@ All this is done for any sub-level being entered.
 	}
 
 	/*New Product Page*/
+
 	
 	.product-title-wrap{
 		padding: 5px 5px;
+		position: relative;
 	}
 	.product-title-wrap .subheading{
 		color: #808080;
+		font-weight: normal;
 	}
+	.product-wrap{
+		margin-top: 40px;
+	}
+
 	.product-wrap #thumbnail-gallery .grid-item{
 		width: 100%;
 		padding-top: 0;
 	}
 	.heading-1{
 		color: #000;
+		text-transform: uppercase;
 	}
 	.heading-2,.heading-1{
 		font-size: 18px;
@@ -1087,6 +1095,7 @@ All this is done for any sub-level being entered.
 	.color-switcher ul li:after{
 		content: '';
 		display: block;
+		z-index: -1;
 		position: absolute;
 		top: -3px;
 		left: -3px;
@@ -1101,8 +1110,7 @@ All this is done for any sub-level being entered.
 	}
 	.color-switcher ul li{
 		display: inline-block;
-		height: 22px;
-		width: 22px;
+		vertical-align: middle;
 		background: #000;
 		border-radius: 50%;
 		position: relative;
@@ -1127,13 +1135,20 @@ All this is done for any sub-level being entered.
 	.add-to-cart{
 		background: #d0d0d0;
 	}
-	.shipping-information img{
+	.shipping-information li:before{
+		content: '';
 		position: absolute;
 		left: 0;
+		background: url('../images/shipping-icon.jpg');
+		height: 20px;
+		width: 20px;
+		top: 3px;
+		background-size: contain;
 	}
 	.shipping-information li{
 		position: relative;
-		padding-left: 20px;
+		padding-left: 30px;
+		line-height: 1.2;
 	}
 	.shipping-information span{
 		color: #000;
@@ -1147,18 +1162,17 @@ All this is done for any sub-level being entered.
 		padding-bottom: 10px;
 		color: #808080;
 	}
-	.product-detail{
-		border-top: 1px solid #D0D0D0;
-		border-bottom: 1px solid #D0D0D0;
-		padding-top: 20px;
-		padding-bottom: 20px;
-		margin-left: 15px;
-		margin-right: 15px;
-	}
+	
 	.product-detail h5{
-		text-align: left;
+		text-transform: uppercase;
 		font-size: 15px;
 		margin-bottom: 15px;
+	}
+	.product-detail .icon-info img{
+		margin-bottom: 10px;
+	}
+	.additional-section{
+
 	}
 	.other-detail{
 		text-align: left;
@@ -1174,4 +1188,94 @@ All this is done for any sub-level being entered.
 	}
 	.other-detail span{
 		color: #000;
+	}
+	.product-options select{
+		padding: 6px 7px;
+	}
+	
+	.additional-section:before,.product-detail:before,.product-detail:after{
+		content: '';
+		display: block;
+		margin: 40px auto 30px;
+		border-top: 1px solid #D0D0D0;
+		max-width: 550px;
+	}
+	.product-detail:before{
+		margin-bottom: 40px;
+		margin-top: 20px;
+	}
+	.desktop-price{
+		display: none;
+	}
+
+	@media (max-width: 767px){
+		.product-detail h5{
+			text-align: left;
+		}
+	}
+	@media (min-width: 768px){
+		.product-right-wrap{
+			padding: 0 40px;	
+		}
+		.product-right-wrap .product-title{
+			font-size: 23px;
+			padding-right: 215px;
+		}
+		.price-amount{
+			display: none;
+		}
+		.desktop-price{
+			width: 200px;
+			text-align: right;
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		#product_mainslider{
+			padding: 0 40px;
+		}
+		.product-title-wrap{
+			padding: 0 0 20px;
+		}
+		.color-switcher ul li:after{
+			height: 40px;
+			width: 40px;
+		}
+		.color-switcher ul li{
+			height: 34px;
+			width: 34px;
+		}
+		.product-detail .icon-info{
+			float: left;
+			width: 33.33%;
+			padding-right: 15px;
+		}
+		.shipping-information{
+			border-top: none;
+			padding-left: 0;
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+		.shipping-information:after,.product-detail:after, .additional-section:after{
+			content: '';
+			display: table;
+			clear: both;
+		}
+		.shipping-information li{
+			display: inline-block;
+			float: left;
+			width: 33.33%;
+			padding-right: 15px;
+		}
+		.add-to-cart.btn{
+			border: 1px solid #808080;
+			padding: 8px 30px;
+			font-size: 20px;
+			max-width: 320px;
+			line-height: 1.4;
+		}
+		.add-to-cart-wrap{
+			text-align: center;
+		}
 	}

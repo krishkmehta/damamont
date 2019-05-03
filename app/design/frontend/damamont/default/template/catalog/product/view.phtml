@@ -42,106 +42,106 @@
         <div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
     </div>
     <form action="<?php echo $this->getSubmitUrl($_product, array('_secure' => $this->_isSecure())) ?>"
-          method="post"
-          id="product_addtocart_form"<?php if ($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+      method="post"
+      id="product_addtocart_form"<?php if ($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
 
-        <div class="row">
-            <div class="col-sm-8 ">
-                <div class=" product-grid clearfix" id="product_mainslider">
+      <div class="row">
+        <div class="col-sm-8 ">
+            <div class=" product-grid clearfix" id="product_mainslider">
 
-                    <?php echo $this->getChildHtml('media') ?>
-                </div>
+                <?php echo $this->getChildHtml('media') ?>
             </div>
+        </div>
 
-            <div class="col-sm-4 no-pad-in-mobile">
-                <div class="product-right">
-                    <?php echo $this->getBlockHtml('formkey') ?>
-                    <div class="no-display">
-                        <input type="hidden" name="product" value="<?php echo $_product->getId() ?>"/>
-                        <input type="hidden" name="related_product" id="related-products-field" value=""/>
-                    </div>
+        <div class="col-sm-4 no-pad-in-mobile">
+            <div class="product-right">
+                <?php echo $this->getBlockHtml('formkey') ?>
+                <div class="no-display">
+                    <input type="hidden" name="product" value="<?php echo $_product->getId() ?>"/>
+                    <input type="hidden" name="related_product" id="related-products-field" value=""/>
+                </div>
 
-                    <h4 class="product-tittle"
-                        itemprop="name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h4>
-                    <?php //echo $this->getChildHtml('media') ?>
-                    <div class="collection-review">
-                        <?php echo $this->getReviewsSummaryHtml($_product, 'default', true) ?>
+                <h4 class="product-tittle"
+                itemprop="name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h4>
+                <?php //echo $this->getChildHtml('media') ?>
+                <div class="collection-review">
+                    <?php echo $this->getReviewsSummaryHtml($_product, 'default', true) ?>
+                </div>
+                <?php if ($_product->getShortDescription()): ?>
+                    <div class="short-description">
+                        <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                     </div>
-                    <?php if ($_product->getShortDescription()): ?>
-                        <div class="short-description">
-                            <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+                <?php endif; ?>
+
+                <div class="price-info">
+                    <?php echo $this->getPriceHtml($_product); ?>
+                    <?php echo $this->getChildHtml('bundle_prices') ?>
+                    <?php echo $this->getTierPriceHtml() ?>
+                    <!-- <?php // echo $this->getChildHtml('product_type_availability'); ?> -->
+                </div>
+
+                <?php echo $this->getChildHtml('alert_urls') ?>
+                <?php echo $this->getChildHtml('other'); ?>
+
+
+                <div class="add-to-cart-wrapper">
+                    <?php echo $this->getChildHtml('product_type_data') ?>
+                    <?php echo $this->getChildHtml('extrahint') ?>
+
+                    <?php if (!$this->hasOptions()): ?>
+                        <div class="add-to-box">
+                            <?php if ($_product->isSaleable()): ?>
+                                <?php echo $this->getChildHtml('addtocart') ?>
+                                <?php if ($this->helper('wishlist')->isAllow() || $_compareUrl = $this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
+                                <!-- <span class="or"><?php echo $this->__('OR') ?></span> -->
+                            <?php endif; ?>
+                        <?php endif; ?>
+                        <?php echo $this->getChildHtml('addto') ?>
+                        <?php //echo $this->getChildHtml('sharing') ?>
+                    </div>
+                    <?php echo $this->getChildHtml('extra_buttons') ?>
+                    <?php elseif (!$_product->isSaleable()): ?>
+                        <div class="add-to-box">
+                            <?php echo $this->getChildHtml('addto') ?>
+                            <?php //echo $this->getChildHtml('sharing') ?>
                         </div>
                     <?php endif; ?>
 
-                    <div class="price-info">
-                        <?php echo $this->getPriceHtml($_product); ?>
-                        <?php echo $this->getChildHtml('bundle_prices') ?>
-                        <?php echo $this->getTierPriceHtml() ?>
-                        <!-- <?php // echo $this->getChildHtml('product_type_availability'); ?> -->
-                    </div>
 
-                    <?php echo $this->getChildHtml('alert_urls') ?>
-                    <?php echo $this->getChildHtml('other'); ?>
+                    <div class="clearer"></div>
+                    <?php if ($_product->isSaleable() && $this->hasOptions()): ?>
+                    <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+                <?php endif; ?>
 
+                <div class="customAccordion">
+                    <ul class="description-accordion clearfix">
 
-                    <div class="add-to-cart-wrapper">
-                        <?php echo $this->getChildHtml('product_type_data') ?>
-                        <?php echo $this->getChildHtml('extrahint') ?>
-
-                        <?php if (!$this->hasOptions()): ?>
-                            <div class="add-to-box">
-                                <?php if ($_product->isSaleable()): ?>
-                                    <?php echo $this->getChildHtml('addtocart') ?>
-                                    <?php if ($this->helper('wishlist')->isAllow() || $_compareUrl = $this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
-                                        <!-- <span class="or"><?php echo $this->__('OR') ?></span> -->
-                                    <?php endif; ?>
-                                <?php endif; ?>
-                                <?php echo $this->getChildHtml('addto') ?>
-                                <?php //echo $this->getChildHtml('sharing') ?>
-                            </div>
-                            <?php echo $this->getChildHtml('extra_buttons') ?>
-                        <?php elseif (!$_product->isSaleable()): ?>
-                            <div class="add-to-box">
-                                <?php echo $this->getChildHtml('addto') ?>
-                                <?php //echo $this->getChildHtml('sharing') ?>
-                            </div>
+                        <?php if ($ship_info = $_product->getShippingInfo()): ?>
+                            <li>
+                                <a href="javascript:;" class="heading heading_acc">Shipping
+                                Information</a>
+                                <div class="footer-shop-list">
+                                    <?php echo $ship_info; ?>
+                                </div>
+                            </li>
                         <?php endif; ?>
-
-
-                        <div class="clearer"></div>
-                        <?php if ($_product->isSaleable() && $this->hasOptions()): ?>
-                            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+                        <?php if ($tech_info = $_product->getTechInfo()): ?>
+                            <li>
+                                <a href="javascript:;" class="heading_acc heading">Techincal Info</a>
+                                <div class="footer-shop-list">
+                                    <?php echo $tech_info; ?>
+                                </div>
+                            </li>
                         <?php endif; ?>
+                    </ul>
 
-                        <div class="customAccordion">
-                            <ul class="description-accordion clearfix">
-
-                                <?php if ($ship_info = $_product->getShippingInfo()): ?>
-                                    <li>
-                                        <a href="javascript:;" class="heading heading_acc">Shipping
-                                            Information</a>
-                                        <div class="footer-shop-list">
-                                            <?php echo $ship_info; ?>
-                                        </div>
-                                    </li>
-                                <?php endif; ?>
-                                <?php if ($tech_info = $_product->getTechInfo()): ?>
-                                    <li>
-                                        <a href="javascript:;" class="heading_acc heading">Techincal Info</a>
-                                        <div class="footer-shop-list">
-                                            <?php echo $tech_info; ?>
-                                        </div>
-                                    </li>
-                                <?php endif; ?>
-                            </ul>
-
-                        </div>
-
-
-                    </div>
                 </div>
+
+
             </div>
-    </form>
+        </div>
+    </div>
+</form>
 
 
 </div>
@@ -156,7 +156,7 @@
                     <li>
                         <div class="why-shop-icon">
                             <img src="//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/C.svg?0" class="img-responsive"
-                                 height="" width="">
+                            height="" width="">
                         </div>
                         <p><?php echo $ship_info ?></p>
 
@@ -165,7 +165,7 @@
                 <li>
                     <div class="why-shop-icon">
                         <img src="//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/A.svg?0" class="img-responsive"
-                             height="" width="">
+                        height="" width="">
                     </div>
                     <p>East Returns</p>
 
@@ -174,7 +174,7 @@
                 <li>
                     <div class="why-shop-icon">
                         <img src="//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/D.svg?0" class="img-responsive"
-                             height="" width="">
+                        height="" width="">
                     </div>
                     <p>Quality Assurance</p>
 
@@ -182,7 +182,7 @@
                 <li>
                     <div class="why-shop-icon">
                         <img src="//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/B.svg?0" class="img-responsive"
-                             height="" width="">
+                        height="" width="">
                     </div>
                     <p>Secure checkout</p>
 
@@ -193,27 +193,37 @@
 </div>
 
 <!-- Product New Page -->
-<div class="product-wrap">
+<div class="product-wrap container">
     <form action="<?php echo $this->getSubmitUrl($_product, array('_secure' => $this->_isSecure())) ?>"
-          method="post"
-          id="product_addtocart_form"<?php if ($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
-
-        <div class="product-title-wrap">
-            <?php echo $this->getBlockHtml('formkey') ?>
-            <div class="no-display">
-                <input type="hidden" name="product" value="<?php echo $_product->getId() ?>"/>
-                <input type="hidden" name="related_product" id="related-products-field" value=""/>
+      method="post"
+      id="product_addtocart_form"<?php if ($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+      <div class="row">
+        <div class="col-md-5">
+            <div class=" product-grid clearfix" id="product_mainslider">
+                <?php echo $this->getChildHtml('media') ?>
             </div>
-            <h4 class="product-title"
+        </div>
+        <div class="col-md-7">
+            <div class="product-right-wrap">
+              <div class="product-title-wrap">
+                <?php echo $this->getBlockHtml('formkey') ?>
+                <div class="no-display">
+                    <input type="hidden" name="product" value="<?php echo $_product->getId() ?>"/>
+                    <input type="hidden" name="related_product" id="related-products-field" value=""/>
+                </div>
+                <h4 class="product-title"
                 itemprop="name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h4>
-            <h5 class="subheading"><?php echo $_product->getShortDescription(); ?></h5>
-        </div>
-        <div class=" product-grid clearfix" id="product_mainslider">
-            <?php echo $this->getChildHtml('media') ?>
-        </div>
-        <div class="text-center">
-            <div class="heading-1">Price:</div>
+                <h5 class="subheading"><?php echo $_product->getShortDescription(); ?></h5>
+                <div class="price-amount desktop-price">
+                    <?php echo $this->getPriceHtml($_product); ?>
+                    <?php echo $this->getChildHtml('bundle_prices') ?>
+                    <?php echo $this->getTierPriceHtml() ?>
+                </div>
+            </div>
+            
+
             <div class="price-amount pb-1 heading-2">
+                <div class="heading-1">Price:</div>
                 <?php echo $this->getPriceHtml($_product); ?>
                 <?php echo $this->getChildHtml('bundle_prices') ?>
                 <?php echo $this->getTierPriceHtml() ?>
@@ -222,23 +232,26 @@
             <?php echo $this->getChildHtml('other'); ?>
 
             <?php if ($_product->isSaleable() && $this->hasOptions()): ?>
-                <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
-            <?php endif; ?>
+            <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+        <?php endif; ?>
+    </div>
+</div>
+</div>
+<div class="text-center">
 
-<!--            <div class="size-wrap">-->
-<!--                <div class="heading-1">Size:</div>-->
-<!--                <select name="" id="">-->
-<!--                    <option value="Small">Small</option>-->
-<!--                    <option value="Medium">Medium</option>-->
-<!--                </select>-->
-<!--            </div>-->
+    <!--            <div class="size-wrap">-->
+        <!--                <div class="heading-1">Size:</div>-->
+        <!--                <select name="" id="">-->
+            <!--                    <option value="Small">Small</option>-->
+            <!--                    <option value="Medium">Medium</option>-->
+            <!--                </select>-->
+            <!--            </div>-->
 
             <div class="shipping-information">
                 <ul>
                     <?php if ($ship_info = $_product->getShippingInfo()): ?>
 
                         <li>
-                            <img src="#" alt="">
                             <span>Shipping:</span>
                             <?php echo $ship_info; ?>
                         </li>
@@ -246,14 +259,12 @@
 
 
                     <li>
-                        <img src="#" alt="">
                         <span>Payments:</span>
                         Credit Cards, PayPal.
                     </li>
                     <?php if ($returnPolicy = $_product->getReturnPolicy()): ?>
 
                         <li>
-                            <img src="#" alt="">
                             <span>Returns:</span>
                             <?php echo $returnPolicy; ?>
                         </li>
@@ -265,32 +276,41 @@
                 <h5>Product Details</h5>
 
                 <div class="icon-info">
-                    <img src="" alt="">
+                    <img src="<?php echo $this->getSkinurl('images/pearls-icon.svg')?>" height="45" alt="Pearl Icon">
                     <div class="heading-1">Freshwater Cultured Pearls</div>
                     <span>Button Shape to perfectly model on the wrist. Size 5.5-6 mm.</span>
 
                 </div>
                 <div class="icon-info">
-                    <img src="" alt="">
+                    <img src="<?php echo $this->getSkinurl('images/steel-icon.svg')?>" height="45" alt="Steel Icon">
                     <div class="heading-1">Stainelss Steel Beads</div>
                     <span>To ensure the best durability over time.</span>
 
                 </div>
                 <div class="icon-info">
-                    <img src="" alt="">
+                    <img src="<?php echo $this->getSkinurl('images/strech-icon.svg')?>" height="45" alt="Stretch Icon">
                     <div class="heading-1">Stretch</div>
                     <span>Hand-strung with elastic string. One size fits all wrist sizes.</span>
                 </div>
-                <?php if($sizeinfo = $_product->getSizeInfo()): ?>
-                <div class="heading-1">Size:</div>
-                <div class="other-detail">
-                    <?php echo $sizeinfo; ?>
-                </div>
-                <?php endif; ?>
-                <?php if($colorinfo = $_product->getColorInfo()); ?>
-                <div class="heading-1"> Colors:</div>
-                <div class="other-detail">
-                    <?php echo $colorinfo; ?>
+                <div class="clearfix"></div>
+                <div class="additional-section">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <?php if($sizeinfo = $_product->getSizeInfo()): ?>
+                                <div class="heading-1">Size:</div>
+                                <div class="other-detail">
+                                    <?php echo $sizeinfo; ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        <div class="col-md-4">
+                            <?php if($colorinfo = $_product->getColorInfo()); ?>
+                            <div class="heading-1"> Colors:</div>
+                            <div class="other-detail">
+                                <?php echo $colorinfo; ?>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
