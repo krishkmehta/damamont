@@ -1221,6 +1221,9 @@ All this is done for any sub-level being entered.
 			font-size: 23px;
 			padding-right: 215px;
 		}
+		.product-detail h5{
+			font-size: 23px;
+		}
 		.price-amount{
 			display: none;
 		}
