@@ -1044,6 +1044,10 @@ All this is done for any sub-level being entered.
 	z-index: 0 !important;
 }
 @media (max-width: 767px){
+	#fme_layered_container{
+		margin-left: -10px;
+		margin-right: -10px;
+	}
 	.header .flag_list,.product-title-wrap{
 		display: none;
 	}
@@ -1071,8 +1075,8 @@ All this is done for any sub-level being entered.
 	body #fme_filters_list{
 		position: fixed;
 		top: 50%;
-		right: 0;
-		left: 0;
+		right: 15px;
+		left: 15px;
 		bottom: 0;
 		z-index: 9999;
 		background: #fff;
@@ -1096,7 +1100,6 @@ All this is done for any sub-level being entered.
 		max-width: 33px;
 	}
 	.mobile-element{
-		border-top: 1px solid #ccc;
 		text-transform: uppercase;
 		font-weight: 600;
 		color: #000;
@@ -1105,6 +1108,9 @@ All this is done for any sub-level being entered.
 	}
 }
 @media (min-width: 768px){
+	#fme_filters_list{
+		border-top: 0 !important;
+	}
 	.mobile-element{
 		display: none;
 	}
