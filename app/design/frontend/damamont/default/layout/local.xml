@@ -2,116 +2,123 @@
 
 <layout version="0.1.0">
 
-	<default>
-		<reference name="head">
-			<action method="addLinkRel">
-				<rel>stylesheet</rel>
-				<href>https://fonts.googleapis.com/css?family=Dancing+Script</href>
-			</action>
-			<action method="addLinkRel">
-				<rel>stylesheet</rel>
-				<href>https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700</href>
-			</action>
-			<action method="addLinkRel">
-				<rel>stylesheet</rel>
-				<href>https://fonts.googleapis.com/css?family=Abel</href>
-			</action>
-			<action method="addItem">
-				<type>skin_js</type>
-				<name>js/mmenu.js</name>
-				<params/>
-			</action>
+    <default>
+        <reference name="head">
+            <action method="addLinkRel">
+                <rel>stylesheet</rel>
+                <href>https://fonts.googleapis.com/css?family=Dancing+Script</href>
+            </action>
+            <action method="addLinkRel">
+                <rel>stylesheet</rel>
+                <href>https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700</href>
+            </action>
+            <action method="addLinkRel">
+                <rel>stylesheet</rel>
+                <href>https://fonts.googleapis.com/css?family=Abel</href>
+            </action>
 
-			<action method="addItem">
-				<type>skin_js</type>
-				<name>js/modernizr.custom.min.js</name>
-				<params/>
-			</action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/modernizr.custom.min.js</name>
+                <params/>
+            </action>
 
-			<!-- <action method="addItem">
-				<type>skin_js</type>
-				<name>js/jquery.dlmenu.js</name>
-				<params/>
-			</action> -->
+            <!-- <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.dlmenu.js</name>
+                <params/>
+            </action> -->
 
-			<action method="addItem"><type>skin_js</type><name>js/FME/jquery.min.js</name></action>
-			<action method="addItem"><type>skin_js</type><name>js/FME/noconflict.js</name></action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/FME/jquery.min.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/FME/noconflict.js</name>
+            </action>
 
-			<action method="addLinkRel">
-				<rel>stylesheet</rel>
-				<href>https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css</href>
-			</action>
-			<action method="addItem">
-				<type>skin_css</type>
-				<name>css/component.css</name>
-			</action>
-			<action method="addItem">
-				<type>skin_css</type>
-				<name>css/bootstrap.css</name>
-			</action>
-			<action method="addItem">
-				<type>skin_css</type>
-				<name>css/selectric.css</name>
-			</action>
-			<action method="addItem">
-				<type>skin_css</type>
-				<name>css/owl.carousel.min.css</name>
-			</action>
-			<action method="addItem">
-				<type>skin_css</type>
-				<name>css/mmenu-light.css</name>
-				<params/>
-			</action>
+            <action method="addLinkRel">
+                <rel>stylesheet</rel>
+                <href>https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css</href>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/component.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/bootstrap.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/selectric.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/owl.carousel.min.css</name>
+            </action>
 
-			<action method="addItem">
-				<type>skin_js</type>
-				<name>js/mmenu-light.js</name>
-				<params/>
-			</action>
-			<action method="addItem">
-				<type>skin_js</type>
-				<name>js/owl.carousel.min.js</name>
-				<params/>
-			</action>
-			<action method="addItem">
-				<type>skin_js</type>
-				<name>js/jquery.simple-popup.js</name>
-				<params/>
-			</action>
 
-			<action method="addItem">
-				<type>skin_js</type>
-				<name>js/jquery.selectric.min.js</name>
-				<params/>
-			</action>
-			
-			<action method="addItem">
-				<type>skin_js</type>
-				<name>js/mmenu.debugger.js</name>
-				<params/>
-			</action>
-			<action method="addItem">
-				<type>skin_js</type>
-				<name>js/custom.js</name>
-				<params/>
-			</action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/mmenu.css</name>
+            </action>
 
-		</reference>
-		<reference name="after_body_start">
-			<block type="core/template" name="after_body_start_script" template="page/html/after_body_start.phtml" />
-		</reference>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/owl.carousel.min.js</name>
+                <params/>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.simple-popup.js</name>
+                <params/>
+            </action>
 
-	</default>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/mmenu.js</name>
+                <params/>
+            </action>
 
-	<catalog_category_default>
-		<reference name="root">
-			<action method="setTemplate"><template>page/3columns.phtml</template></action>
-		</reference>
-	</catalog_category_default>
-	<catalog_category_layered>
-		<reference name="root">
-			<action method="setTemplate"><template>page/3columns.phtml</template></action>
-		</reference>
-	</catalog_category_layered>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.selectric.min.js</name>
+                <params/>
+            </action>
+
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/mmenu.debugger.js</name>
+                <params/>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/custom.js</name>
+                <params/>
+            </action>
+
+        </reference>
+        <reference name="after_body_start">
+            <block type="core/template" name="after_body_start_script" template="page/html/after_body_start.phtml"/>
+        </reference>
+
+    </default>
+
+    <catalog_category_default>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/3columns.phtml</template>
+            </action>
+        </reference>
+    </catalog_category_default>
+    <catalog_category_layered>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/3columns.phtml</template>
+            </action>
+        </reference>
+    </catalog_category_layered>
 
 </layout> 

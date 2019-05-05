@@ -149,8 +149,13 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
 
             $html .= '<li class="' . $this->_getMenuItemClasses($child) . '">';
 
+
             if ($child->getFullUrl() && $child->getCssClass() != 'customhtml') {
-                $html .= '<a href="' . $child->getFullUrl() . '" ' . $child->getType() . '>';
+                if (!$child->hasChildren()) {
+
+                    $html .= '<a href="' . $child->getFullUrl() . '" ' . $child->getType() . '>';
+
+                }
             } else {
                 $html .= '<div>';
             }
@@ -158,7 +163,9 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
             $html .= '<span>' . $this->escapeHtml($child->getTitle()) . '</span>';
 
             if ($child->getFullUrl()) {
-                $html .= '</a>';
+                if (!$child->hasChildren()) {
+                    $html .= '</a>';
+                }
             } else {
                 $html .= '</div>';
             }
@@ -376,7 +383,8 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
     protected function __welcomeHtml()
     {
 
-        $wc = '<li class="custom-close-menu"><div class="sub-menu-header clearfix">
+        $wc = '<li class="custom-close-menu">
+            <div class="sub-menu-header clearfix">
         <div class="profile-image pull-left"></div>';
         $wc .= '<span class="close-menu"><img src="'.$this->getSkinurl('images/close-white.png').'"></span><span class="pull-left profile-text-wrap"><div class="greeting">';
         $wc .= $this->__('Hello ');
