@@ -239,7 +239,7 @@
             titleLink : "parent"
         },
         onClick : {
-            close : null,
+            close : true,
             preventDefault : null,
             setSelected : true
         },

@@ -231,8 +231,9 @@ jQuery(document).ready(function() {
     document.addEventListener( 'click', ( evnt ) => {
         let anchor = evnt.target.closest( 'a[href^="#/"]' );
         if ( anchor ) {
-            alert('Thank you for clicking, but that\'s a demo link.');
+
             evnt.preventDefault();
         }
     });
+    doc
 });
