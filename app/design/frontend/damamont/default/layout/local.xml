@@ -18,15 +18,20 @@
 			</action>
 			<action method="addItem">
 				<type>skin_js</type>
+				<name>js/mmenu.js</name>
+				<params/>
+			</action>
+			<action method="addItem">
+				<type>skin_js</type>
 				<name>js/modernizr.custom.min.js</name>
 				<params/>
 			</action>
 
-			<action method="addItem">
+			<!-- <action method="addItem">
 				<type>skin_js</type>
 				<name>js/jquery.dlmenu.js</name>
 				<params/>
-			</action>
+			</action> -->
 
 			<action method="addItem"><type>skin_js</type><name>js/FME/jquery.min.js</name></action>
 			<action method="addItem"><type>skin_js</type><name>js/FME/noconflict.js</name></action>
@@ -66,6 +71,12 @@
 			<action method="addItem">
 				<type>skin_js</type>
 				<name>js/jquery.selectric.min.js</name>
+				<params/>
+			</action>
+			
+			<action method="addItem">
+				<type>skin_js</type>
+				<name>js/mmenu.debugger.js</name>
 				<params/>
 			</action>
 			<action method="addItem">

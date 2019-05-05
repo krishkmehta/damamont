@@ -204,6 +204,8 @@ jQuery(document).ready(function ($) {
     jQuery('body:not(.cms-home)').css('paddingTop', headerHeight);
 
     jQuery('.single-colllection h5').matchHeight();
+    jQuery('.product-view-img .product-view-text h5').matchHeight();
+    
 });
 
 
@@ -225,5 +227,12 @@ jQuery(document).ready(function() {
       }
   });
 
-    
+    new Mmenu( document.querySelector( '#menu' ) );
+
+    document.addEventListener( 'click', ( evnt ) => {
+        let anchor = evnt.target.closest( 'a[href^="#/"]' );
+        if ( anchor ) {
+            evnt.preventDefault();
+        }
+    });
 });

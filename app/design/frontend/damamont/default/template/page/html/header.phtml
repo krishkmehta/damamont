@@ -1,7 +1,7 @@
 <div class="header-container">
     <div class="backdrop"></div>
-    <div class="header">
-        <div id="dl-menu" class="dl-menuwrapper">
+    <div class="header" id="page">
+        <?php /* <div id="dl-menu" class="dl-menuwrapper">
             <button class="dl-trigger"><img src="<?php echo $this->getSkinurl('images/hamburger-menu.svg')?>"></button>
 
             <?php
@@ -16,7 +16,22 @@
             }
 
             ?>
-        </div>
+            </div> */ ?>
+            <a href="#menu">Menu</a>
+            <nav id="menu">
+               <?php
+               $menus = array(1, 2);
+               foreach ($menus as $menuId) {
+                $menu = Mage::getModel('scandi_menumanager/menu')
+                ->setStoreId(Mage::app()->getStore()->getId())
+                ->load($menuId);
+                if ($menu->getIsActive()) {
+                    echo $this->getLayout()->createBlock('scandi_menumanager/custom')->setMenuId($menuId)->toHtml();
+                }
+            }
+
+            ?>
+        </nav>
 
         <div class="col-3">
             <?php echo $this->getChildHtml('store_language') ?>
