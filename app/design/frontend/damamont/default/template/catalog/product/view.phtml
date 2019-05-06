@@ -43,167 +43,227 @@
 <div class="product-wrap container">
     <div class="col-md-12">
         <div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
-   </div>
-   <div class="mobile-display">
-     <h4 class="product-title"
-     itemprop="name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h4>
-     <h5 class="subheading"><?php echo $_product->getShortDescription(); ?></h5>
- </div>
-   <form action="<?php echo $this->getSubmitUrl($_product, array('_secure' => $this->_isSecure())) ?>"
-      method="post"
-      id="product_addtocart_form"<?php if ($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
-      <div class="row">
-        <div class="col-md-5">
-            <div class=" product-grid clearfix" id="product_mainslider">
-                <?php echo $this->getChildHtml('media') ?>
+    </div>
+    <div class="mobile-display">
+        <h4 class="product-title"
+            itemprop="name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h4>
+        <h5 class="subheading"><?php echo $_product->getShortDescription(); ?></h5>
+    </div>
+    <form action="<?php echo $this->getSubmitUrl($_product, array('_secure' => $this->_isSecure())) ?>"
+          method="post"
+          id="product_addtocart_form"<?php if ($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+        <div class="row">
+            <div class="col-md-5">
+                <div class=" product-grid clearfix" id="product_mainslider">
+                    <?php echo $this->getChildHtml('media') ?>
+                </div>
             </div>
-        </div>
-        <div class="col-md-7">
-            <div class="product-right-wrap">
-                <div class="product-title-wrap">
-                    <?php echo $this->getBlockHtml('formkey') ?>
-                    <div class="no-display">
-                        <input type="hidden" name="product" value="<?php echo $_product->getId() ?>"/>
-                        <input type="hidden" name="related_product" id="related-products-field" value=""/>
+            <div class="col-md-7">
+                <div class="product-right-wrap">
+                    <div class="product-title-wrap">
+                        <?php echo $this->getBlockHtml('formkey') ?>
+                        <div class="no-display">
+                            <input type="hidden" name="product" value="<?php echo $_product->getId() ?>"/>
+                            <input type="hidden" name="related_product" id="related-products-field" value=""/>
+                        </div>
+                        <h4 class="product-title"
+                            itemprop="name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h4>
+                        <h5 class="subheading"><?php echo $_product->getShortDescription(); ?></h5>
+                        <div class="price-amount desktop-price">
+                            <?php echo $this->getPriceHtml($_product); ?>
+                            <?php echo $this->getChildHtml('bundle_prices') ?>
+                            <?php echo $this->getTierPriceHtml() ?>
+                        </div>
                     </div>
-                    <h4 class="product-title"
-                    itemprop="name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h4>
-                    <h5 class="subheading"><?php echo $_product->getShortDescription(); ?></h5>
-                    <div class="price-amount desktop-price">
+
+
+                    <div class="price-amount pb-1 heading-2">
+                        <div class="heading-1">Price:</div>
                         <?php echo $this->getPriceHtml($_product); ?>
                         <?php echo $this->getChildHtml('bundle_prices') ?>
                         <?php echo $this->getTierPriceHtml() ?>
                     </div>
-                </div>
-
-
-                <div class="price-amount pb-1 heading-2">
-                    <div class="heading-1">Price:</div>
-                    <?php echo $this->getPriceHtml($_product); ?>
-                    <?php echo $this->getChildHtml('bundle_prices') ?>
-                    <?php echo $this->getTierPriceHtml() ?>
-                </div>
-                <?php echo $this->getChildHtml('alert_urls') ?>
-                <?php echo $this->getChildHtml('other'); ?>
-                <?php if (!$this->hasOptions()): ?>
-                    <div class="add-to-box">
-                        <?php if ($_product->isSaleable()): ?>
-                            <?php echo $this->getChildHtml('addtocart') ?>
-                            <?php if ($this->helper('wishlist')->isAllow() || $_compareUrl = $this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
-                            <!-- <span class="or"><?php echo $this->__('OR') ?></span> -->
-                        <?php endif; ?>
-                    <?php endif; ?>
-                    <?php echo $this->getChildHtml('addto') ?>
-                    <?php //echo $this->getChildHtml('sharing') ?>
-                </div>
-                <?php echo $this->getChildHtml('extra_buttons') ?>
-                <?php elseif (!$_product->isSaleable()): ?>
-                    <div class="add-to-box">
-                        <?php echo $this->getChildHtml('addto') ?>
-                        <?php //echo $this->getChildHtml('sharing') ?>
-                    </div>
-                <?php endif; ?>
-
-                <?php if ($_product->isSaleable() && $this->hasOptions()): ?>
-                <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
-            <?php endif; ?>
-            <?php if ($_product->isSaleable() && $this->hasOptions()): ?>
-            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
-        <?php endif; ?>
-    </div>
-</div>
-</div>
-<div class="text-center">
-
-    <div class="shipping-information">
-        <ul>
-            <?php if ($ship_info = $_product->getShippingInfo()): ?>
-
-                <li>
-                    <span>Shipping:</span>
-                    <?php echo $ship_info; ?>
-                </li>
-            <?php endif; ?>
-
-
-            <li>
-                <span>Payments:</span>
-                Credit Cards, PayPal.
-            </li>
-            <?php if ($returnPolicy = $_product->getReturnPolicy()): ?>
-
-                <li>
-                    <span>Returns:</span>
-                    <?php echo $returnPolicy; ?>
-                </li>
-            <?php endif; ?>
-
-        </ul>
-    </div>
-    <div class="product-detail">
-        <h5>Product Details</h5>
-
-        <div class="icon-info">
-            <img src="<?php echo $this->getSkinurl('images/pearls-icon.svg') ?>" height="45" alt="Pearl Icon">
-            <div class="heading-1">Freshwater Cultured Pearls</div>
-            <span>Button Shape to perfectly model on the wrist. Size 5.5-6 mm.</span>
-
-        </div>
-        <div class="icon-info">
-            <img src="<?php echo $this->getSkinurl('images/steel-icon.svg') ?>" height="45" alt="Steel Icon">
-            <div class="heading-1">Stainelss Steel Beads</div>
-            <span>To ensure the best durability over time.</span>
-
-        </div>
-        <div class="icon-info">
-            <img src="<?php echo $this->getSkinurl('images/strech-icon.svg') ?>" height="45" alt="Stretch Icon">
-            <div class="heading-1">Stretch</div>
-            <span>Hand-strung with elastic string. One size fits all wrist sizes.</span>
-        </div>
-        <div class="clearfix"></div>
-        <div class="additional-section">
-            <ul id="tabs">
-                <li><a id="tab1">Size:</a></li>
-                <li><a id="tab2">Colors:</a></li>
-                <li><a id="tab3">Other Detail</a></li>
-            </ul>
-
-            <div class="container-tab" id="tab1C">
-                <?php if ($sizeinfo = $_product->getSizeInfo()): ?>
-                    <div class="other-detail">
-                        <?php echo $sizeinfo; ?>
-                    </div>
-                <?php endif; ?>
-            </div>
-            <div class="container-tab" id="tab2C">
-                <?php if ($colorinfo = $_product->getColorInfo()) ; ?>
-                <div class="other-detail">
-                    <?php echo $colorinfo; ?>
-                </div>
-            </div>
-            <div class="container-tab" id="tab3C">3Some content</div>
-
-            <div class="row mobile-row">
-                <div class="col-md-4">
-                    <?php if ($sizeinfo = $_product->getSizeInfo()): ?>
-                        <div class="heading-1">Size:</div>
-                        <div class="other-detail">
-                            <?php echo $sizeinfo; ?>
+                    <?php echo $this->getChildHtml('alert_urls') ?>
+                    <?php echo $this->getChildHtml('other'); ?>
+                    <?php if (!$this->hasOptions()): ?>
+                        <div class="add-to-box">
+                            <?php if ($_product->isSaleable()): ?>
+                                <?php echo $this->getChildHtml('addtocart') ?>
+                                <?php if ($this->helper('wishlist')->isAllow() || $_compareUrl = $this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
+                                    <!-- <span class="or"><?php echo $this->__('OR') ?></span> -->
+                                <?php endif; ?>
+                            <?php endif; ?>
+                            <?php echo $this->getChildHtml('addto') ?>
+                            <?php //echo $this->getChildHtml('sharing') ?>
+                        </div>
+                        <?php echo $this->getChildHtml('extra_buttons') ?>
+                    <?php elseif (!$_product->isSaleable()): ?>
+                        <div class="add-to-box">
+                            <?php echo $this->getChildHtml('addto') ?>
+                            <?php //echo $this->getChildHtml('sharing') ?>
                         </div>
                     <?php endif; ?>
-                </div>
-                <div class="col-md-4">
-                    <?php if ($colorinfo = $_product->getColorInfo()) ; ?>
-                    <div class="heading-1"> Colors:</div>
-                    <div class="other-detail">
-                        <?php echo $colorinfo; ?>
-                    </div>
+
+                    <?php if ($_product->isSaleable() && $this->hasOptions()): ?>
+                        <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+                    <?php endif; ?>
+                    <?php if ($_product->isSaleable() && $this->hasOptions()): ?>
+                        <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-</form>
+        <div class="text-center">
+
+            <div class="shipping-information">
+                <ul>
+                    <?php if ($ship_info = $_product->getShippingInfo()): ?>
+
+                        <li>
+                            <span>Shipping:</span>
+                            <?php echo $ship_info; ?>
+                        </li>
+                    <?php endif; ?>
+
+
+                    <li>
+                        <span>Payments:</span>
+                        Credit Cards, PayPal.
+                    </li>
+                    <?php if ($returnPolicy = $_product->getReturnPolicy()): ?>
+
+                        <li>
+                            <span>Returns:</span>
+                            <?php echo $returnPolicy; ?>
+                        </li>
+                    <?php endif; ?>
+
+                </ul>
+            </div>
+            <div class="product-detail">
+                <h5>Product Details</h5>
+
+                <div class="icon-info">
+                    <img src="<?php echo $this->getSkinurl('images/pearls-icon.svg') ?>" height="45" alt="Pearl Icon">
+                    <div class="heading-1">Freshwater Cultured Pearls</div>
+                    <span>Button Shape to perfectly model on the wrist. Size 5.5-6 mm.</span>
+
+                </div>
+                <div class="icon-info">
+                    <img src="<?php echo $this->getSkinurl('images/steel-icon.svg') ?>" height="45" alt="Steel Icon">
+                    <div class="heading-1">Stainelss Steel Beads</div>
+                    <span>To ensure the best durability over time.</span>
+
+                </div>
+                <div class="icon-info">
+                    <img src="<?php echo $this->getSkinurl('images/strech-icon.svg') ?>" height="45" alt="Stretch Icon">
+                    <div class="heading-1">Stretch</div>
+                    <span>Hand-strung with elastic string. One size fits all wrist sizes.</span>
+                </div>
+                <div class="clearfix"></div>
+                <?php $attributes = $_product->getAttributes();
+                $sizeinfo = $_product->getSizeInfo();
+                $colorinfo = $_product->getColorInfo();
+                $attrbuteData = array();
+                foreach ($attributes as $attribute) {
+                    if ($attribute->getIsVisibleOnFront() && !in_array($attribute->getAttributeCode(), $excludeAttr)) {
+                        $value = $attribute->getFrontend()->getValue($_product);
+
+                        if (!$_product->hasData($attribute->getAttributeCode())) {
+                            $value = __('N/A');
+                        } elseif ((string)$value == '') {
+                            $value = __('No');
+                        } elseif ($attribute->getFrontendInput() == 'price' && is_string($value)) {
+                            $value = $this->priceCurrency->convertAndFormat($value);
+                        }
+                        if (is_string($value) && strlen($value)) {
+                            $attrbuteData[$attribute->getAttributeCode()]['label'] = $attribute->getStoreLabel();
+                            $attrbuteData[$attribute->getAttributeCode()]['value'] = $value;
+
+                        }
+                    }
+                }
+                if (count($attrbuteData) > 0 || $sizeinfo || $colorinfo) {
+                    ?>
+                    <div class="additional-section">
+                        <ul id="tabs">
+
+                            <li><a id="tab1">Size:</a></li>
+
+
+                            <li><a id="tab2">Colors:</a></li>
+
+
+                            <li><a id="tab3">Other Detail</a></li>
+
+                        </ul>
+
+                        <div class="container-tab" id="tab1C">
+                            <div class="other-detail">
+                                <?php if ($sizeinfo): ?>
+                                    <?php echo $sizeinfo; ?>
+                                <?php else : ?>
+                                    No Size information
+                                <?php endif; ?>
+                            </div>
+
+                        </div>
+
+
+                        <div class="container-tab" id="tab2C">
+                            <div class="other-detail">
+                                <?php if ($colorinfo): ?>
+                                    <?php echo $colorinfo; ?>
+                                <?php else: ?>
+                                    No Color Information
+                                <?php endif; ?>
+                            </div>
+                        </div>
+
+
+                        <div class="container-tab" id="tab3C">
+                            <?php if (count($attrbuteData) > 0): ?>
+                                <?php foreach ($attrbuteData as $data): ?>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="col-md-6">
+                                                <strong><?php echo $data['label'] ?></strong>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <?php echo $data['value'] ?>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <?php endforeach; ?>
+                            <?php else : ?>
+                                No Other Product Detail
+                            <?php endif; ?>
+                        </div>
+
+
+                        <div class="row mobile-row">
+                            <div class="col-md-4">
+                                <?php if ($sizeinfo = $_product->getSizeInfo()): ?>
+                                    <div class="heading-1">Size:</div>
+                                    <div class="other-detail">
+                                        <?php echo $sizeinfo; ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                            <div class="col-md-4">
+                                <?php if ($colorinfo = $_product->getColorInfo()) ; ?>
+                                <div class="heading-1"> Colors:</div>
+                                <div class="other-detail">
+                                    <?php echo $colorinfo; ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </form>
 </div>
 
 <!-- Product New Page End -->
