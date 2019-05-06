@@ -180,7 +180,7 @@ jQuery(document).ready(function () {
     });
     ;
     var headerHeight = jQuery('.header-container').outerHeight();
-    jQuery('body:not(.cms-home)').css({'paddingTop': headerHeight});
+    // jQuery('body:not(.cms-home)').css({'paddingTop': headerHeight});
     // jQuery(".popup-flag2").simplePopup({ type: "html", htmlSelector: "#flag-container2" });
     jQuery(document).on('click', '.mobile-element', function(){
         jQuery('#fme_filters_list').addClass('no-display');
@@ -235,5 +235,4 @@ jQuery(document).ready(function() {
             evnt.preventDefault();
         }
     });
-    doc
 });
