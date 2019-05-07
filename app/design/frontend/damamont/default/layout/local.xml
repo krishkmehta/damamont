@@ -42,10 +42,7 @@
                 <rel>stylesheet</rel>
                 <href>https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css</href>
             </action>
-            <action method="addItem">
-                <type>skin_css</type>
-                <name>css/component.css</name>
-            </action>
+            
             <action method="addItem">
                 <type>skin_css</type>
                 <name>css/bootstrap.css</name>
@@ -64,7 +61,10 @@
                 <type>skin_css</type>
                 <name>css/mmenu.css</name>
             </action>
-
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/component.css</name>
+            </action>
             <action method="addItem">
                 <type>skin_js</type>
                 <name>js/owl.carousel.min.js</name>

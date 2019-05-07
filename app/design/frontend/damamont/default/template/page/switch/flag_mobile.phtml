@@ -30,20 +30,20 @@
     <?php foreach ($this->getStores() as $_lang): ?>
         <?php
 
-        $menu .= "<li><a href='" . $_lang->getCurrentUrl(false) . "'>";
+        $menu .= "<li class='flag-menu'><a href='" . $_lang->getCurrentUrl(false) . "'>";
         $currentMenu = '<img class="img-responsive" src="' . $this->getSkinUrl('images/flags/' .
-                $_lang->getCode() . '.png') . '"
-                             alt="' . $this->escapeHtml($_lang->getName()) . '">' . $this->escapeHtml
-            ($_lang->getName());
+            $_lang->getCode() . '.svg') . '"
+        alt="' . $this->escapeHtml($_lang->getName()) . '">' . $this->escapeHtml
+        ($_lang->getName());
         $menu = $menu . $currentMenu . "</a></li>";
         ?>
 
         <?php if ($_lang->getId() == $this->getCurrentStoreId()): ?>
-            <?php $first = "<span>" . $currentMenu . "</span>"; ?>
-        <?php endif; ?>
-    <?php endforeach; ?>
+        <?php $first = "<span>" . $currentMenu . "</span>"; ?>
+    <?php endif; ?>
+<?php endforeach; ?>
 
-    <?php echo $first . "<ul>" . $menu . "</ul>"; ?>
+<?php echo $first . "<ul>" . $menu . "</ul>"; ?>
 
 
 <?php endif; ?>

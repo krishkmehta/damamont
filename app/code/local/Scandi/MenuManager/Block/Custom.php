@@ -373,7 +373,7 @@ class Scandi_MenuManager_Block_Custom extends Mage_Core_Block_Template
 
     protected function _getCustomHtml()
     {
-        return "<li  class='text-center' >" . $this->getLayout()->createBlock("page/switch")->setTemplate('page/switch/flag_mobile.phtml')
+        return "<li  class='flag-menu' >" . $this->getLayout()->createBlock("page/switch")->setTemplate('page/switch/flag_mobile.phtml')
         ->toHtml() . "</li>";
 
 
