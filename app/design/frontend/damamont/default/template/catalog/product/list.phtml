@@ -76,13 +76,13 @@ if($currentCategory ) {
                                 echo $catimg ?>');">
 
                                 <a href="<?php echo $caturl ?>"
-                                   style="background-image: url('<?php echo $catimg ?>);">
-                                   <img src="<?php echo $catimg; ?>" alt="<?php echo $catname; ?>"
-                                   class="img-responsive"
-                                   height="750"
-                                   width="674"
-                                   style="display: none;">
-                                   <div class="collection-detail">
+                                 style="background-image: url('<?php echo $catimg ?>);">
+                                 <img src="<?php echo $catimg; ?>" alt="<?php echo $catname; ?>"
+                                 class="img-responsive"
+                                 height="750"
+                                 width="674"
+                                 style="display: none;">
+                                 <div class="collection-detail">
                                     <p class="collection-title" style=""><?php echo $catname; ?></p>
                                     <p class="shop-now-btn"> SHOP ACRYLIC&nbsp; </p>
                                 </div>
@@ -112,20 +112,18 @@ if($currentCategory ) {
                             <div class="single_collection">
                                 <div class="collection_img"
                                 style="background-image: url(<?php $this->helper('catalog/image')->init($_product,
-                                 'small_image')->resize(270, 180); ?>)">
-                                 <img style="display: none;"
-                                 src="<?php $this->helper('catalog/image')->init($_product, 'small_image')->resize(270, 180); ?>"
-                                 width="270" height="180">
-                             </div>
-                             <div class="collection_text">
+                                   'small_image')->resize(270, 180); ?>)">
+                                   <img style="display: none;"
+                                   src="<?php $this->helper('catalog/image')->init($_product, 'small_image')->resize(270, 180); ?>"
+                                   width="270" height="180">
+                               </div>
+                               <div class="collection_text">
                                 <h5>
                                     <a href="<?php echo $_product->getProductUrl() ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?></a>
                                 </h5>
 
 
                                 <div class="box">
-                                    <img src="//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/Dama-Logo.svg?0"
-                                    width="80" height="20" alt="Logo"/>
                                     <p> <?php
                                     echo $_product->getResource()->getAttribute('c_perl')->getFrontend()->getValue($_product);
                                     ?></p>
@@ -149,48 +147,44 @@ if($currentCategory ) {
                                 <a href="<?php echo $_product->getProductUrl() ?>">
                                     <div class="small-img"
                                     style="background-image: url(<?php echo $this->helper('catalog/image')->init
-                                     ($_product,
-                                         'small_image')->resize(280, 280); ?>)">
-                                         <img class="img-responsive" style="display: none;"
-                                         src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(280, 280); ?>"
-                                         width="270" height="180">
-                                     </div>
-                                 </a>
-                                 <a href="<?php echo $_product->getProductUrl() ?>">
+                                       ($_product,
+                                           'small_image')->resize(280, 280); ?>)">
+                                           <img class="img-responsive" style="display: none;"
+                                           src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(280, 280); ?>"
+                                           width="270" height="180">
+                                       </div>
+                                   </a>
+                                   <a href="<?php echo $_product->getProductUrl() ?>">
                                     <h5><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?></h5>
-                                    <img src="<?php echo $this->getSkinUrl('images/logo.svg') ?>"
-                                    height="" width="35" class="img-responsive">
-
-
                                     <?php if($_product->isConfigurable()): ?>
 
-                                     <?php $attributes = $_product->getTypeInstance(true)->getConfigurableAttributes($_product) ?>
-                                     <?php if(count($attributes)): ?>
+                                       <?php $attributes = $_product->getTypeInstance(true)->getConfigurableAttributes($_product) ?>
+                                       <?php if(count($attributes)): ?>
 
-                                         <?php foreach($attributes as $att): ?>
-                                             <?php $pAtt=$att->getProductAttribute();
+                                           <?php foreach($attributes as $att): ?>
+                                               <?php $pAtt=$att->getProductAttribute();
 
-                                             $allProducts = $_product->getTypeInstance(true)->getUsedProducts(null, $_product);
-                                             $frontValues =array() ?>
-                                             <?php if('Color' == $pAtt->getFrontendLabel()): ?>
+                                               $allProducts = $_product->getTypeInstance(true)->getUsedProducts(null, $_product);
+                                               $frontValues =array() ?>
+                                               <?php if('Color' == $pAtt->getFrontendLabel()): ?>
 
-                                                 <?php foreach($allProducts as $p): ?>
+                                                   <?php foreach($allProducts as $p): ?>
 
-                                                     <?php if(!$p->isSaleable()) continue; ?>
-                                                     <?php $out=$p->getAttributeText($pAtt->getName()); ?>
-                                                     <?php $frontValues[$out]=$out; ?>
-                                                 <?php endforeach ?>
-                                                 <p class="color-variation"><?php echo implode(', ', $frontValues) ?></p>
+                                                       <?php if(!$p->isSaleable()) continue; ?>
+                                                       <?php $out=$p->getAttributeText($pAtt->getName()); ?>
+                                                       <?php $frontValues[$out]=$out; ?>
+                                                   <?php endforeach ?>
+                                                   <p class="color-variation"><?php echo implode(', ', $frontValues) ?></p>
 
-                                             <?php endif; ?>
-                                         <?php endforeach ?>
+                                               <?php endif; ?>
+                                           <?php endforeach ?>
 
-                                     <?php endif ?>
-                                 <?php endif ?>
-                             </a>
+                                       <?php endif ?>
+                                   <?php endif ?>
+                               </a>
 
 
-                             <div class="desk-show collection-price">
+                               <div class="collection-price">
                                 <?php echo $this->getPriceHtml($_product, true) ?></div>
 
                             </div>
