@@ -304,7 +304,15 @@ jQuery(document).ready(function ($) {
     jQuery('body:not(.cms-home)').css('paddingTop', headerHeight);
 
     jQuery('.single-colllection h5').matchHeight();
+    jQuery('.like-item .product-name').matchHeight();
     jQuery('.product-view-img .product-view-text h5').matchHeight();
+
+    jQuery('.other-detail-mobile .content-acc').slideUp();
+    jQuery('.other-detail-mobile .heading-1').click(function(){
+        jQuery('.other-detail-mobile .heading-1').removeClass('active-heading');
+        jQuery(this).toggleClass('active-heading');
+        jQuery('.content-acc').slideToggle();
+    })
 
 });
 

@@ -259,26 +259,22 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="heading-1"> Other Detail:</div>
-                                    <?php if (count($attrbuteData) > 0): ?>
-                                        <?php foreach ($attrbuteData as $data): ?>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="col-md-6">
+                                    <div class="other-detail-mobile">
+                                        <div class="heading-1"> Other Detail:</div>
+                                        <div class="content-acc">
+                                            <?php if (count($attrbuteData) > 0): ?>
+                                                <?php foreach ($attrbuteData as $data): ?>
+                                                    <div class="item-row">
                                                         <strong><?php echo $data['label'] ?></strong>
-                                                    </div>
-                                                    <div class="col-md-6">
                                                         <?php echo $data['value'] ?>
                                                     </div>
-                                                </div>
+                                                <?php endforeach; ?>
+                                                <?php else : ?>
+                                                    No Other Product Detail
+                                                <?php endif; ?>
                                             </div>
-
-                                        <?php endforeach; ?>
-                                        <?php else : ?>
-                                            No Other Product Detail
-                                        <?php endif; ?>
+                                        </div>
                                     </div>
-
                                 </div>
                             </div>
                         <?php } ?>
