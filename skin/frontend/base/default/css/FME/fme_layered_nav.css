@@ -6,32 +6,31 @@ div.fme-filter a.adj-nav-pad2 {padding-left:5px}
 div.fme-filter a.adj-nav-pad3 {padding-left:10px}
 
 /*price ranges*/
-div.fme-filter a.adj-nav-price {} 
 div.fme-filter a.adj-nav-price-selected {font-weight: bold}
 
 /*attributes*/
 #fme_layered_color span{display: none; }
-div.fme-filter a.fme_layered_attribute{padding-left: 9px;}
+div.fme-filter a.fme_layered_attribute{padding-left: 9px;line-height: 1.4;}
 div.fme-filter a.fme_layered_attribute:before{ 
     content: ''; display: inline-block;     
-    height: 14px;
-    width: 14px;
+    height: 16px;
+    width: 16px;
     right: 10px;
-    top: 4px;
+    top: 3px;
     padding-left: 0;
     position:absolute;
-    border: 1px solid #000;
+    border: 1px solid #674e4a;
     border-radius: 50%;
 }
 div.fme-filter a.fme_layered_attribute_selected:after{
     content: '';
     display: block;
-    height: 8px;
-    width: 8px;
+    height: 10px;
+    width: 10px;
     position: absolute;
     right: 13px;
-    background: #000;
-    top: 7px;
+    background: #b3938a;
+    top: 6px;
     border-radius: 50%;
 }
 div.fme-filter a.fme_layered_attribute_selected {background-position: 0px -16px; font-weight: bold; overflow:hidden;}
@@ -66,36 +65,38 @@ div.price_slider div.handle { top:3px; width:14px; height:23px; background: tran
     width: 200px;
 
 }
+#fme_filters_list dt {
+    font-weight: bold;
+    color: #674e4a;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
 #fme_filters_list ol{
     padding-top: 8px;
-    padding-bottom: 8px;
-}
-#fme_filters_list{
- border-color: #cccccc;
- border-style: solid;
- border-width: 1px;
- margin: 0;
- padding: 0;  
+    padding-bottom: 10px;
+    border-bottom: 1px solid #674e4a;
+    margin-bottom: 8px;
 }
 .fme_loading_filters img{
  left:48%;
  top:45%;
  display:block;
- position:fixed;
+ position:fixed; 
  z-index:900;
 }
-
+#fme_filters_list dd:last-of-type ol {
+    border-bottom: none;
+}
 .fme_layered_clear_all {
     margin:0;
-    border:1px solid #b9ccdd;
-    border-left:0;
-    border-right:0;
-    padding:3px 10px;
-    color:#1f5070;
+    font-style: italic;
+    color:#160502;
     font-weight:bold;
-    font-size: 0.9em;
+    font-size: 16px;
     text-transform: uppercase;
     text-align:center;
+    padding: 0px 10px 15px 10px;
+    border-bottom: 1px solid #674e4a;
 } 
 #fme_filters_list .btn-remove{
     border: none;
@@ -104,13 +105,9 @@ div.price_slider div.handle { top:3px; width:14px; height:23px; background: tran
 .fme-filter dt{
     cursor:pointer;
     -moz-user-select: none;
-    background-color: #f4f4f4;
-    border-color: #cccccc;
-    border-style: solid;
-    border-width: 1px;
     color: #636363;
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: normal;
     line-height: 1.2;
@@ -121,9 +118,7 @@ div.price_slider div.handle { top:3px; width:14px; height:23px; background: tran
     text-transform: uppercase;
     border-left: none;
     border-right: none;
-}
-div.fme-filter dd {
-    padding: 2px;
+    font-family: 'Arial';
 }
 
 .fme-filter dt.fme_layered_dt_selected{}
@@ -141,7 +136,7 @@ div.fme-filter dd li{overflow:hidden;}
 
 .color span { font-family:Arial; text-align: left; font-size:12px; color:#999; margin-top: -3px; }
 div.fme-filter dd a:hover { color:#f89521; text-decoration:none; }
-div.fme-filter dd a { font-family:Arial; font-size:12px; color:#333; text-decoration:none; }
+div.fme-filter dd a {font-size:16px; color:#333; text-decoration:none; text-transform: uppercase;}
 #fme_filters_list .btn-remove:after{
     line-height: 20px;
     color: #000;

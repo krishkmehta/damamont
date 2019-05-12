@@ -35,10 +35,10 @@
 <?php
 $subats_ids = array();
 
-if($currentCategory ) {
+if ($currentCategory) {
     $cat = Mage::getModel('catalog/category')->load($currentCategory->getId());
 
-    if($cat->getCollectionCategory()){
+    if ($cat->getCollectionCategory()) {
         /*Returns comma separated ids*/
         $subcats = $cat->getChildren();
 
@@ -72,36 +72,36 @@ if($currentCategory ) {
 
                             <div class="single-collection collections-single">
                                 <div class="collection-image"
-                                style="background-image: url('<?php
-                                echo $catimg ?>');">
+                                     style="background-image: url('<?php
+                                     echo $catimg ?>');">
 
-                                <a href="<?php echo $caturl ?>"
-                                   style="background-image: url('<?php echo $catimg ?>);">
-                                   <img src="<?php echo $catimg; ?>" alt="<?php echo $catname; ?>"
-                                   class="img-responsive"
-                                   height="750"
-                                   width="674"
-                                   style="display: none;">
-                                   <div class="collection-detail">
-                                    <p class="collection-title" style=""><?php echo $catname; ?></p>
-                                    <p class="shop-now-btn"> SHOP ACRYLIC&nbsp; </p>
+                                    <a href="<?php echo $caturl ?>"
+                                       style="background-image: url('<?php echo $catimg ?>);">
+                                        <img src="<?php echo $catimg; ?>" alt="<?php echo $catname; ?>"
+                                             class="img-responsive"
+                                             height="750"
+                                             width="674"
+                                             style="display: none;">
+                                        <div class="collection-detail">
+                                            <p class="collection-title" style=""><?php echo $catname; ?></p>
+                                            <p class="shop-now-btn"> SHOP ACRYLIC&nbsp; </p>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                    </div>
-                <?php endif; ?>
-            <?php endforeach; ?>
-        </div>
-    </div>
-    <?php
-} else {
-    ?>
-    <?php
-    $_productCollection = $this->getLoadedProductCollection();
-    $_helper = $this->helper('catalog/output');
-    ?>
-    <?php if (!$_productCollection->count()): ?>
-        <p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
+                            </div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        <?php
+        } else {
+        ?>
+        <?php
+        $_productCollection = $this->getLoadedProductCollection();
+        $_helper = $this->helper('catalog/output');
+        ?>
+        <?php if (!$_productCollection->count()): ?>
+            <p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
         <?php else: ?>
             <div class="category-products grid">
                 <?php //echo $this->getToolbarHtml() ?>
@@ -111,94 +111,91 @@ if($currentCategory ) {
                         <?php foreach ($_productCollection as $_product): ?>
                             <div class="single_collection">
                                 <div class="collection_img"
-                                style="background-image: url(<?php $this->helper('catalog/image')->init($_product,
-                                 'small_image')->resize(270, 180); ?>)">
-                                 <img style="display: none;"
-                                 src="<?php $this->helper('catalog/image')->init($_product, 'small_image')->resize(270, 180); ?>"
-                                 width="270" height="180">
-                             </div>
-                             <div class="collection_text">
-                                <h5>
-                                    <a href="<?php echo $_product->getProductUrl() ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?></a>
-                                </h5>
+                                     style="background-image: url(<?php $this->helper('catalog/image')->init($_product,
+                                         'small_image')->resize(270, 180); ?>)">
+                                    <img style="display: none;"
+                                         src="<?php $this->helper('catalog/image')->init($_product, 'small_image')->resize(270, 180); ?>"
+                                         width="270" height="180">
+                                </div>
+                                <div class="collection_text">
+                                    <h5>
+                                        <a href="<?php echo $_product->getProductUrl() ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?></a>
+                                    </h5>
 
 
-                                <div class="box">
-                                    <img src="//cdn.shopify.com/s/files/1/2405/7229/t/8/assets/Dama-Logo.svg?0"
-                                    width="80" height="20" alt="Logo"/>
-                                    <p> <?php
-                                    echo $_product->getResource()->getAttribute('c_perl')->getFrontend()->getValue($_product);
-                                    ?></p>
+                                    <div class="box">
+                                        <p> <?php
+                                            echo $_product->getResource()->getAttribute('c_perl')->getFrontend()->getValue($_product);
+                                            ?></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-                <script type="text/javascript">decorateList('products-list', 'none-recursive')</script>
+                        <?php endforeach; ?>
+                    </div>
+                    <script type="text/javascript">decorateList('products-list', 'none-recursive')</script>
 
                 <?php else: ?>
 
-                    <?php // Grid Mode ?>
+                <?php // Grid Mode ?>
 
-                    <?php $_collectionSize = $_productCollection->count() ?>
-                    <?php $_columnCount = $this->getColumnCount(); ?>
-                    <?php $i = 0;
-                    foreach ($_productCollection as $_product): ?>
-                        <div class="grid-item">
-                            <div class="single-colllection">
-                                <a href="<?php echo $_product->getProductUrl() ?>">
-                                    <div class="small-img"
-                                    style="background-image: url(<?php echo $this->helper('catalog/image')->init
+                <?php $_collectionSize = $_productCollection->count() ?>
+                <?php $_columnCount = $this->getColumnCount(); ?>
+                <?php $i = 0;
+                foreach ($_productCollection as $_product): ?>
+                    <div class="grid-item">
+                        <div class="single-colllection">
+                            <a href="<?php echo $_product->getProductUrl() ?>">
+                                <div class="small-img"
+                                     style="background-image: url(<?php echo $this->helper('catalog/image')->init
                                      ($_product,
                                          'small_image')->resize(280, 280); ?>)">
-                                         <img class="img-responsive" style="display: none;"
+                                    <img class="img-responsive" style="display: none;"
                                          src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(280, 280); ?>"
                                          width="270" height="180">
-                                     </div>
-                                 </a>
-                                 <a href="<?php echo $_product->getProductUrl() ?>">
-                                    <h5><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?></h5>
-                                    <img src="<?php echo $this->getSkinUrl('images/logo.svg') ?>"
-                                    height="" width="35" class="img-responsive">
+                                </div>
+                            </a>
+                            <a href="<?php echo $_product->getProductUrl() ?>">
+                                <h5><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?></h5>
+                                <?php if ($_product->isConfigurable()): ?>
+
+                                    <?php $attributes = $_product->getTypeInstance(true)->getConfigurableAttributes($_product) ?>
+                                    <?php if (count($attributes)): ?>
+
+                                        <?php foreach ($attributes as $att): ?>
+                                            <?php $pAtt = $att->getProductAttribute();
+
+                                            $allProducts = $_product->getTypeInstance(true)->getUsedProducts(null, $_product);
+                                            $frontValues = array() ?>
+                                            <?php if ('Color' == $pAtt->getFrontendLabel()): ?>
+
+                                                <?php foreach ($allProducts as $p): ?>
+
+                                                    <?php if (!$p->isSaleable()) continue; ?>
+                                                    <?php $out = $p->getAttributeText($pAtt->getName()); ?>
+                                                    <?php $frontValues[$out] = $out; ?>
+                                                <?php endforeach ?>
+                                                <p class="color-variation"><?php echo implode(', ', $frontValues) ?></p>
+
+                                            <?php endif; ?>
+                                        <?php endforeach ?>
+
+                                    <?php endif ?>
+                                <?php endif ?>
+                            </a>
 
 
-                                    <?php if($_product->isConfigurable()): ?>
+                            <div class="collection-price">
 
-                                     <?php $attributes = $_product->getTypeInstance(true)->getConfigurableAttributes($_product) ?>
-                                     <?php if(count($attributes)): ?>
-
-                                         <?php foreach($attributes as $att): ?>
-                                             <?php $pAtt=$att->getProductAttribute();
-
-                                             $allProducts = $_product->getTypeInstance(true)->getUsedProducts(null, $_product);
-                                             $frontValues =array() ?>
-                                             <?php if('Color' == $pAtt->getFrontendLabel()): ?>
-
-                                                 <?php foreach($allProducts as $p): ?>
-
-                                                     <?php if(!$p->isSaleable()) continue; ?>
-                                                     <?php $out=$p->getAttributeText($pAtt->getName()); ?>
-                                                     <?php $frontValues[$out]=$out; ?>
-                                                 <?php endforeach ?>
-                                                 <p class="color-variation"><?php echo implode(', ', $frontValues) ?></p>
-
-                                             <?php endif; ?>
-                                         <?php endforeach ?>
-
-                                     <?php endif ?>
-                                 <?php endif ?>
-                             </a>
-                             <div class="desk-show collection-price">
                                 <?php echo $this->getPriceHtml($_product, true) ?></div>
 
-                            </div>
                         </div>
-                    <?php endforeach ?>
-                </div>
-                <script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd', 'even', 'first', 'last'])</script>
-            <?php endif; ?>
+                    </div>
+                <?php endforeach ?>
+            </div>
+            <script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd', 'even', 'first', 'last'])</script>
+        <?php endif; ?>
 
         <?php endif; ?>
-    <?php } ?>
-</div>
+        <?php } ?>
+    </div>
 </div>
